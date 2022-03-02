@@ -23,7 +23,6 @@ public class Factura {
     public static final double MENOS_TREINTA_PORCIENTO = 0.7;
 
     private Long id;
-    private Integer cantidadMeses;
     private Long valor;
     private LocalDate fechaIngreso;
     private LocalDate fechaCaducidad;
@@ -31,7 +30,7 @@ public class Factura {
     private Integer estado;
     private String descripcion;
 
-    public Factura(Long id, Integer cantidadMeses, Long valor, LocalDate fechaIngreso, LocalDate fechaCaducidad, Jugador jugador,
+    public Factura(Long id, Long valor, LocalDate fechaIngreso, LocalDate fechaCaducidad, Jugador jugador,
                    Integer estado, String descripcion) {
 
         validarObligatorio(valor, SE_DEBE_INGRESAR_EL_VALOR_DE_LA_FACTURA);
@@ -41,7 +40,6 @@ public class Factura {
         validarObligatorio(descripcion, SE_DEBE_INGRESAR_UNA_DESCRIPCION);
 
         this.id = id;
-        this.cantidadMeses = cantidadMeses;
         this.valor = valor;
         this.fechaIngreso = fechaIngreso;
         this.fechaCaducidad = fechaCaducidad;
