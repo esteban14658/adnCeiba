@@ -18,8 +18,8 @@ com/ceiba/factura/puerto/dao/DaoFactura.java
  com.ceiba.factura.puerto.dao.DaoFactura
 com/ceiba/jugador/puerto/dao/DaoJugador.java
  com.ceiba.jugador.puerto.dao.DaoJugador
-com/ceiba/jugador/servicio/ServicioObtenerEquipo.java
- com.ceiba.jugador.servicio.ServicioObtenerEquipo
+com/ceiba/factura/modelo/entidad/Factura.java
+ com.ceiba.factura.modelo.entidad.Factura
 com/ceiba/factura/modelo/dto/DtoFactura.java
  com.ceiba.factura.modelo.dto.DtoFactura
 com/ceiba/usuario/servicio/ServicioEliminarUsuario.java
@@ -38,5 +38,5 @@ com/ceiba/factura/servicio/ServicioCrearFactura.java
  com.ceiba.factura.servicio.ServicioCrearFactura
 com/ceiba/jugador/servicio/ServicioObtenerPorIdJugador.java
  com.ceiba.jugador.servicio.ServicioObtenerPorIdJugador
-com/ceiba/factura/modelo/entidad/Factura.java
- com.ceiba.factura.modelo.entidad.Factura
+com/ceiba/jugador/servicio/ServicioObtenerEquipo.java
+ com.ceiba.jugador.servicio.ServicioObtenerEquipo

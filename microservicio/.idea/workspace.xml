@@ -90,7 +90,7 @@
       <recent name="com.ceiba.jugador.adaptador.dao" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ConsultaControladorJugadorTest.deberiaListarJugadores">
+  <component name="RunManager" selected="Spring Boot.Application">
     <configuration name="ComandoControladorJugadorTest.deberiaCrearUnJugador" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.infraestructura.test" />
       <extension name="coverage">
@@ -223,7 +223,7 @@
       <workItem from="1646135262717" duration="616000" />
       <workItem from="1646139170439" duration="13618000" />
       <workItem from="1646158076119" duration="14516000" />
-      <workItem from="1646221613407" duration="6291000" />
+      <workItem from="1646221613407" duration="12083000" />
     </task>
     <servers />
   </component>
@@ -236,7 +236,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/aplicacion/src/main/java/com/ceiba/factura/consulta/ManejadorListarFacturas.java</url>
           <line>17</line>
-          <properties class="com.ceiba.factura.consulta.ManejadorListarFacturas" method="ejecutar">
+          <properties class="com.ceiba.factura.consulta.ManejadorListarFacturas">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -262,7 +262,10 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/jugadores$ServicioActualizarUsuarioTest_deberiaActualizarCorrectamenteEnElRepositorio.ic" NAME="ServicioActualizarUsuarioTest.deberiaActualizarCorrectamenteEnElRepositorio Coverage Results" MODIFIED="1646088876513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/jugadores$Application.ic" NAME="Application Coverage Results" MODIFIED="1646153741232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/jugadores$ConsultaControladorJugadorTest_deberiaListarJugadores.ic" NAME="ConsultaControladorJugadorTest.deberiaListarJugadores Coverage Results" MODIFIED="1646229352875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ceiba.jugador.controlador.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/jugadores$Application.ic" NAME="Application Coverage Results" MODIFIED="1646229408522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/jugadores$ServicioCrearJugadorTest_deberiaCrearElJugadorDeManeraCorrecta.ic" NAME="ServicioCrearJugadorTest.deberiaCrearElJugadorDeManeraCorrecta Coverage Results" MODIFIED="1646091464520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/jugadores$ServicioCrearJugadorTest_deberiaLanzarUnaExepcionCuandoSeValideLaExistenciaDelJugador.ic" NAME="ServicioCrearJugadorTest.deberiaLanzarUnaExepcionCuandoSeValideLaExistenciaDelJugador Coverage Results" MODIFIED="1646092080350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
