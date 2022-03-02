@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RepositorioFacturaMysql.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">infraestructura</a> &gt; <a href="index.source.html" class="el_package">com.ceiba.factura.adaptador.repositorio</a> &gt; <span class="el_source">RepositorioFacturaMysql.java</span></div><h1>RepositorioFacturaMysql.java</h1><pre class="source lang-java linenums">package com.ceiba.factura.adaptador.repositorio;
+
+import com.ceiba.factura.modelo.entidad.Factura;
+import com.ceiba.factura.puerto.repositorio.RepositorioFactura;
+import com.ceiba.infraestructura.jdbc.CustomNamedParameterJdbcTemplate;
+import com.ceiba.infraestructura.jdbc.sqlstatement.SqlStatement;
+import io.swagger.models.auth.In;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class RepositorioFacturaMysql implements RepositorioFactura {
+
+    private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
+
+    @SqlStatement(namespace=&quot;factura&quot;, value=&quot;crear&quot;)
+    private static String sqlCrear;
+
+    @SqlStatement(namespace=&quot;factura&quot;, value=&quot;actualizar&quot;)
+    private static String sqlActualizar;
+
+    @SqlStatement(namespace=&quot;factura&quot;, value=&quot;eliminar&quot;)
+    private static String sqlEliminar;
+
+    @SqlStatement(namespace=&quot;factura&quot;, value=&quot;existe&quot;)
+    private static String sqlExiste;
+
+    @SqlStatement(namespace=&quot;factura&quot;, value=&quot;existePorId&quot;)
+    private static String sqlExistePorId;
+
+    @SqlStatement(namespace = &quot;factura&quot;, value = &quot;existePorDoc&quot;)
+    private static String sqlExistePorDocumento;
+
+    @SqlStatement(namespace = &quot;factura&quot;, value = &quot;existePorIdJugador&quot;)
+    private static String sqlExistePorIdJugador;
+
+<span class="nc" id="L37">    public RepositorioFacturaMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {</span>
+<span class="nc" id="L38">        this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;</span>
+<span class="nc" id="L39">    }</span>
+
+    @Override
+    public Long crear(Factura factura) {
+<span class="nc" id="L43">        return this.customNamedParameterJdbcTemplate.crear(factura, sqlCrear);</span>
+    }
+
+    @Override
+    public void actualizar(Factura factura) {
+
+<span class="nc" id="L49">    }</span>
+
+    @Override
+    public void eliminar(Integer id) {
+
+<span class="nc" id="L54">    }</span>
+
+    @Override
+    public boolean existePorId(Integer id) {
+<span class="nc" id="L58">        return false;</span>
+    }
+
+    @Override
+    public boolean existePorDocumento(Long documento) {
+<span class="nc" id="L63">        MapSqlParameterSource paramSource = new MapSqlParameterSource();</span>
+<span class="nc" id="L64">        paramSource.addValue(&quot;documento&quot;, documento);</span>
+<span class="nc" id="L65">        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExistePorDocumento,paramSource, Boolean.class);</span>
+    }
+
+    @Override
+    public boolean existePorIdJugador(Integer jugador) {
+<span class="nc" id="L70">        MapSqlParameterSource paramSource = new MapSqlParameterSource();</span>
+<span class="nc" id="L71">        paramSource.addValue(&quot;jugador&quot;, jugador);</span>
+<span class="nc" id="L72">        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExistePorIdJugador,paramSource, Boolean.class);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

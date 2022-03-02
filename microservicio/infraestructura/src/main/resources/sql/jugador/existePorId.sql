@@ -1,0 +1,1 @@
+select count(1) from jugador where id = :id

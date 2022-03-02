@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "documento": 11299292,
+    "nombre": "wstsgs",
+    "apellido": "dsdds",
+    "fechaNacimiento": "2012-03-09 00:00:00",
+    "peso": 1.32,
+    "altura": 1.84,
+    "posicion": "delantero",
+    "pieHabil": "derecho"
+  }
+]
