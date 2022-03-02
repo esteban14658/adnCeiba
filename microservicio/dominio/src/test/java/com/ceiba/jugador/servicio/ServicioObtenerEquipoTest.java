@@ -17,7 +17,7 @@ public class ServicioObtenerEquipoTest {
         // arrange
         RepositorioJugador repositorioJugador = Mockito.mock(RepositorioJugador.class);
         DaoJugador daoJugador = Mockito.mock(DaoJugador.class);
-        ServicioObtenerEquipo servicioObtenerEquipo = new ServicioObtenerEquipo(daoJugador, repositorioJugador);
+        ServicioObtenerEquipo servicioObtenerEquipo = new ServicioObtenerEquipo(daoJugador);
         // act - assert
         BasePrueba.assertThrows(() -> servicioObtenerEquipo.ejecutar(4L,4L,4L), ExcepcionLongitudValor.class,"No puede sobrepasar la cantidad permitida de jugadores");
     }

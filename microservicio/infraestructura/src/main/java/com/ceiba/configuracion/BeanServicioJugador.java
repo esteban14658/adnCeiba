@@ -31,7 +31,7 @@ public class BeanServicioJugador {
 
     @Bean
     public ServicioObtenerEquipo servicioObtenerEquipo(DaoJugador daoJugador, RepositorioJugador repositorioJugador){
-        return new ServicioObtenerEquipo(daoJugador, repositorioJugador);
+        return new ServicioObtenerEquipo(daoJugador);
     }
 
 }

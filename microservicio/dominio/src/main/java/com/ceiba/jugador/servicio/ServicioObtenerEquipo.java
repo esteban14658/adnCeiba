@@ -1,10 +1,8 @@
 package com.ceiba.jugador.servicio;
 
 import com.ceiba.dominio.excepcion.ExcepcionLongitudValor;
-import com.ceiba.dominio.excepcion.ExcepcionValorInvalido;
 import com.ceiba.jugador.modelo.dto.DtoJugador;
 import com.ceiba.jugador.puerto.dao.DaoJugador;
-import com.ceiba.jugador.puerto.repositorio.RepositorioJugador;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,11 +12,9 @@ public class ServicioObtenerEquipo {
 
     public static final long CANTIDAD_MAXIMA_JUGADORES_PERMITIDA = 11L;
     private final DaoJugador daoJugador;
-    private final RepositorioJugador repositorioJugador;
 
-    public ServicioObtenerEquipo(DaoJugador daoJugador, RepositorioJugador repositorioJugador) {
+    public ServicioObtenerEquipo(DaoJugador daoJugador) {
         this.daoJugador = daoJugador;
-        this.repositorioJugador = repositorioJugador;
     }
 
     public List<DtoJugador> ejecutar(Long defensas, Long mediocampistas, Long delanteros) {
