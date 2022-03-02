@@ -1,4 +1,3 @@
-@Library('ceiba-jenkins-library')
 pipeline {
   //Donde se va a ejecutar el Pipeline
   agent {
@@ -61,11 +60,12 @@ pipeline {
     }
 
     stage('Static Code Analysis') {
-        steps{
-            	sonarqubeMasQualityGatesP(sonarKey:'com.ceiba:cine-adn.esteba.beltran',
-            sonarName:'Ceiba-ADN(esteban.beltran)',
-            sonarPathProperties:'./sonar-project.properties')
-        }
+          steps{
+            echo '------------>Análisis de código estático<------------'
+            withSonarQubeEnv('Sonar') {
+    			sh "${tool name: 'SonarScanner', type:'hudson.plugins.sonar.SonarRunnerInstallation'}/bin/sonar-scanner"
+            }
+    	  }
     }
 
 

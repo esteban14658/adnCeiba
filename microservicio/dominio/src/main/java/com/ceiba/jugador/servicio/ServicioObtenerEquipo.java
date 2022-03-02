@@ -21,72 +21,36 @@ public class ServicioObtenerEquipo {
     }
 
     public List<DtoJugador> ejecutar(Long defensas, Long mediocampistas, Long delanteros) {
+        String[] posiciones = new String[] {"Portero","Defensa", "Mediocampista", "Delantero"};
+        Long[] keys = new Long[] {1L, defensas, mediocampistas, delanteros};
         Long sumatoria = 1L + defensas + mediocampistas + delanteros;
         if (sumatoria > 11L){
             throw new ExcepcionLongitudValor("No puede sobrepasar la cantidad permitida de jugadores");
         }
         List<DtoJugador> equipoA = new ArrayList<>();
-        int contador = 0;
-        for (DtoJugador item: obtenerJugadores("Portero",1L)) {
-            if (contador < 1) {
-                equipoA.add(item);
+        for (int i = 0; i < 4 ; i++){
+            System.out.println(i);
+            for (DtoJugador dtoJugador: obtenerJugadores(posiciones[i], keys[i])) {
+                equipoA.add(dtoJugador);
             }
-            contador++;
-        };
-        contador = 0;
-        for (DtoJugador item: obtenerJugadores("Defensa", defensas)) {
-            if (contador < defensas) {
-                equipoA.add(item);
-            }
-            contador++;
-        };
-        contador = 0;
-        for (DtoJugador item: obtenerJugadores("Mediocampista", mediocampistas)) {
-            if (contador < mediocampistas) {
-                equipoA.add(item);
-            }
-            contador++;
-        };
-        contador = 0;
-        for (DtoJugador item: obtenerJugadores("Delantero", delanteros)) {
-            if (contador < delanteros) {
-                equipoA.add(item);
-            }
-            contador++;
-        };
+        }
+
         return equipoA;
     }
 
     private List<DtoJugador> obtenerJugadores(String posicion, Long cantidad){
         List<DtoJugador> jugadores = this.daoJugador.listarPorPosicion(posicion);
         List<DtoJugador> resultado = new ArrayList<>();
-        for (DtoJugador item: jugadores) {
-            if (posicion.equals("Portero") && resultado.size() < cantidad){
-                int random = numeroAleatorioEnRango(0, jugadores.size());
-                item = jugadores.get(random);
-                resultado.add(item);
-                System.out.println("Random = " + random);
-            }
-            else if (posicion.equals("Defensa") && resultado.size() < cantidad){
-                int random = numeroAleatorioEnRango(0, jugadores.size());
-                item = jugadores.get(random);
-                resultado.add(item);
-            }
-            else if (posicion.equals("Mediocampista") && resultado.size() < cantidad){
-                int random = numeroAleatorioEnRango(0, jugadores.size());
-                item = jugadores.get(random);
-                resultado.add(item);
-            }
-            else if (posicion.equals("Delantero") && resultado.size() < cantidad){
-                int random = numeroAleatorioEnRango(0, jugadores.size());
-                item = jugadores.get(random);
-                resultado.add(item);
-            }
-            else {
-                //throw new ExcepcionValorInvalido("No se reconoce la posicion ingresada");
-            }
-        };
+        for (int i = 0; i < cantidad; i++){
+            int random = numeroAleatorioEnRango(0, cantidadDeLista(posicion));
+            DtoJugador dtoJugador = jugadores.get(random);
+            resultado.add(dtoJugador);
+        }
         return resultado;
+    }
+
+    private int cantidadDeLista(String posicion){
+        return this.daoJugador.listarPorPosicion(posicion).size();
     }
 
     private static int numeroAleatorioEnRango(int minimo, int maximo) {
