@@ -1,0 +1,8 @@
+com/ceiba/ApplicationMock.java
+ com.ceiba.ApplicationMock
+com/ceiba/jugador/testdatabuilder/ComandoJugadorTestDataBuilder.java
+ com.ceiba.jugador.testdatabuilder.ComandoJugadorTestDataBuilder
+com/ceiba/jugador/controlador/ComandoControladorJugadorTest.java
+ com.ceiba.jugador.controlador.ComandoControladorJugadorTest
+com/ceiba/jugador/controlador/ConsultaControladorJugadorTest.java
+ com.ceiba.jugador.controlador.ConsultaControladorUsuarioTest

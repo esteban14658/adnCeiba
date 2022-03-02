@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MapeoFactura.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">infraestructura</a> &gt; <a href="index.source.html" class="el_package">com.ceiba.factura.adaptador.dao</a> &gt; <span class="el_source">MapeoFactura.java</span></div><h1>MapeoFactura.java</h1><pre class="source lang-java linenums">package com.ceiba.factura.adaptador.dao;
+
+import com.ceiba.factura.modelo.dto.DtoFactura;
+import com.ceiba.infraestructura.jdbc.MapperResult;
+import com.ceiba.jugador.adaptador.dao.MapeoJugador;
+import com.ceiba.jugador.modelo.dto.DtoJugador;
+import org.springframework.jdbc.core.RowMapper;
+
+import java.nio.charset.StandardCharsets;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.time.LocalDate;
+import java.util.HashMap;
+
+<span class="nc" id="L15">public class MapeoFactura implements RowMapper&lt;DtoFactura&gt;, MapperResult {</span>
+
+    @Override
+    public DtoFactura mapRow(ResultSet resultSet, int rowNum) throws SQLException {
+
+<span class="nc" id="L20">        MapeoJugador mapeoJugador = new MapeoJugador();</span>
+
+<span class="nc" id="L22">        Long id = resultSet.getLong(&quot;id&quot;);</span>
+<span class="nc" id="L23">        Integer valor = resultSet.getInt(&quot;valor&quot;);</span>
+<span class="nc" id="L24">        LocalDate fechaIngreso = extraerLocalDate(resultSet, &quot;fecha_ingreso&quot;);</span>
+<span class="nc" id="L25">        LocalDate fechaCaducidad = extraerLocalDate(resultSet, &quot;fecha_caducidad&quot;);</span>
+<span class="nc" id="L26">        DtoJugador jugador = mapeoJugador.mapRow(resultSet, rowNum);</span>
+<span class="nc" id="L27">        Integer estado = resultSet.getInt(&quot;estado&quot;);</span>
+<span class="nc" id="L28">        String descripcion = resultSet.getString(&quot;descripcion&quot;);</span>
+
+<span class="nc" id="L30">        return new DtoFactura(id, valor, fechaIngreso, fechaCaducidad, jugador, estado, descripcion);</span>
+
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>
