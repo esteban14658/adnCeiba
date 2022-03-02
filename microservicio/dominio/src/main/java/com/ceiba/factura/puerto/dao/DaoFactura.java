@@ -1,7 +1,6 @@
 package com.ceiba.factura.puerto.dao;
 
 import com.ceiba.factura.modelo.dto.DtoFactura;
-import com.ceiba.jugador.modelo.dto.DtoJugador;
 
 import java.util.List;
 

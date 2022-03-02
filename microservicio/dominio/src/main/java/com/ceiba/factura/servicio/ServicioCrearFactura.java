@@ -16,6 +16,8 @@ public class ServicioCrearFactura {
 
     public Long ejecutar(Factura factura) {
         validarExistenciaPrevia(factura);
+        factura.promocionSeisMeses();
+
         return this.repositorioFactura.crear(factura);
     }
 

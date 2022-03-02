@@ -2,8 +2,6 @@ package com.ceiba.jugador.controlador;
 
 import com.ceiba.jugador.consulta.*;
 import com.ceiba.jugador.modelo.dto.DtoJugador;
-import com.ceiba.usuario.consulta.ManejadorListarUsuarios;
-import com.ceiba.usuario.modelo.dto.DtoUsuario;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;

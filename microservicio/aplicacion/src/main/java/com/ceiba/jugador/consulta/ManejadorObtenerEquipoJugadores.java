@@ -11,11 +11,9 @@ import java.util.List;
 @Component
 public class ManejadorObtenerEquipoJugadores {
 
-    private final DaoJugador daoJugador;
     private final ServicioObtenerEquipo servicioObtenerEquipo;
 
-    public ManejadorObtenerEquipoJugadores(DaoJugador daoJugador, ServicioObtenerEquipo servicioObtenerEquipo) {
-        this.daoJugador = daoJugador;
+    public ManejadorObtenerEquipoJugadores(ServicioObtenerEquipo servicioObtenerEquipo) {
         this.servicioObtenerEquipo = servicioObtenerEquipo;
     }
 

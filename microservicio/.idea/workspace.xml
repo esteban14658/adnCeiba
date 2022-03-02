@@ -171,6 +171,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ServicioObtenerPorIdJugadorTest.deberiaObtenerUnJugadorPorSuId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jugadores.dominio.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ceiba.jugador.servicio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ceiba.jugador.servicio" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.servicio.ServicioObtenerPorIdJugadorTest" />
+      <option name="METHOD_NAME" value="deberiaObtenerUnJugadorPorSuId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="microservicio" />
       <method v="2">
@@ -193,11 +209,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ServicioObtenerPorIdJugadorTest.deberiaObtenerUnJugadorPorSuId" />
         <item itemvalue="JUnit.ConsultaControladorJugadorTest.deberiaListarJugadores" />
         <item itemvalue="JUnit.ConsultaControladorJugadorTest.deberiaTraerUnJugadorPorElId" />
         <item itemvalue="JUnit.ConsultaControladorJugadorTest.deberiaListarJugadores" />
         <item itemvalue="JUnit.ComandoControladorJugadorTest.deberiaCrearUnJugador" />
-        <item itemvalue="JUnit.ConsultaControladorUsuarioTest.deberiaListarUsuarios" />
       </list>
     </recent_temporary>
   </component>
@@ -223,7 +239,8 @@
       <workItem from="1646135262717" duration="616000" />
       <workItem from="1646139170439" duration="13618000" />
       <workItem from="1646158076119" duration="14516000" />
-      <workItem from="1646221613407" duration="12083000" />
+      <workItem from="1646221613407" duration="17094000" />
+      <workItem from="1646243860162" duration="4778000" />
     </task>
     <servers />
   </component>
@@ -236,7 +253,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/aplicacion/src/main/java/com/ceiba/factura/consulta/ManejadorListarFacturas.java</url>
           <line>17</line>
-          <properties class="com.ceiba.factura.consulta.ManejadorListarFacturas">
+          <properties class="com.ceiba.factura.consulta.ManejadorListarFacturas" method="ejecutar">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -254,7 +271,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/dominio/src/main/java/com/ceiba/jugador/servicio/ServicioObtenerEquipo.java</url>
-          <line>60</line>
+          <line>59</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>

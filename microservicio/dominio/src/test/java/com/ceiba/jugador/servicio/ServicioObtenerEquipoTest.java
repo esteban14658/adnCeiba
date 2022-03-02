@@ -13,7 +13,7 @@ public class ServicioObtenerEquipoTest {
     @Test
     @DisplayName("Deberia lanzar una exepcion cuando la cantidad de jugadores en el equipo supere el " +
             "maximo permitido")
-    void deberiaLanzarUnaExepcionCuandoNoSeValideLaExistenciaDelJugador() {
+    void deberiaLanzarUnaExepcionCuandoHayaMayorCantidadDeJugadoresPermitidos() {
         // arrange
         RepositorioJugador repositorioJugador = Mockito.mock(RepositorioJugador.class);
         DaoJugador daoJugador = Mockito.mock(DaoJugador.class);
@@ -21,5 +21,7 @@ public class ServicioObtenerEquipoTest {
         // act - assert
         BasePrueba.assertThrows(() -> servicioObtenerEquipo.ejecutar(4L,4L,4L), ExcepcionLongitudValor.class,"No puede sobrepasar la cantidad permitida de jugadores");
     }
+
+
 
 }

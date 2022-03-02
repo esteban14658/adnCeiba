@@ -1,7 +1,6 @@
 package com.ceiba.factura.puerto.repositorio;
 
 import com.ceiba.factura.modelo.entidad.Factura;
-import com.ceiba.jugador.modelo.entidad.Jugador;
 
 public interface RepositorioFactura {
 

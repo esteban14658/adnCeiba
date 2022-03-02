@@ -2,8 +2,6 @@ package com.ceiba.jugador.comando.fabrica;
 
 import com.ceiba.jugador.comando.ComandoJugador;
 import com.ceiba.jugador.modelo.entidad.Jugador;
-import com.ceiba.usuario.comando.ComandoUsuario;
-import com.ceiba.usuario.modelo.entidad.Usuario;
 import org.springframework.stereotype.Component;
 
 @Component

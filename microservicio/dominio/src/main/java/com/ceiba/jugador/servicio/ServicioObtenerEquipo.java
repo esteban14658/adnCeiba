@@ -12,6 +12,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class ServicioObtenerEquipo {
 
+    public static final long CANTIDAD_MAXIMA_JUGADORES_PERMITIDA = 11L;
     private final DaoJugador daoJugador;
     private final RepositorioJugador repositorioJugador;
 
@@ -24,12 +25,11 @@ public class ServicioObtenerEquipo {
         String[] posiciones = new String[] {"Portero","Defensa", "Mediocampista", "Delantero"};
         Long[] keys = new Long[] {1L, defensas, mediocampistas, delanteros};
         Long sumatoria = 1L + defensas + mediocampistas + delanteros;
-        if (sumatoria > 11L){
+        if (sumatoria > CANTIDAD_MAXIMA_JUGADORES_PERMITIDA){
             throw new ExcepcionLongitudValor("No puede sobrepasar la cantidad permitida de jugadores");
         }
         List<DtoJugador> equipoA = new ArrayList<>();
         for (int i = 0; i < 4 ; i++){
-            System.out.println(i);
             for (DtoJugador dtoJugador: obtenerJugadores(posiciones[i], keys[i])) {
                 equipoA.add(dtoJugador);
             }
