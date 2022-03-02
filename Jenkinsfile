@@ -1,3 +1,4 @@
+@Library('ceiba-jenkins-library')
 pipeline {
   //Donde se va a ejecutar el Pipeline
   agent {
@@ -38,8 +39,8 @@ pipeline {
 			gitTool: 'Default',
 			submoduleCfg: [],
 			userRemoteConfigs: [[
-				credentialsId: 'GitHub_nicolasPACEIBA',
-                url:'https://github.com/nicolaspa1/cine-ceiba'
+				credentialsId: 'GitHub_esteban.beltran',
+                url:'https://github.com/esteban14658/adnCeiba'
 			]]
 		])
 
@@ -61,8 +62,8 @@ pipeline {
 
     stage('Static Code Analysis') {
         steps{
-            	sonarqubeMasQualityGatesP(sonarKey:'co.com.ceiba.adn:[nombre.proyecto-nombre.apellido]',
-            sonarName:'CeibaADN-NombreDelProyecto(nombre.apellido)',
+            	sonarqubeMasQualityGatesP(sonarKey:'com.ceiba:cine-adn.esteba.beltran',
+            sonarName:'Ceiba-ADN(esteban.beltran)',
             sonarPathProperties:'./sonar-project.properties')
         }
     }
