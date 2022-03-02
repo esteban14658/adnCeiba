@@ -90,7 +90,7 @@
       <recent name="com.ceiba.jugador.adaptador.dao" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ConsultaControladorUsuarioTest.deberiaTraerUnJugadorPorElId">
+  <component name="RunManager" selected="Spring Boot.Application">
     <configuration name="ComandoControladorJugadorTest.deberiaCrearUnJugador" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.infraestructura.test" />
       <extension name="coverage">
@@ -223,7 +223,7 @@
       <workItem from="1646135262717" duration="616000" />
       <workItem from="1646139170439" duration="13618000" />
       <workItem from="1646158076119" duration="14516000" />
-      <workItem from="1646221613407" duration="3078000" />
+      <workItem from="1646221613407" duration="4047000" />
     </task>
     <servers />
   </component>

@@ -28,6 +28,8 @@ com/ceiba/usuario/comando/fabrica/FabricaUsuario.java
  com.ceiba.usuario.comando.fabrica.FabricaUsuario
 com/ceiba/jugador/consulta/ManejadorObtenerPorIdJugador.java
  com.ceiba.jugador.consulta.ManejadorObtenerPorIdJugador
+com/ceiba/jugador/consulta/ManejadorObtenerEquipoJugadores.java
+ com.ceiba.jugador.consulta.ManejadorObtenerEquipoJugadores
 com/ceiba/usuario/comando/ComandoUsuario.java
  com.ceiba.usuario.comando.ComandoUsuario
 com/ceiba/jugador/consulta/ManejadorListarJugadoresPorPosicion.java
@@ -36,5 +38,3 @@ com/ceiba/jugador/comando/ComandoJugador.java
  com.ceiba.jugador.comando.ComandoJugador
 com/ceiba/jugador/comando/manejador/ManejadorActualizarJugador.java
  com.ceiba.jugador.comando.manejador.ManejadorActualizarJugador
-com/ceiba/jugador/consulta/ManejadorObtenerEquipoJugadores.java
- com.ceiba.jugador.consulta.ManejadorObtenerEquipoJugadores
