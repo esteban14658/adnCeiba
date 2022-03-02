@@ -22,7 +22,7 @@ public class FabricaFactura {
     }
 
     private Jugador mapToEntity(final DtoJugador dtoJugador){
-        final Jugador jugador = new Jugador(
+        return new  Jugador (
                 dtoJugador.getId(),
                 dtoJugador.getDocumento(),
                 dtoJugador.getNombre(),
@@ -33,7 +33,6 @@ public class FabricaFactura {
                 dtoJugador.getPosicion(),
                 dtoJugador.getPieHabil()
         );
-        return jugador;
     }
 
 }
