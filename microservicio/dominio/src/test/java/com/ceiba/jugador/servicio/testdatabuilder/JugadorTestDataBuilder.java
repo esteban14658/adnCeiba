@@ -102,6 +102,11 @@ public class JugadorTestDataBuilder {
         return listaJugadores;
     }
 
+    public DtoJugador dtoJugador(){
+        return new DtoJugador(id, 80808080L, nombre, apellido, fechaNacimiento,
+                peso, altura, posicion, pieHabil);
+    }
+
     public Jugador build() { return new Jugador(id, documento, nombre, apellido,
         fechaNacimiento, peso, altura, posicion, pieHabil); }
 

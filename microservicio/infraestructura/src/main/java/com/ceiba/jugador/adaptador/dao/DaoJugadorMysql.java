@@ -23,7 +23,7 @@ public class DaoJugadorMysql implements DaoJugador {
     @SqlStatement(namespace= "jugador", value="listarPorPieHabil")
     private static String sqlListarPorPieHabil;
 
-    @SqlStatement(namespace= "jugador", value="obtenerPorId")
+    @SqlStatement(namespace= "jugador", value="obtenerPorDocumento")
     private static String sqlObtener;
 
     public DaoJugadorMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {
@@ -50,9 +50,9 @@ public class DaoJugadorMysql implements DaoJugador {
     }
 
     @Override
-    public DtoJugador obtenerPorId(Long id) {
+    public DtoJugador obtenerPorDocumento(Long documento) {
         MapSqlParameterSource paramSource = new MapSqlParameterSource();
-        paramSource.addValue("id", id);
+        paramSource.addValue("documento", documento);
         return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlObtener, paramSource, new MapeoJugador());
     }
 }

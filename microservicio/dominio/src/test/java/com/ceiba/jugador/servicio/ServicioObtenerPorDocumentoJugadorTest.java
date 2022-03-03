@@ -2,6 +2,7 @@ package com.ceiba.jugador.servicio;
 
 import com.ceiba.BasePrueba;
 import com.ceiba.dominio.excepcion.ExcepcionSinDatos;
+import com.ceiba.jugador.modelo.dto.DtoJugador;
 import com.ceiba.jugador.modelo.entidad.Jugador;
 import com.ceiba.jugador.puerto.dao.DaoJugador;
 import com.ceiba.jugador.puerto.repositorio.RepositorioJugador;
@@ -9,11 +10,12 @@ import com.ceiba.jugador.servicio.testdatabuilder.JugadorTestDataBuilder;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ServicioObtenerPorIdJugadorTest {
+public class ServicioObtenerPorDocumentoJugadorTest {
 
-    public static final long DOCUMENTO = 10101010L;
+    public static final long DOCUMENTO = 80808080L;
 
     @Test
     @DisplayName("Deberia lanzar una exepcion cuando no se valide la existencia del jugador")
@@ -23,26 +25,26 @@ public class ServicioObtenerPorIdJugadorTest {
         RepositorioJugador repositorioJugador = Mockito.mock(RepositorioJugador.class);
         DaoJugador daoJugador = Mockito.mock(DaoJugador.class);
         Mockito.when(repositorioJugador.existePorDocumento(Mockito.anyLong())).thenReturn(true);
-        ServicioObtenerPorIdJugador servicioObtenerPorIdJugador = new ServicioObtenerPorIdJugador(daoJugador ,repositorioJugador);
+        ServicioObtenerPorDocumentoJugador servicioObtenerPorDocumentoJugador = new ServicioObtenerPorDocumentoJugador(daoJugador ,repositorioJugador);
         // act - assert
-        BasePrueba.assertThrows(() -> servicioObtenerPorIdJugador.ejecutar(jugador.getId()), ExcepcionSinDatos.class,"El usuario no existe en el sistema");
+        BasePrueba.assertThrows(() -> servicioObtenerPorDocumentoJugador.ejecutar(jugador.getId()), ExcepcionSinDatos.class,"El usuario no existe en el sistema");
     }
 
-    /*@Test
+    @Test
     @DisplayName("Deberia obtener un jugador a traves de su id")
     void deberiaObtenerUnJugadorPorSuId(){
         // arrange
-        Jugador jugador = new JugadorTestDataBuilder().conDocumento(DOCUMENTO).build();
+        DtoJugador dtoJugador = new JugadorTestDataBuilder().dtoJugador();
 
         RepositorioJugador repositorioJugador = Mockito.mock(RepositorioJugador.class);
         DaoJugador daoJugador = Mockito.mock(DaoJugador.class);
 
-        Mockito.when(repositorioJugador.existePorDocumento(Mockito.anyLong())).thenReturn(true);
-        Mockito.when(repositorioJugador.crear(jugador)).thenReturn(jugador.getDocumento());
+        Mockito.when(repositorioJugador.existePorDocumento(DOCUMENTO)).thenReturn(true);
+        Mockito.when(daoJugador.obtenerPorDocumento(DOCUMENTO)).thenReturn(dtoJugador);
+        ServicioObtenerPorDocumentoJugador servicioObtenerPorDocumentoJugador = new ServicioObtenerPorDocumentoJugador(daoJugador, repositorioJugador);
+        DtoJugador dtoJugadorReturned = servicioObtenerPorDocumentoJugador.ejecutar(DOCUMENTO);
 
-        ServicioObtenerPorIdJugador servicioObtenerPorIdJugador = new ServicioObtenerPorIdJugador(daoJugador, repositorioJugador);
-
-        assertEquals(2L, servicioObtenerPorIdJugador.ejecutar(jugador.getId()).getId());
-    }*/
+        assertEquals(dtoJugadorReturned, dtoJugador);
+    }
 
 }

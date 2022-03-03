@@ -25,8 +25,8 @@ public class BeanServicioJugador {
     }
 
     @Bean
-    public ServicioObtenerPorIdJugador servicioObtenerPorIdJugador(DaoJugador daoJugador, RepositorioJugador repositorioJugador) {
-        return new ServicioObtenerPorIdJugador(daoJugador, repositorioJugador);
+    public ServicioObtenerPorDocumentoJugador servicioObtenerPorIdJugador(DaoJugador daoJugador, RepositorioJugador repositorioJugador) {
+        return new ServicioObtenerPorDocumentoJugador(daoJugador, repositorioJugador);
     }
 
     @Bean

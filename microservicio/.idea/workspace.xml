@@ -90,7 +90,7 @@
       <recent name="com.ceiba.jugador.adaptador.dao" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Application">
+  <component name="RunManager" selected="JUnit.ServicioObtenerPorDocumentoJugadorTest.deberiaObtenerUnJugadorPorSuId">
     <configuration name="All in jugadores (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores" />
       <option name="PACKAGE_NAME" value="" />
@@ -131,22 +131,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServicioActualizarFacturaTest.deberiaValidarLaExistenciaPreviaDelJugador" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jugadores.dominio.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ceiba.factura.servicio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.factura.servicio" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.servicio.ServicioActualizarFacturaTest" />
-      <option name="METHOD_NAME" value="deberiaValidarLaExistenciaPreviaDelJugador" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ServicioCrearFacturaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.dominio.test" />
       <extension name="coverage">
@@ -178,6 +162,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ServicioObtenerPorDocumentoJugadorTest.deberiaObtenerUnJugadorPorSuId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jugadores.dominio.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ceiba.jugador.servicio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ceiba.jugador.servicio" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.servicio.ServicioObtenerPorDocumentoJugadorTest" />
+      <option name="METHOD_NAME" value="deberiaObtenerUnJugadorPorSuId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="microservicio" />
       <method v="2">
@@ -200,11 +200,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ServicioObtenerPorDocumentoJugadorTest.deberiaObtenerUnJugadorPorSuId" />
         <item itemvalue="JUnit.ServicioActualizarFacturaTest.deberiaActualizarCorrectamenteLaFactura" />
         <item itemvalue="JUnit.All in jugadores (1)" />
         <item itemvalue="JUnit.ServicioCrearFacturaTest" />
         <item itemvalue="JUnit.ServicioEliminarFacturaTest.deberiaEliminarElJugadorLlamandoAlRepositorio" />
-        <item itemvalue="JUnit.ServicioActualizarFacturaTest.deberiaValidarLaExistenciaPreviaDelJugador" />
       </list>
     </recent_temporary>
   </component>
@@ -232,7 +232,7 @@
       <workItem from="1646158076119" duration="14516000" />
       <workItem from="1646221613407" duration="17094000" />
       <workItem from="1646243860162" duration="7810000" />
-      <workItem from="1646308503026" duration="25721000" />
+      <workItem from="1646308503026" duration="28589000" />
     </task>
     <servers />
   </component>
@@ -260,6 +260,11 @@
           <url>file://$PROJECT_DIR$/dominio/src/test/java/com/ceiba/jugador/servicio/ServicioObtenerEquipoTest.java</url>
           <line>34</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dominio/src/test/java/com/ceiba/jugador/servicio/ServicioObtenerPorDocumentoJugadorTest.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

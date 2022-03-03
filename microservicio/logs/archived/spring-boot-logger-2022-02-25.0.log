@@ -25,7 +25,7 @@
 2022-02-25 07:14:48,816 WARN org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Schema `dbtest` has version 1.0, but no migration could be resolved in the configured locations !
 2022-02-25 07:14:48,832 WARN org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Schema `dbtest` contains a failed future migration to version 1.0 !
 2022-02-25 07:14:48,832 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Schema `dbtest` is up to date. No migration necessary.
-2022-02-25 07:14:49,004 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'consultaControladorJugador' defined in file [C:\Users\esteban.beltran\Documents\Proyectos JAVA\java-arquitectura-hexagonal\microservicio\infraestructura\build\classes\java\main\com\ceiba\jugador\controlador\ConsultaControladorJugador.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'manejadorObtenerPorIdJugador' defined in file [C:\Users\esteban.beltran\Documents\Proyectos JAVA\java-arquitectura-hexagonal\microservicio\aplicacion\build\classes\java\main\com\ceiba\jugador\consulta\ManejadorObtenerPorIdJugador.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ceiba.jugador.servicio.ServicioObtenerPorIdJugador' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2022-02-25 07:14:49,004 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'consultaControladorJugador' defined in file [C:\Users\esteban.beltran\Documents\Proyectos JAVA\java-arquitectura-hexagonal\microservicio\infraestructura\build\classes\java\main\com\ceiba\jugador\controlador\ConsultaControladorJugador.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'manejadorObtenerPorIdJugador' defined in file [C:\Users\esteban.beltran\Documents\Proyectos JAVA\java-arquitectura-hexagonal\microservicio\aplicacion\build\classes\java\main\com\ceiba\jugador\consulta\ManejadorObtenerPorIdJugador.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ceiba.jugador.servicio.ServicioObtenerPorDocumentoJugador' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
 2022-02-25 07:14:49,004 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown initiated...
 2022-02-25 07:14:49,019 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown completed.
 2022-02-25 07:16:51,952 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application using Java 1.8.0_322 on ESTEBAN-BELTRAN with PID 13900 (C:\Users\esteban.beltran\Documents\Proyectos JAVA\java-arquitectura-hexagonal\microservicio\build\classes\java\main started by esteban.beltran in C:\Users\esteban.beltran\Documents\Proyectos JAVA\java-arquitectura-hexagonal\microservicio)
@@ -134,8 +134,8 @@ org.springframework.dao.InvalidDataAccessApiUsageException: No value supplied fo
 	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.query(NamedParameterJdbcTemplate.java:209)
 	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.query(NamedParameterJdbcTemplate.java:221)
 	at com.ceiba.jugador.adaptador.dao.DaoJugadorMysql.obtenerPorId(DaoJugadorMysql.java:36)
-	at com.ceiba.jugador.servicio.ServicioObtenerPorIdJugador.ejecutar(ServicioObtenerPorIdJugador.java:24)
-	at com.ceiba.jugador.consulta.ManejadorObtenerPorIdJugador.ejecutar(ManejadorObtenerPorIdJugador.java:21)
+	at com.ceiba.jugador.servicio.ServicioObtenerPorDocumentoJugador.ejecutar(ServicioObtenerPorIdJugador.java:24)
+	at com.ceiba.jugador.consulta.ManejadorObtenerPorDocumentoJugador.ejecutar(ManejadorObtenerPorIdJugador.java:21)
 	at com.ceiba.jugador.controlador.ConsultaControladorJugador.obtenerPorId(ConsultaControladorJugador.java:40)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -200,8 +200,8 @@ org.springframework.dao.InvalidDataAccessApiUsageException: No value supplied fo
 	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.query(NamedParameterJdbcTemplate.java:209)
 	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.query(NamedParameterJdbcTemplate.java:221)
 	at com.ceiba.jugador.adaptador.dao.DaoJugadorMysql.obtenerPorId(DaoJugadorMysql.java:36)
-	at com.ceiba.jugador.servicio.ServicioObtenerPorIdJugador.ejecutar(ServicioObtenerPorIdJugador.java:24)
-	at com.ceiba.jugador.consulta.ManejadorObtenerPorIdJugador.ejecutar(ManejadorObtenerPorIdJugador.java:21)
+	at com.ceiba.jugador.servicio.ServicioObtenerPorDocumentoJugador.ejecutar(ServicioObtenerPorIdJugador.java:24)
+	at com.ceiba.jugador.consulta.ManejadorObtenerPorDocumentoJugador.ejecutar(ManejadorObtenerPorIdJugador.java:21)
 	at com.ceiba.jugador.controlador.ConsultaControladorJugador.obtenerPorId(ConsultaControladorJugador.java:40)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)

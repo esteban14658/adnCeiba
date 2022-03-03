@@ -30,5 +30,5 @@ public interface DaoJugador {
      * Permite obtener un solo jugador
      * @return un jugador
      */
-    DtoJugador obtenerPorId(Long id);
+    DtoJugador obtenerPorDocumento(Long documento);
 }

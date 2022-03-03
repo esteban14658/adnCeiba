@@ -17,18 +17,18 @@ import java.util.List;
 public class ConsultaControladorJugador {
 
     private final ManejadorListarJugadores manejadorListarJugadores;
-    private final ManejadorObtenerPorIdJugador manejadorObtenerPorIdJugador;
+    private final ManejadorObtenerPorDocumentoJugador manejadorObtenerPorDocumentoJugador;
     private final ManejadorListarJugadoresPorPosicion manejadorListarJugadoresPorPosicion;
     private final ManejadorListarJugadoresPorPieHabil manejadorListarJugadoresPorPieHabil;
     private final ManejadorObtenerEquipoJugadores manejadorObtenerEquipoJugadores;
 
     public ConsultaControladorJugador(ManejadorListarJugadores manejadorListarJugadores,
-                                      ManejadorObtenerPorIdJugador manejadorObtenerPorIdJugador,
+                                      ManejadorObtenerPorDocumentoJugador manejadorObtenerPorDocumentoJugador,
                                       ManejadorListarJugadoresPorPosicion manejadorListarJugadoresPorPosicion,
                                       ManejadorListarJugadoresPorPieHabil manejadorListarJugadoresPorPieHabil,
                                       ManejadorObtenerEquipoJugadores manejadorObtenerEquipoJugadores) {
         this.manejadorListarJugadores = manejadorListarJugadores;
-        this.manejadorObtenerPorIdJugador = manejadorObtenerPorIdJugador;
+        this.manejadorObtenerPorDocumentoJugador = manejadorObtenerPorDocumentoJugador;
         this.manejadorListarJugadoresPorPosicion = manejadorListarJugadoresPorPosicion;
         this.manejadorListarJugadoresPorPieHabil = manejadorListarJugadoresPorPieHabil;
         this.manejadorObtenerEquipoJugadores = manejadorObtenerEquipoJugadores;
@@ -59,10 +59,10 @@ public class ConsultaControladorJugador {
         return this.manejadorObtenerEquipoJugadores.ejecutar(defensas, mediocampistas, delanteros);
     }
 
-    @GetMapping(value = "obtenerPorId/{id}")
-    @ApiOperation("obtener jugador por id")
-    public DtoJugador obtenerPorId(@PathVariable Long id) {
-        return this.manejadorObtenerPorIdJugador.ejecutar(id);
+    @GetMapping(value = "obtenerPorId/{documento}")
+    @ApiOperation("obtener jugador por documento")
+    public DtoJugador obtenerPorId(@PathVariable Long documento) {
+        return this.manejadorObtenerPorDocumentoJugador.ejecutar(documento);
     }
 
 }
