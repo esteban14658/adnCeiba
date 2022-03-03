@@ -12,12 +12,6 @@ public interface RepositorioFactura {
     Long crear(Factura factura);
 
     /**
-     * Permite actualizar un factura
-     * @param factura
-     */
-    void actualizar(Factura factura);
-
-    /**
      * Permite eliminar una factura
      * @param id
      */

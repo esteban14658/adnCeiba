@@ -1,5 +1,3 @@
-com/ceiba/factura/servicio/ServicioActualizarFactura.java
- com.ceiba.factura.servicio.ServicioActualizarFactura
 com/ceiba/jugador/modelo/dto/DtoJugador.java
  com.ceiba.jugador.modelo.dto.DtoJugador
 com/ceiba/jugador/servicio/ServicioActualizarJugador.java

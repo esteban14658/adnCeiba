@@ -28,8 +28,8 @@ com/ceiba/infraestructura/jdbc/sqlstatement/StatementException.java
  com.ceiba.infraestructura.jdbc.sqlstatement.StatementException
 com/ceiba/infraestructura/jdbc/sqlstatement/DataAccessAnnotationProcessor.java
  com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor
-com/ceiba/infraestructura/jdbc/CustomNamedParameterJdbcTemplate.java
- com.ceiba.infraestructura.jdbc.CustomNamedParameterJdbcTemplate
+com/ceiba/infraestructura/jdbc/MapperResult.java
+ com.ceiba.infraestructura.jdbc.MapperResult
 com/ceiba/infraestructura/configuracion/ConfiguracionHealth.java
  com.ceiba.infraestructura.configuracion.ConfiguracionHealth
 com/ceiba/infraestructura/jdbc/sqlstatement/SqlStatement.java
@@ -42,5 +42,5 @@ com/ceiba/infraestructura/actuator/ManejadorHealthCheckBloques.java
  com.ceiba.infraestructura.actuator.ManejadorHealthCheckBloques
 com/ceiba/infraestructura/actuator/Salud.java
  com.ceiba.infraestructura.actuator.Salud
-com/ceiba/infraestructura/jdbc/MapperResult.java
- com.ceiba.infraestructura.jdbc.MapperResult
+com/ceiba/infraestructura/jdbc/CustomNamedParameterJdbcTemplate.java
+ com.ceiba.infraestructura.jdbc.CustomNamedParameterJdbcTemplate

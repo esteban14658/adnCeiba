@@ -99,14 +99,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in jugadores" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jugadores" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ConsultaControladorJugadorTest.deberiaListarJugadores" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.infraestructura.test" />
       <extension name="coverage">
@@ -118,6 +110,22 @@
       <option name="PACKAGE_NAME" value="com.ceiba.jugador.controlador" />
       <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.controlador.ConsultaControladorJugadorTest" />
       <option name="METHOD_NAME" value="deberiaListarJugadores" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServicioActualizarFacturaTest.deberiaActualizarCorrectamenteLaFactura" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jugadores.dominio.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ceiba.factura.servicio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ceiba.factura.servicio" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.servicio.ServicioActualizarFacturaTest" />
+      <option name="METHOD_NAME" value="deberiaActualizarCorrectamenteLaFactura" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -192,11 +200,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ServicioActualizarFacturaTest.deberiaActualizarCorrectamenteLaFactura" />
         <item itemvalue="JUnit.All in jugadores (1)" />
         <item itemvalue="JUnit.ServicioCrearFacturaTest" />
         <item itemvalue="JUnit.ServicioEliminarFacturaTest.deberiaEliminarElJugadorLlamandoAlRepositorio" />
         <item itemvalue="JUnit.ServicioActualizarFacturaTest.deberiaValidarLaExistenciaPreviaDelJugador" />
-        <item itemvalue="JUnit.All in jugadores" />
       </list>
     </recent_temporary>
   </component>
@@ -224,7 +232,7 @@
       <workItem from="1646158076119" duration="14516000" />
       <workItem from="1646221613407" duration="17094000" />
       <workItem from="1646243860162" duration="7810000" />
-      <workItem from="1646308503026" duration="21572000" />
+      <workItem from="1646308503026" duration="25721000" />
     </task>
     <servers />
   </component>
