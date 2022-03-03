@@ -35,7 +35,7 @@ class ConsultaControladorJugadorTest {
         mocMvc.perform(get("/jugadores")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$", hasSize(1)))
+                .andExpect(jsonPath("$", hasSize(15)))
                 .andExpect(jsonPath("$[0].nombre", is("Juanito")))
                 .andExpect(jsonPath("$[0].id", is(1)));
 

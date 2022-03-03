@@ -40,7 +40,7 @@ public class ServicioObtenerEquipoTest {
         Mockito.when(daoJugador.listarPorPosicion("Delantero")).thenReturn(listaJugadores);
         ServicioObtenerEquipo servicioObtenerEquipo = new ServicioObtenerEquipo(daoJugador);
         List<DtoJugador> listaJugadoresRetornados = servicioObtenerEquipo.ejecutar(4L, 4L, 2L);
-        
+
         assertTrue(!listaJugadoresRetornados.isEmpty());
 
     }

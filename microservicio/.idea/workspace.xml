@@ -90,7 +90,7 @@
       <recent name="com.ceiba.jugador.adaptador.dao" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ServicioObtenerEquipoTest.deberiaObtenerUnEquipoDeManeraCorrecta">
+  <component name="RunManager" selected="JUnit.ConsultaControladorJugadorTest.deberiaListarJugadores">
     <configuration name="ConsultaControladorJugadorTest.deberiaListarJugadores" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.infraestructura.test" />
       <extension name="coverage">
@@ -209,10 +209,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ConsultaControladorJugadorTest.deberiaListarJugadores" />
         <item itemvalue="JUnit.ServicioObtenerEquipoTest.deberiaObtenerUnEquipoDeManeraCorrecta" />
         <item itemvalue="JUnit.ServicioCrearJugadorTest.deberiaCrearElJugadorDeManeraCorrecta" />
         <item itemvalue="JUnit.ServicioObtenerPorIdJugadorTest.deberiaObtenerUnJugadorPorSuId" />
-        <item itemvalue="JUnit.ConsultaControladorJugadorTest.deberiaListarJugadores" />
         <item itemvalue="JUnit.ConsultaControladorJugadorTest.deberiaTraerUnJugadorPorElId" />
       </list>
     </recent_temporary>
@@ -241,7 +241,7 @@
       <workItem from="1646158076119" duration="14516000" />
       <workItem from="1646221613407" duration="17094000" />
       <workItem from="1646243860162" duration="7810000" />
-      <workItem from="1646308503026" duration="14763000" />
+      <workItem from="1646308503026" duration="15046000" />
     </task>
     <servers />
   </component>
