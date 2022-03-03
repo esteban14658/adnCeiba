@@ -42,6 +42,10 @@ public class ServicioObtenerEquipo {
         List<Integer> registroObtenido = new ArrayList<>();
         List<DtoJugador> resultado = new ArrayList<>();
         for (int i = 0; i < cantidad; i++){
+            if (cantidadDeLista(posicion) < 1){
+                resultado = new ArrayList<>();
+                break;
+            }
             int random = numeroAleatorioEnRango(0, cantidadDeLista(posicion));
             if (!registroObtenido.contains(random)){
                 registroObtenido.add(random);

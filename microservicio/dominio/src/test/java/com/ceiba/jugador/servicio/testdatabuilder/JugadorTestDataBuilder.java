@@ -1,8 +1,12 @@
 package com.ceiba.jugador.servicio.testdatabuilder;
 
+import com.ceiba.jugador.modelo.dto.DtoJugador;
 import com.ceiba.jugador.modelo.entidad.Jugador;
+import jdk.nashorn.internal.objects.annotations.Setter;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class JugadorTestDataBuilder {
 
@@ -26,6 +30,7 @@ public class JugadorTestDataBuilder {
         posicion = "Delantero";
         pieHabil = "Derecho";
     }
+
 
     public JugadorTestDataBuilder conId(Long id){
         this.id = id;
@@ -72,6 +77,36 @@ public class JugadorTestDataBuilder {
         return this;
     }
 
+    public List<DtoJugador> listaDeJugadores(){
+        List<DtoJugador> listaJugadores = new ArrayList<>();
+        for (int i = 0; i < 18; i++){
+            if (i < 5) {
+                DtoJugador dtoJugador = new DtoJugador(id, documento + i, nombre, apellido,
+                        fechaNacimiento, peso, altura, "Delantero", pieHabil);
+                listaJugadores.add(dtoJugador);
+            } else if (i >= 5 && i < 10) {
+                DtoJugador dtoJugador = new DtoJugador(id, documento + i, nombre, apellido,
+                        fechaNacimiento, peso, altura, "Mediocampista", pieHabil);
+                listaJugadores.add(dtoJugador);
+            } else if (i >= 10 && i < 15) {
+                DtoJugador dtoJugador = new DtoJugador(id, documento + i, nombre, apellido,
+                        fechaNacimiento, peso, altura, "Defensa", pieHabil);
+                listaJugadores.add(dtoJugador);
+            }
+            else {
+                DtoJugador dtoJugador = new DtoJugador(id, documento + i, nombre, apellido,
+                        fechaNacimiento, peso, altura, "Portero", pieHabil);
+                listaJugadores.add(dtoJugador);
+            }
+        }
+        return listaJugadores;
+    }
+
     public Jugador build() { return new Jugador(id, documento, nombre, apellido,
         fechaNacimiento, peso, altura, posicion, pieHabil); }
+
+    public Jugador build(Long documento, String nombre, String apellido, LocalDate fechaNacimiento,
+                         float peso, float altura, String posicion, String pieHabil) {
+        return new Jugador(id, documento, nombre, apellido, fechaNacimiento, peso, altura, posicion, pieHabil);
+    }
 }
