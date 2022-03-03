@@ -2,6 +2,7 @@ package com.ceiba.jugador.servicio;
 
 import com.ceiba.BasePrueba;
 import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
+import com.ceiba.dominio.excepcion.ExcepcionSinDatos;
 import com.ceiba.jugador.modelo.entidad.Jugador;
 import com.ceiba.jugador.puerto.repositorio.RepositorioJugador;
 import com.ceiba.jugador.servicio.testdatabuilder.JugadorTestDataBuilder;
@@ -20,7 +21,7 @@ public class ServicioActualizarJugadorTest {
         Mockito.when(repositorioJugador.existePorId(Mockito.anyLong())).thenReturn(false);
         ServicioActualizarJugador servicioActualizarJugador = new ServicioActualizarJugador(repositorioJugador);
         // act - assert
-        BasePrueba.assertThrows(() -> servicioActualizarJugador.ejecutar(jugador), ExcepcionDuplicidad.class,"El jugador no existe en el sistema");
+        BasePrueba.assertThrows(() -> servicioActualizarJugador.ejecutar(jugador), ExcepcionSinDatos.class,"El jugador no existe en el sistema");
     }
 
     @Test

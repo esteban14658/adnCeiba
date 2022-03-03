@@ -1,5 +1,6 @@
 package com.ceiba.factura.servicio;
 
+
 import com.ceiba.BasePrueba;
 import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
 import com.ceiba.factura.modelo.entidad.Factura;
@@ -23,9 +24,9 @@ public class ServicioCrearFacturaTest {
         Mockito.when(repositorioFactura.crear(factura)).thenReturn(10L);
         ServicioCrearFactura servicioCrearFactura = new ServicioCrearFactura(repositorioFactura);
         // act
-        Long idJugador = servicioCrearFactura.ejecutar(factura);
+        Long idFactura = servicioCrearFactura.ejecutar(factura);
         //- assert
-        assertEquals(10L,idJugador);
+        assertEquals(10L,idFactura);
         Mockito.verify(repositorioFactura, Mockito.times(1)).crear(factura);
     }
 

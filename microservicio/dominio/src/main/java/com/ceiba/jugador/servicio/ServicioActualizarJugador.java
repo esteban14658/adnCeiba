@@ -1,6 +1,7 @@
 package com.ceiba.jugador.servicio;
 
 import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
+import com.ceiba.dominio.excepcion.ExcepcionSinDatos;
 import com.ceiba.jugador.modelo.entidad.Jugador;
 import com.ceiba.jugador.puerto.repositorio.RepositorioJugador;
 
@@ -22,7 +23,7 @@ public class ServicioActualizarJugador {
     private void validarExistenciaPrevia(Jugador jugador) {
         boolean existe = this.repositorioJugador.existePorId(jugador.getId());
         if(!existe) {
-            throw new ExcepcionDuplicidad(EL_JUGADOR_NO_EXISTE_EN_EL_SISTEMA);
+            throw new ExcepcionSinDatos(EL_JUGADOR_NO_EXISTE_EN_EL_SISTEMA);
         }
     }
 }

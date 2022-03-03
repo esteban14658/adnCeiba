@@ -22,7 +22,6 @@ public class ServicioObtenerEquipo {
 
     public List<DtoJugador> ejecutar(Long defensas, Long mediocampistas, Long delanteros) {
         String[] posiciones = new String[] {"Portero","Defensa", "Mediocampista", "Delantero"};
-        List<String> listaPosiciones = Arrays.asList("Portero","Defensa", "Mediocampista", "Delantero");
         Long[] keys = new Long[] {1L, defensas, mediocampistas, delanteros};
         Long sumatoria = 1L + defensas + mediocampistas + delanteros;
         if (sumatoria > CANTIDAD_MAXIMA_JUGADORES_PERMITIDA){

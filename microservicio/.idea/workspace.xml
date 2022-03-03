@@ -90,7 +90,15 @@
       <recent name="com.ceiba.jugador.adaptador.dao" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in jugadores">
+  <component name="RunManager" selected="Spring Boot.Application">
+    <configuration name="All in jugadores (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jugadores" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in jugadores" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores" />
       <option name="PACKAGE_NAME" value="" />
@@ -115,65 +123,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConsultaControladorJugadorTest.deberiaListarJugadores" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jugadores.infraestructura.test" />
+    <configuration name="ServicioActualizarFacturaTest.deberiaValidarLaExistenciaPreviaDelJugador" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jugadores.dominio.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ceiba.jugador.controlador.*" />
+          <option name="PATTERN" value="com.ceiba.factura.servicio.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.jugador.controlador" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.controlador.ConsultaControladorJugadorTest" />
-      <option name="METHOD_NAME" value="deberiaListarJugadores" />
+      <option name="PACKAGE_NAME" value="com.ceiba.factura.servicio" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.servicio.ServicioActualizarFacturaTest" />
+      <option name="METHOD_NAME" value="deberiaValidarLaExistenciaPreviaDelJugador" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServicioCrearJugadorTest.deberiaCrearElJugadorDeManeraCorrecta" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ServicioCrearFacturaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.dominio.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ceiba.jugador.servicio.*" />
+          <option name="PATTERN" value="com.ceiba.factura.servicio.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.jugador.servicio" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.servicio.ServicioCrearJugadorTest" />
-      <option name="METHOD_NAME" value="deberiaCrearElJugadorDeManeraCorrecta" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.ceiba.factura.servicio" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.servicio.ServicioCrearFacturaTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServicioEliminarJugadorTest.deberiaEliminarElJugadorLlamandoAlRepositorio" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ServicioEliminarFacturaTest.deberiaEliminarElJugadorLlamandoAlRepositorio" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.dominio.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ceiba.jugador.servicio.*" />
+          <option name="PATTERN" value="com.ceiba.factura.servicio.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.jugador.servicio" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.servicio.ServicioEliminarJugadorTest" />
+      <option name="PACKAGE_NAME" value="com.ceiba.factura.servicio" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.servicio.ServicioEliminarFacturaTest" />
       <option name="METHOD_NAME" value="deberiaEliminarElJugadorLlamandoAlRepositorio" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServicioObtenerEquipoTest.deberiaObtenerUnEquipoDeManeraCorrecta" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jugadores.dominio.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ceiba.jugador.servicio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.jugador.servicio" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.servicio.ServicioObtenerEquipoTest" />
-      <option name="METHOD_NAME" value="deberiaObtenerUnEquipoDeManeraCorrecta" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -201,11 +192,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in jugadores (1)" />
+        <item itemvalue="JUnit.ServicioCrearFacturaTest" />
+        <item itemvalue="JUnit.ServicioEliminarFacturaTest.deberiaEliminarElJugadorLlamandoAlRepositorio" />
+        <item itemvalue="JUnit.ServicioActualizarFacturaTest.deberiaValidarLaExistenciaPreviaDelJugador" />
         <item itemvalue="JUnit.All in jugadores" />
-        <item itemvalue="JUnit.ServicioEliminarJugadorTest.deberiaEliminarElJugadorLlamandoAlRepositorio" />
-        <item itemvalue="JUnit.ConsultaControladorJugadorTest.deberiaListarJugadores" />
-        <item itemvalue="JUnit.ServicioObtenerEquipoTest.deberiaObtenerUnEquipoDeManeraCorrecta" />
-        <item itemvalue="JUnit.ServicioCrearJugadorTest.deberiaCrearElJugadorDeManeraCorrecta" />
       </list>
     </recent_temporary>
   </component>
@@ -233,7 +224,7 @@
       <workItem from="1646158076119" duration="14516000" />
       <workItem from="1646221613407" duration="17094000" />
       <workItem from="1646243860162" duration="7810000" />
-      <workItem from="1646308503026" duration="20153000" />
+      <workItem from="1646308503026" duration="21572000" />
     </task>
     <servers />
   </component>
@@ -271,7 +262,11 @@
       <FILTER>com.ceiba.jugador.controlador.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/jugadores$Application.ic" NAME="Application Coverage Results" MODIFIED="1646229408522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/jugadores$ServicioEliminarFacturaTest_deberiaEliminarElJugadorLlamandoAlRepositorio.ic" NAME="ServicioEliminarFacturaTest.deberiaEliminarElJugadorLlamandoAlRepositorio Coverage Results" MODIFIED="1646334273950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ceiba.factura.servicio.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/jugadores$ServicioCrearJugadorTest_deberiaCrearElJugadorDeManeraCorrecta.ic" NAME="ServicioCrearJugadorTest.deberiaCrearElJugadorDeManeraCorrecta Coverage Results" MODIFIED="1646091464520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/jugadores$ServicioCrearJugadorTest_deberiaLanzarUnaExepcionCuandoSeValideLaExistenciaDelJugador.ic" NAME="ServicioCrearJugadorTest.deberiaLanzarUnaExepcionCuandoSeValideLaExistenciaDelJugador Coverage Results" MODIFIED="1646092080350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/jugadores$All_in_jugadores__1_.ic" NAME="All in jugadores (1) Coverage Results" MODIFIED="1646334825775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
