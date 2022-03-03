@@ -240,7 +240,8 @@
       <workItem from="1646139170439" duration="13618000" />
       <workItem from="1646158076119" duration="14516000" />
       <workItem from="1646221613407" duration="17094000" />
-      <workItem from="1646243860162" duration="6846000" />
+      <workItem from="1646243860162" duration="7810000" />
+      <workItem from="1646308503026" duration="6286000" />
     </task>
     <servers />
   </component>
@@ -266,13 +267,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/dominio/src/main/java/com/ceiba/jugador/servicio/ServicioObtenerEquipo.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/dominio/src/main/java/com/ceiba/jugador/servicio/ServicioObtenerEquipo.java</url>
-          <line>55</line>
-          <option name="timeStamp" value="9" />
+          <line>40</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

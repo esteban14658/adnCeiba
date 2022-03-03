@@ -28,13 +28,13 @@ com/ceiba/factura/comando/fabrica/FabricaFactura.java
  com.ceiba.factura.comando.fabrica.FabricaFactura
 com/ceiba/jugador/consulta/ManejadorObtenerPorIdJugador.java
  com.ceiba.jugador.consulta.ManejadorObtenerPorIdJugador
-com/ceiba/jugador/consulta/ManejadorObtenerEquipoJugadores.java
- com.ceiba.jugador.consulta.ManejadorObtenerEquipoJugadores
+com/ceiba/jugador/comando/fabrica/FabricaJugador.java
+ com.ceiba.jugador.comando.fabrica.FabricaJugador
 com/ceiba/jugador/comando/manejador/ManejadorCrearJugador.java
  com.ceiba.jugador.comando.manejador.ManejadorCrearJugador
 com/ceiba/factura/comando/manejador/ManejadorCrearFactura.java
  com.ceiba.factura.comando.manejador.ManejadorCrearFactura
 com/ceiba/jugador/comando/manejador/ManejadorActualizarJugador.java
  com.ceiba.jugador.comando.manejador.ManejadorActualizarJugador
-com/ceiba/jugador/comando/fabrica/FabricaJugador.java
- com.ceiba.jugador.comando.fabrica.FabricaJugador
+com/ceiba/jugador/consulta/ManejadorObtenerEquipoJugadores.java
+ com.ceiba.jugador.consulta.ManejadorObtenerEquipoJugadores
