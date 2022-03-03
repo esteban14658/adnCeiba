@@ -90,19 +90,11 @@
       <recent name="com.ceiba.jugador.adaptador.dao" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Application">
-    <configuration name="ConsultaControladorJugadorTest.deberiaListarJugadores" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jugadores.infraestructura.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ceiba.jugador.controlador.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.jugador.controlador" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.controlador.ConsultaControladorJugadorTest" />
-      <option name="METHOD_NAME" value="deberiaListarJugadores" />
-      <option name="TEST_OBJECT" value="method" />
+  <component name="RunManager" selected="JUnit.All in jugadores">
+    <configuration name="All in jugadores" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jugadores" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -123,7 +115,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConsultaControladorJugadorTest.deberiaTraerUnJugadorPorElId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ConsultaControladorJugadorTest.deberiaListarJugadores" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.infraestructura.test" />
       <extension name="coverage">
         <pattern>
@@ -133,7 +125,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.ceiba.jugador.controlador" />
       <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.controlador.ConsultaControladorJugadorTest" />
-      <option name="METHOD_NAME" value="deberiaTraerUnJugadorPorElId" />
+      <option name="METHOD_NAME" value="deberiaListarJugadores" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -155,6 +147,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ServicioEliminarJugadorTest.deberiaEliminarElJugadorLlamandoAlRepositorio" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jugadores.dominio.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ceiba.jugador.servicio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ceiba.jugador.servicio" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.servicio.ServicioEliminarJugadorTest" />
+      <option name="METHOD_NAME" value="deberiaEliminarElJugadorLlamandoAlRepositorio" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ServicioObtenerEquipoTest.deberiaObtenerUnEquipoDeManeraCorrecta" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.dominio.test" />
       <extension name="coverage">
@@ -166,22 +174,6 @@
       <option name="PACKAGE_NAME" value="com.ceiba.jugador.servicio" />
       <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.servicio.ServicioObtenerEquipoTest" />
       <option name="METHOD_NAME" value="deberiaObtenerUnEquipoDeManeraCorrecta" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServicioObtenerPorIdJugadorTest.deberiaObtenerUnJugadorPorSuId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jugadores.dominio.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ceiba.jugador.servicio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.jugador.servicio" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.servicio.ServicioObtenerPorIdJugadorTest" />
-      <option name="METHOD_NAME" value="deberiaObtenerUnJugadorPorSuId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -209,11 +201,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in jugadores" />
+        <item itemvalue="JUnit.ServicioEliminarJugadorTest.deberiaEliminarElJugadorLlamandoAlRepositorio" />
         <item itemvalue="JUnit.ConsultaControladorJugadorTest.deberiaListarJugadores" />
         <item itemvalue="JUnit.ServicioObtenerEquipoTest.deberiaObtenerUnEquipoDeManeraCorrecta" />
         <item itemvalue="JUnit.ServicioCrearJugadorTest.deberiaCrearElJugadorDeManeraCorrecta" />
-        <item itemvalue="JUnit.ServicioObtenerPorIdJugadorTest.deberiaObtenerUnJugadorPorSuId" />
-        <item itemvalue="JUnit.ConsultaControladorJugadorTest.deberiaTraerUnJugadorPorElId" />
       </list>
     </recent_temporary>
   </component>
@@ -241,7 +233,7 @@
       <workItem from="1646158076119" duration="14516000" />
       <workItem from="1646221613407" duration="17094000" />
       <workItem from="1646243860162" duration="7810000" />
-      <workItem from="1646308503026" duration="19690000" />
+      <workItem from="1646308503026" duration="20153000" />
     </task>
     <servers />
   </component>

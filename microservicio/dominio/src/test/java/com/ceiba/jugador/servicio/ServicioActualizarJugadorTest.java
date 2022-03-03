@@ -20,7 +20,7 @@ public class ServicioActualizarJugadorTest {
         Mockito.when(repositorioJugador.existePorId(Mockito.anyLong())).thenReturn(false);
         ServicioActualizarJugador servicioActualizarJugador = new ServicioActualizarJugador(repositorioJugador);
         // act - assert
-        BasePrueba.assertThrows(() -> servicioActualizarJugador.ejecutar(jugador), ExcepcionDuplicidad.class,"El usuario no existe en el sistema");
+        BasePrueba.assertThrows(() -> servicioActualizarJugador.ejecutar(jugador), ExcepcionDuplicidad.class,"El jugador no existe en el sistema");
     }
 
     @Test

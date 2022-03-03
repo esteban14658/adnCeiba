@@ -13,7 +13,7 @@ public class ServicioEliminarJugadorTest {
         RepositorioJugador repositorioJugador = Mockito.mock(RepositorioJugador.class);
         ServicioEliminarJugador servicioEliminarJugador = new ServicioEliminarJugador(repositorioJugador);
 
-        servicioEliminarJugador.ejecutar(1l);
+        servicioEliminarJugador.ejecutar(1L);
 
         Mockito.verify(repositorioJugador, Mockito.times(1)).eliminar(1l);
 

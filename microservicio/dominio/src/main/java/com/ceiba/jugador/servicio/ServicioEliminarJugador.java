@@ -14,14 +14,7 @@ public class ServicioEliminarJugador {
     }
 
     public void ejecutar(Long id) {
-        validarExistenciaPrevia(id);
         this.repositorioJugador.eliminar(id);
     }
 
-    private void validarExistenciaPrevia(Long id){
-        boolean existe = this.repositorioJugador.existePorId(id);
-        if (!existe){
-            throw new ExcepcionSinDatos(EL_JUGADOR_NO_EXISTE_EN_EL_SISTEMA);
-        }
-    }
 }
