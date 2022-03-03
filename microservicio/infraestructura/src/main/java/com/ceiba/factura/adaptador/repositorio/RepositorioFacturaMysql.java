@@ -45,17 +45,21 @@ public class RepositorioFacturaMysql implements RepositorioFactura {
 
     @Override
     public void actualizar(Factura factura) {
-
+        this.customNamedParameterJdbcTemplate.actualizar(factura, sqlActualizar);
     }
 
     @Override
-    public void eliminar(Integer id) {
-
+    public void eliminar(Long id) {
+        MapSqlParameterSource paramSource = new MapSqlParameterSource();
+        paramSource.addValue("id", id);
+        this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().update(sqlEliminar, paramSource);
     }
 
     @Override
-    public boolean existePorId(Integer id) {
-        return false;
+    public boolean existePorId(Long id) {
+        MapSqlParameterSource paramSource = new MapSqlParameterSource();
+        paramSource.addValue("id", id);
+        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExistePorId,paramSource, Boolean.class);
     }
 
     @Override

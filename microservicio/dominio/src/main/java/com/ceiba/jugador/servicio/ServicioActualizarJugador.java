@@ -6,7 +6,7 @@ import com.ceiba.jugador.puerto.repositorio.RepositorioJugador;
 
 public class ServicioActualizarJugador {
 
-    private static final String EL_USUARIO_NO_EXISTE_EN_EL_SISTEMA = "El usuario no existe en el sistema";
+    private static final String EL_JUGADOR_NO_EXISTE_EN_EL_SISTEMA = "El jugador no existe en el sistema";
 
     private final RepositorioJugador repositorioJugador;
 
@@ -14,15 +14,15 @@ public class ServicioActualizarJugador {
         this.repositorioJugador = repositorioJugador;
     }
 
-    public void ejecutar(Jugador usuario) {
-        validarExistenciaPrevia(usuario);
-        this.repositorioJugador.actualizar(usuario);
+    public void ejecutar(Jugador jugador) {
+        validarExistenciaPrevia(jugador);
+        this.repositorioJugador.actualizar(jugador);
     }
 
     private void validarExistenciaPrevia(Jugador jugador) {
         boolean existe = this.repositorioJugador.existePorId(jugador.getId());
         if(!existe) {
-            throw new ExcepcionDuplicidad(EL_USUARIO_NO_EXISTE_EN_EL_SISTEMA);
+            throw new ExcepcionDuplicidad(EL_JUGADOR_NO_EXISTE_EN_EL_SISTEMA);
         }
     }
 }

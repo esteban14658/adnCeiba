@@ -6,10 +6,6 @@ import com.ceiba.jugador.comando.fabrica.FabricaJugador;
 import com.ceiba.jugador.modelo.entidad.Jugador;
 import com.ceiba.jugador.servicio.ServicioCrearJugador;
 import com.ceiba.manejador.ManejadorComandoRespuesta;
-import com.ceiba.usuario.comando.ComandoUsuario;
-import com.ceiba.usuario.comando.fabrica.FabricaUsuario;
-import com.ceiba.usuario.modelo.entidad.Usuario;
-import com.ceiba.usuario.servicio.ServicioCrearUsuario;
 import org.springframework.stereotype.Component;
 
 @Component

@@ -21,13 +21,13 @@ public interface RepositorioFactura {
      * Permite eliminar una factura
      * @param id
      */
-    void eliminar(Integer id);
+    void eliminar(Long id);
 
     /**
      * Permite validar si existe una factura con un nombre excluyendo un id
      * @return si existe o no
      */
-    boolean existePorId(Integer id);
+    boolean existePorId(Long id);
 
     /**
      * Permite validar si existe una factura con un nombre excluyendo un id
@@ -40,6 +40,4 @@ public interface RepositorioFactura {
      * @return si existe o no
      */
     boolean existePorIdJugador(Integer jugador);
-
-
 }

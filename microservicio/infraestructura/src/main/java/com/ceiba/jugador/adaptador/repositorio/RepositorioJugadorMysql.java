@@ -43,7 +43,6 @@ public class RepositorioJugadorMysql implements RepositorioJugador {
     public void eliminar(Long id) {
         MapSqlParameterSource paramSource = new MapSqlParameterSource();
         paramSource.addValue("id", id);
-
         this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().update(sqlEliminar, paramSource);
     }
 

@@ -35,12 +35,12 @@ public class ConsultaControladorJugador {
     }
 
     @GetMapping
-    @ApiOperation("Listar jugadores")
+    @ApiOperation("Listar todos los jugadores")
     public List<DtoJugador> listar() {
         return this.manejadorListarJugadores.ejecutar();
     }
 
-    @GetMapping(value = "listarPorPosicion/{posicion}")
+    @GetMapping(value = "jugadores/{posicion}")
     @ApiOperation("Listar jugadores por posicion")
     public List<DtoJugador> listarPorPosicion(@PathVariable String posicion) {
         return this.manejadorListarJugadoresPorPosicion.ejecutar(posicion);

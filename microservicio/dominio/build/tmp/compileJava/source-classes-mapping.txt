@@ -2,14 +2,14 @@ com/ceiba/factura/modelo/entidad/Factura.java
  com.ceiba.factura.modelo.entidad.Factura
 com/ceiba/jugador/servicio/ServicioObtenerPorIdJugador.java
  com.ceiba.jugador.servicio.ServicioObtenerPorIdJugador
-com/ceiba/jugador/servicio/ServicioEliminarJugador.java
- com.ceiba.jugador.servicio.ServicioEliminarJugador
-com/ceiba/factura/servicio/ServicioCrearFactura.java
- com.ceiba.factura.servicio.ServicioCrearFactura
+com/ceiba/jugador/puerto/repositorio/RepositorioJugador.java
+ com.ceiba.jugador.puerto.repositorio.RepositorioJugador
+com/ceiba/jugador/servicio/ServicioObtenerEquipo.java
+ com.ceiba.jugador.servicio.ServicioObtenerEquipo
 com/ceiba/jugador/modelo/dto/DtoJugador.java
  com.ceiba.jugador.modelo.dto.DtoJugador
-com/ceiba/jugador/servicio/ServicioActualizarJugador.java
- com.ceiba.jugador.servicio.ServicioActualizarJugador
+com/ceiba/factura/modelo/dto/DtoFactura.java
+ com.ceiba.factura.modelo.dto.DtoFactura
 com/ceiba/jugador/servicio/ServicioCrearJugador.java
  com.ceiba.jugador.servicio.ServicioCrearJugador
 com/ceiba/jugador/modelo/entidad/Jugador.java
@@ -18,11 +18,15 @@ com/ceiba/factura/puerto/dao/DaoFactura.java
  com.ceiba.factura.puerto.dao.DaoFactura
 com/ceiba/jugador/puerto/dao/DaoJugador.java
  com.ceiba.jugador.puerto.dao.DaoJugador
-com/ceiba/jugador/servicio/ServicioObtenerEquipo.java
- com.ceiba.jugador.servicio.ServicioObtenerEquipo
-com/ceiba/factura/modelo/dto/DtoFactura.java
- com.ceiba.factura.modelo.dto.DtoFactura
-com/ceiba/jugador/puerto/repositorio/RepositorioJugador.java
- com.ceiba.jugador.puerto.repositorio.RepositorioJugador
+com/ceiba/factura/servicio/ServicioEliminarFactura.java
+ com.ceiba.factura.servicio.ServicioEliminarFactura
 com/ceiba/factura/puerto/repositorio/RepositorioFactura.java
  com.ceiba.factura.puerto.repositorio.RepositorioFactura
+com/ceiba/jugador/servicio/ServicioEliminarJugador.java
+ com.ceiba.jugador.servicio.ServicioEliminarJugador
+com/ceiba/factura/servicio/ServicioActualizarFactura.java
+ com.ceiba.factura.servicio.ServicioActualizarFactura
+com/ceiba/jugador/servicio/ServicioActualizarJugador.java
+ com.ceiba.jugador.servicio.ServicioActualizarJugador
+com/ceiba/factura/servicio/ServicioCrearFactura.java
+ com.ceiba.factura.servicio.ServicioCrearFactura
