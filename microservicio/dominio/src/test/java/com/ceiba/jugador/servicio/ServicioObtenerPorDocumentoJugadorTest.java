@@ -24,10 +24,10 @@ public class ServicioObtenerPorDocumentoJugadorTest {
         Jugador jugador = new JugadorTestDataBuilder().build();
         RepositorioJugador repositorioJugador = Mockito.mock(RepositorioJugador.class);
         DaoJugador daoJugador = Mockito.mock(DaoJugador.class);
-        Mockito.when(repositorioJugador.existePorDocumento(Mockito.anyLong())).thenReturn(true);
+        Mockito.when(repositorioJugador.existePorId(1L)).thenReturn(true);
         ServicioObtenerPorDocumentoJugador servicioObtenerPorDocumentoJugador = new ServicioObtenerPorDocumentoJugador(daoJugador ,repositorioJugador);
         // act - assert
-        BasePrueba.assertThrows(() -> servicioObtenerPorDocumentoJugador.ejecutar(jugador.getId()), ExcepcionSinDatos.class,"El usuario no existe en el sistema");
+        BasePrueba.assertThrows(() -> servicioObtenerPorDocumentoJugador.ejecutar(100000L), ExcepcionSinDatos.class,"El jugador no existe en el sistema");
     }
 
     @Test
