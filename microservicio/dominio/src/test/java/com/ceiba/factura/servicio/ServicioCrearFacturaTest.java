@@ -41,6 +41,40 @@ public class ServicioCrearFacturaTest {
     }
 
     @Test
+    @DisplayName("Deberia Crear la factura de manera correcta cuando solo hay un mes")
+    void deberiaCrearLaFacturaDeManeraCorrectaCuandoSoloEsUnMes() {
+        Jugador jugador = new JugadorTestDataBuilder().conId(1L).build();
+        Factura factura = new FacturaTestDataBuilder().conJugador(jugador).build();
+        RepositorioFactura repositorioFactura = Mockito.mock(RepositorioFactura.class);
+        doAnswer(invocation -> {
+            Factura facturaArg = invocation.getArgument(0);
+            assertNotNull(facturaArg);
+            assertNull(facturaArg.getId());
+            return null;
+        }).when(repositorioFactura).crear(any(Factura.class));
+        ServicioCrearFactura service = new ServicioCrearFactura(repositorioFactura);
+
+        assertDoesNotThrow(() -> service.ejecutar(factura, 1L));
+    }
+
+    @Test
+    @DisplayName("Deberia Crear la factura de manera correcta cuando solo hay un mes")
+    void deberiaCrearLaFacturaDeManeraCorrectaCuandoSonSeisMeses() {
+        Jugador jugador = new JugadorTestDataBuilder().conId(1L).build();
+        Factura factura = new FacturaTestDataBuilder().conJugador(jugador).build();
+        RepositorioFactura repositorioFactura = Mockito.mock(RepositorioFactura.class);
+        doAnswer(invocation -> {
+            Factura facturaArg = invocation.getArgument(0);
+            assertNotNull(facturaArg);
+            assertNull(facturaArg.getId());
+            return null;
+        }).when(repositorioFactura).crear(any(Factura.class));
+        ServicioCrearFactura service = new ServicioCrearFactura(repositorioFactura);
+
+        assertDoesNotThrow(() -> service.ejecutar(factura, 6L));
+    }
+
+    @Test
     @DisplayName("Deberia lanzar una exepcion cuando se valide la existencia de una factura")
     void deberiaLanzarUnaExepcionCuandoSeValideLaExistenciaDeUnaFacturaActiva() {
         // arrange

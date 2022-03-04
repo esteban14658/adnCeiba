@@ -100,37 +100,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.ServicioCrearFacturaTest">
-    <configuration name="ConsultaControladorJugadorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jugadores.infraestructura.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ceiba.jugador.controlador.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.jugador.controlador" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.controlador.ConsultaControladorJugadorTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConsultaControladorJugadorTest.deberiaObtenerUnJugadorPorElDocumento" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jugadores.infraestructura.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ceiba.jugador.controlador.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.jugador.controlador" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.controlador.ConsultaControladorJugadorTest" />
-      <option name="METHOD_NAME" value="deberiaObtenerUnJugadorPorElDocumento" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ServicioCrearFacturaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.dominio.test" />
       <extension name="coverage">
@@ -157,6 +126,38 @@
       <option name="PACKAGE_NAME" value="com.ceiba.factura.servicio" />
       <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.servicio.ServicioCrearFacturaTest" />
       <option name="METHOD_NAME" value="deberiaCrearLaFacturaDeManeraCorrecta" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServicioCrearFacturaTest.deberiaCrearLaFacturaDeManeraCorrectaCuandoSoloEsUnMes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jugadores.dominio.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ceiba.factura.servicio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ceiba.factura.servicio" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.servicio.ServicioCrearFacturaTest" />
+      <option name="METHOD_NAME" value="deberiaCrearLaFacturaDeManeraCorrectaCuandoSoloEsUnMes" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServicioCrearFacturaTest.deberiaCrearLaFacturaDeManeraCorrectaCuandoSonSeisMeses" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jugadores.dominio.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ceiba.factura.servicio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ceiba.factura.servicio" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.servicio.ServicioCrearFacturaTest" />
+      <option name="METHOD_NAME" value="deberiaCrearLaFacturaDeManeraCorrectaCuandoSonSeisMeses" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -201,10 +202,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ServicioCrearFacturaTest" />
+        <item itemvalue="JUnit.ServicioCrearFacturaTest.deberiaCrearLaFacturaDeManeraCorrectaCuandoSonSeisMeses" />
+        <item itemvalue="JUnit.ServicioCrearFacturaTest.deberiaCrearLaFacturaDeManeraCorrectaCuandoSoloEsUnMes" />
         <item itemvalue="JUnit.ServicioCrearFacturaTest.deberiaCrearLaFacturaDeManeraCorrecta" />
         <item itemvalue="JUnit.ServicioCrearFacturaTest.deberiaLanzarUnaExepcionCuandoSeValideLaExistenciaDeUnaFacturaActiva" />
-        <item itemvalue="JUnit.ConsultaControladorJugadorTest" />
-        <item itemvalue="JUnit.ConsultaControladorJugadorTest.deberiaObtenerUnJugadorPorElDocumento" />
       </list>
     </recent_temporary>
   </component>
@@ -234,7 +235,7 @@
       <workItem from="1646243860162" duration="7810000" />
       <workItem from="1646308503026" duration="30200000" />
       <workItem from="1646395362879" duration="15348000" />
-      <workItem from="1646416338412" duration="12305000" />
+      <workItem from="1646416338412" duration="12785000" />
     </task>
     <servers />
   </component>
