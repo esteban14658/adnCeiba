@@ -1,6 +1,5 @@
 package com.ceiba.factura.comando;
 
-import com.ceiba.jugador.comando.ComandoJugador;
 import com.ceiba.jugador.modelo.entidad.Jugador;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

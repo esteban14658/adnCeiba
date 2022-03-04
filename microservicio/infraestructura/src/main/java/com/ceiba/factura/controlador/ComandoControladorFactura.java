@@ -27,7 +27,6 @@ public class ComandoControladorFactura {
     @PostMapping
     @ApiOperation("Crear factura")
     public ComandoRespuesta<Long> crear(@RequestBody ComandoFactura comandoFactura) {
-        System.out.println(comandoFactura.getJugador());
         return manejadorCrearFactura.ejecutar(comandoFactura);
     }
 }

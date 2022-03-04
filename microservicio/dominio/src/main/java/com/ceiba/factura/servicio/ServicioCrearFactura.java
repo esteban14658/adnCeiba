@@ -19,11 +19,9 @@ public class ServicioCrearFactura {
     }
 
     public Long ejecutar(Factura factura, Long meses) {
-        System.out.println(factura.getJugador().getId());
         validarExistenciaPrevia(factura);
         factura = ingresoDeDatos(factura, meses);
-        Long r = this.repositorioFactura.crear(factura);
-        return r;
+        return this.repositorioFactura.crear(factura);
     }
 
     public Factura ingresoDeDatos(Factura factura, Long meses) {
@@ -37,7 +35,7 @@ public class ServicioCrearFactura {
         } else if (meses == 6){
             valorFactura = factura.promocionSeisMeses();
         }
-        Long valor = (new Double(valorFactura).longValue());
+        Long valor = Math.round(valorFactura);
         return new Factura(factura.getId(), valor, LocalDate.parse(fechaInicio),
                 LocalDate.parse(fechaCaducidad), factura.getJugador(), factura.getEstado(), factura.getDescripcion());
     }

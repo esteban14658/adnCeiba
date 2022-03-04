@@ -46,8 +46,7 @@ public class RepositorioFacturaMysql implements RepositorioFactura{
         parameterSource.addValue("jugador", factura.getJugador().getId());
         parameterSource.addValue("estado", factura.getEstado());
         parameterSource.addValue("descripcion", factura.getDescripcion());
-        Long retorno = Long.valueOf(this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().update(sqlCrear, parameterSource));
-        return retorno;
+        return Long.valueOf(this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().update(sqlCrear, parameterSource));
     }
 
     @Override
