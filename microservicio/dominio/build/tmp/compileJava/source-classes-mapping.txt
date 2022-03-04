@@ -2,8 +2,8 @@ com/ceiba/jugador/modelo/dto/DtoJugador.java
  com.ceiba.jugador.modelo.dto.DtoJugador
 com/ceiba/jugador/servicio/ServicioActualizarJugador.java
  com.ceiba.jugador.servicio.ServicioActualizarJugador
-com/ceiba/factura/servicio/ServicioCrearFactura.java
- com.ceiba.factura.servicio.ServicioCrearFactura
+com/ceiba/jugador/modelo/dto/DtoPosiciones.java
+ com.ceiba.jugador.modelo.dto.DtoPosiciones
 com/ceiba/jugador/modelo/entidad/Jugador.java
  com.ceiba.jugador.modelo.entidad.Jugador
 com/ceiba/jugador/servicio/ServicioObtenerPorDocumentoJugador.java
@@ -12,8 +12,8 @@ com/ceiba/factura/puerto/dao/DaoFactura.java
  com.ceiba.factura.puerto.dao.DaoFactura
 com/ceiba/jugador/puerto/dao/DaoJugador.java
  com.ceiba.jugador.puerto.dao.DaoJugador
-com/ceiba/factura/modelo/entidad/Factura.java
- com.ceiba.factura.modelo.entidad.Factura
+com/ceiba/jugador/servicio/ServicioObtenerEquipo.java
+ com.ceiba.jugador.servicio.ServicioObtenerEquipo
 com/ceiba/factura/servicio/ServicioEliminarFactura.java
  com.ceiba.factura.servicio.ServicioEliminarFactura
 com/ceiba/factura/modelo/dto/DtoFactura.java
@@ -26,7 +26,7 @@ com/ceiba/jugador/servicio/ServicioEliminarJugador.java
  com.ceiba.jugador.servicio.ServicioEliminarJugador
 com/ceiba/jugador/servicio/ServicioCrearJugador.java
  com.ceiba.jugador.servicio.ServicioCrearJugador
-com/ceiba/jugador/servicio/ServicioObtenerEquipo.java
- com.ceiba.jugador.servicio.ServicioObtenerEquipo
-com/ceiba/jugador/modelo/dto/DtoPosiciones.java
- com.ceiba.jugador.modelo.dto.DtoPosiciones
+com/ceiba/factura/servicio/ServicioCrearFactura.java
+ com.ceiba.factura.servicio.ServicioCrearFactura
+com/ceiba/factura/modelo/entidad/Factura.java
+ com.ceiba.factura.modelo.entidad.Factura

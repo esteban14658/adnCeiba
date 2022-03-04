@@ -1,9 +1,12 @@
 package com.ceiba.factura.modelo.entidad;
 
+import com.ceiba.jugador.modelo.dto.DtoJugador;
 import com.ceiba.jugador.modelo.entidad.Jugador;
+import lombok.Data;
 import lombok.Getter;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;
 
@@ -48,11 +51,20 @@ public class Factura {
         this.descripcion = descripcion;
     }
 
+    public double mensualidadNormal() { return VALOR_MENSUAL; }
+
     public double promocionTresMeses(){
         return VALOR_MENSUAL * TRES_MESES * MENOS_QUINCE_PORCIENTO;
     }
 
     public double promocionSeisMeses(){
         return VALOR_MENSUAL * SEIS_MESES * MENOS_TREINTA_PORCIENTO;
+    }
+
+    public String sumarMeses(String fecha, Long meses) {
+        DateTimeFormatter formateador = DateTimeFormatter.ofPattern("uuuu-MM-dd");
+        LocalDate fechaLocal = LocalDate.parse(fecha, formateador);
+        fechaLocal = fechaLocal.plusMonths(meses);
+        return fechaLocal.format(formateador);
     }
 }

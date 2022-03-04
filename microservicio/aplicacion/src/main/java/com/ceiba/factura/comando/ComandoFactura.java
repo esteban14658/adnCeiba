@@ -1,6 +1,7 @@
 package com.ceiba.factura.comando;
 
-import com.ceiba.jugador.modelo.dto.DtoJugador;
+import com.ceiba.jugador.comando.ComandoJugador;
+import com.ceiba.jugador.modelo.entidad.Jugador;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,8 +19,9 @@ public class ComandoFactura {
     private Long valor;
     private LocalDate fechaIngreso;
     private LocalDate fechaCaducidad;
-    private DtoJugador jugador;
+    private Jugador jugador;
     private Integer estado;
     private String descripcion;
+    private Long meses;
 
 }

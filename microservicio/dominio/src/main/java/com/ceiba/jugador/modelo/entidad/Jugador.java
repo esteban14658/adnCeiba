@@ -48,4 +48,8 @@ public class Jugador {
         this.pieHabil = pieHabil;
     }
 
+    public Jugador() {
+        super();
+    }
+
 }

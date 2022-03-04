@@ -2,7 +2,7 @@ package com.ceiba.factura.puerto.repositorio;
 
 import com.ceiba.factura.modelo.entidad.Factura;
 
-public interface RepositorioFactura {
+public interface RepositorioFactura{
 
     /**
      * Permite crear un jugador
@@ -33,5 +33,5 @@ public interface RepositorioFactura {
      * Permite validar si existe una factura con el id del jugador
      * @return si existe o no
      */
-    boolean existePorIdJugador(Integer jugador);
+    boolean existePorIdJugador(Long jugador);
 }

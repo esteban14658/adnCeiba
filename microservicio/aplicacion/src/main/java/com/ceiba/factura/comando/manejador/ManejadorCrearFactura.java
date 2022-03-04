@@ -25,6 +25,6 @@ public class ManejadorCrearFactura implements ManejadorComandoRespuesta<ComandoF
 
     public ComandoRespuesta<Long> ejecutar(ComandoFactura comandoFactura) {
         Factura factura = this.fabricaFactura.crear(comandoFactura);
-        return new ComandoRespuesta<>(this.servicioCrearFactura.ejecutar(factura));
+        return new ComandoRespuesta<>(this.servicioCrearFactura.ejecutar(factura, comandoFactura.getMeses()));
     }
 }

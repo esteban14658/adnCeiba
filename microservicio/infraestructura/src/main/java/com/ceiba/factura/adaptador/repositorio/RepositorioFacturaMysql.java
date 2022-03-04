@@ -4,12 +4,11 @@ import com.ceiba.factura.modelo.entidad.Factura;
 import com.ceiba.factura.puerto.repositorio.RepositorioFactura;
 import com.ceiba.infraestructura.jdbc.CustomNamedParameterJdbcTemplate;
 import com.ceiba.infraestructura.jdbc.sqlstatement.SqlStatement;
-import io.swagger.models.auth.In;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class RepositorioFacturaMysql implements RepositorioFactura {
+public class RepositorioFacturaMysql implements RepositorioFactura{
 
     private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
 
@@ -40,7 +39,15 @@ public class RepositorioFacturaMysql implements RepositorioFactura {
 
     @Override
     public Long crear(Factura factura) {
-        return this.customNamedParameterJdbcTemplate.crear(factura, sqlCrear);
+        MapSqlParameterSource parameterSource = new MapSqlParameterSource();
+        parameterSource.addValue("valor", factura.getValor());
+        parameterSource.addValue("fechaIngreso", factura.getFechaIngreso());
+        parameterSource.addValue("fechaCaducidad", factura.getFechaCaducidad());
+        parameterSource.addValue("jugador", factura.getJugador().getId());
+        parameterSource.addValue("estado", factura.getEstado());
+        parameterSource.addValue("descripcion", factura.getDescripcion());
+        Long retorno = Long.valueOf(this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().update(sqlCrear, parameterSource));
+        return retorno;
     }
 
     @Override
@@ -65,7 +72,7 @@ public class RepositorioFacturaMysql implements RepositorioFactura {
     }
 
     @Override
-    public boolean existePorIdJugador(Integer jugador) {
+    public boolean existePorIdJugador(Long jugador) {
         MapSqlParameterSource paramSource = new MapSqlParameterSource();
         paramSource.addValue("jugador", jugador);
         return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExistePorIdJugador,paramSource, Boolean.class);
