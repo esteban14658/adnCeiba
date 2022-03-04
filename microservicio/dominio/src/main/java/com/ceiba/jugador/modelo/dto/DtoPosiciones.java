@@ -1,6 +1,5 @@
 package com.ceiba.jugador.modelo.dto;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
