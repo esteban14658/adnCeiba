@@ -1,6 +1,7 @@
 package com.ceiba.jugador.consulta;
 
 import com.ceiba.jugador.modelo.dto.DtoJugador;
+import com.ceiba.jugador.modelo.dto.DtoPosiciones;
 import com.ceiba.jugador.servicio.ServicioObtenerEquipo;
 import org.springframework.stereotype.Component;
 
@@ -15,7 +16,7 @@ public class ManejadorObtenerEquipoJugadores {
         this.servicioObtenerEquipo = servicioObtenerEquipo;
     }
 
-    public List<DtoJugador> ejecutar(Long defensas, Long mediocampistas, Long delanteros) {
-        return this.servicioObtenerEquipo.ejecutar(defensas, mediocampistas, delanteros);
+    public List<DtoJugador> ejecutar(DtoPosiciones dtoPosiciones) {
+        return this.servicioObtenerEquipo.ejecutar(dtoPosiciones);
     }
 }

@@ -22,7 +22,7 @@ com/ceiba/jugador/consulta/ManejadorListarJugadoresPorPieHabil.java
  com.ceiba.jugador.consulta.ManejadorListarJugadoresPorPieHabil
 com/ceiba/jugador/consulta/ManejadorObtenerPorDocumentoJugador.java
  com.ceiba.jugador.consulta.ManejadorObtenerPorDocumentoJugador
-com/ceiba/jugador/consulta/ManejadorObtenerEquipoJugadores.java
- com.ceiba.jugador.consulta.ManejadorObtenerEquipoJugadores
 com/ceiba/jugador/consulta/ManejadorListarJugadoresPorPosicion.java
  com.ceiba.jugador.consulta.ManejadorListarJugadoresPorPosicion
+com/ceiba/jugador/consulta/ManejadorObtenerEquipoJugadores.java
+ com.ceiba.jugador.consulta.ManejadorObtenerEquipoJugadores

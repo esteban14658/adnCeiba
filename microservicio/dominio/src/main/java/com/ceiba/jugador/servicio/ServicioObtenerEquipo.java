@@ -2,14 +2,13 @@ package com.ceiba.jugador.servicio;
 
 import com.ceiba.dominio.excepcion.ExcepcionLongitudValor;
 import com.ceiba.jugador.modelo.dto.DtoJugador;
+import com.ceiba.jugador.modelo.dto.DtoPosiciones;
 import com.ceiba.jugador.modelo.entidad.Jugador;
 import com.ceiba.jugador.puerto.dao.DaoJugador;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
-import java.util.stream.Stream;
 
 public class ServicioObtenerEquipo {
 
@@ -20,10 +19,10 @@ public class ServicioObtenerEquipo {
         this.daoJugador = daoJugador;
     }
 
-    public List<DtoJugador> ejecutar(Long defensas, Long mediocampistas, Long delanteros) {
+    public List<DtoJugador> ejecutar(DtoPosiciones dtoPosiciones) {
         String[] posiciones = new String[] {"Portero","Defensa", "Mediocampista", "Delantero"};
-        Long[] keys = new Long[] {1L, defensas, mediocampistas, delanteros};
-        Long sumatoria = 1L + defensas + mediocampistas + delanteros;
+        Long[] keys = new Long[] {1L, dtoPosiciones.getDefensas(), dtoPosiciones.getMediocampistas(), dtoPosiciones.getDelanteros()};
+        Long sumatoria = 1L + dtoPosiciones.getDefensas() + dtoPosiciones.getMediocampistas() + dtoPosiciones.getDelanteros();
         if (sumatoria > CANTIDAD_MAXIMA_JUGADORES_PERMITIDA){
             throw new ExcepcionLongitudValor("No puede sobrepasar la cantidad permitida de jugadores");
         }

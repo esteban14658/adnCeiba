@@ -2,12 +2,10 @@ package com.ceiba.jugador.controlador;
 
 import com.ceiba.jugador.consulta.*;
 import com.ceiba.jugador.modelo.dto.DtoJugador;
+import com.ceiba.jugador.modelo.dto.DtoPosiciones;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -40,26 +38,25 @@ public class ConsultaControladorJugador {
         return this.manejadorListarJugadores.ejecutar();
     }
 
-    @GetMapping(value = "jugadores/{posicion}")
+    @GetMapping(value = "/{posicion}")
     @ApiOperation("Listar jugadores por posicion")
     public List<DtoJugador> listarPorPosicion(@PathVariable String posicion) {
         return this.manejadorListarJugadoresPorPosicion.ejecutar(posicion);
     }
 
-    @GetMapping(value = "listarPorPieHabil/{pieHabil}")
+    @GetMapping(value = "/jugadores/{pieHabil}")
     @ApiOperation("Listar jugadores por pie habil")
     public List<DtoJugador> listarPorPieHabil(@PathVariable String pieHabil) {
         return this.manejadorListarJugadoresPorPieHabil.ejecutar(pieHabil);
     }
 
-    @GetMapping(value = "obtenerEquipo/{defensas}/{mediocampistas}/{delanteros}")
+    @GetMapping(value = "/equipo")
     @ApiOperation("obtener equipo")
-    public List<DtoJugador> obtenerEquipo(@PathVariable Long defensas, @PathVariable Long mediocampistas,
-                                          @PathVariable Long delanteros) {
-        return this.manejadorObtenerEquipoJugadores.ejecutar(defensas, mediocampistas, delanteros);
+    public List<DtoJugador> obtenerEquipo(@RequestBody DtoPosiciones dtoPosiciones) {
+        return this.manejadorObtenerEquipoJugadores.ejecutar(dtoPosiciones);
     }
 
-    @GetMapping(value = "obtenerPorId/{documento}")
+    @GetMapping(value = "jugador/{documento}")
     @ApiOperation("obtener jugador por documento")
     public DtoJugador obtenerPorId(@PathVariable Long documento) {
         return this.manejadorObtenerPorDocumentoJugador.ejecutar(documento);
