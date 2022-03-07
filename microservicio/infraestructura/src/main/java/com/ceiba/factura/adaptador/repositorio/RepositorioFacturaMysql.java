@@ -15,14 +15,8 @@ public class RepositorioFacturaMysql implements RepositorioFactura{
     @SqlStatement(namespace="factura", value="crear")
     private static String sqlCrear;
 
-    @SqlStatement(namespace="factura", value="actualizar")
-    private static String sqlActualizar;
-
     @SqlStatement(namespace="factura", value="eliminar")
     private static String sqlEliminar;
-
-    @SqlStatement(namespace="factura", value="existe")
-    private static String sqlExiste;
 
     @SqlStatement(namespace="factura", value="existePorId")
     private static String sqlExistePorId;
