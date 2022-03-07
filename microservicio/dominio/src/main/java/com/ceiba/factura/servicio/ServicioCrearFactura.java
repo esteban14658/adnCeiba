@@ -2,6 +2,7 @@ package com.ceiba.factura.servicio;
 
 import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
 import com.ceiba.dominio.excepcion.ExcepcionSinDatos;
+import com.ceiba.dominio.excepcion.ExcepcionValorInvalido;
 import com.ceiba.factura.modelo.entidad.Factura;
 import com.ceiba.factura.puerto.repositorio.RepositorioFactura;
 
@@ -11,6 +12,7 @@ public class ServicioCrearFactura {
 
     public static final String EL_JUGADOR_AL_QUE_DESEA_ASIGNARLE_LA_FACTURA_NO_ESTA_REGISTRADO = "El jugador al que desea asignarle la factura no esta registrado";
     public static final String YA_TIENE_UNA_FACTURA_ASIGNADA = "Ya tiene una factura asignada";
+    public static final String SOLO_SE_PUEE_INGRESAR_VALORES_DE_1_3_Y_6_MESES = "Solo se puee ingresar valores de 1, 3 y 6 meses";
 
     private final RepositorioFactura repositorioFactura;
 
@@ -34,6 +36,8 @@ public class ServicioCrearFactura {
             valorFactura = factura.promocionTresMeses();
         } else if (meses == 6){
             valorFactura = factura.promocionSeisMeses();
+        } else {
+            throw new ExcepcionValorInvalido(SOLO_SE_PUEE_INGRESAR_VALORES_DE_1_3_Y_6_MESES);
         }
         Long valor = Math.round(valorFactura);
         return new Factura(factura.getId(), valor, LocalDate.parse(fechaInicio),

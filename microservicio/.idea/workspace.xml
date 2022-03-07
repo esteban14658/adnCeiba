@@ -163,7 +163,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServicioCrearFacturaTest.deberiaLanzarUnaExepcionCuandoSeValideLaExistenciaDeUnaFacturaActiva" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ServicioCrearFacturaTest.deberiaLanzarUnaExepcionCuandoSeDigiteUnMesNoAceptado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.dominio.test" />
       <extension name="coverage">
         <pattern>
@@ -173,7 +173,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.ceiba.factura.servicio" />
       <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.servicio.ServicioCrearFacturaTest" />
-      <option name="METHOD_NAME" value="deberiaLanzarUnaExepcionCuandoSeValideLaExistenciaDeUnaFacturaActiva" />
+      <option name="METHOD_NAME" value="deberiaLanzarUnaExepcionCuandoSeDigiteUnMesNoAceptado" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -202,10 +202,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ServicioCrearFacturaTest" />
+        <item itemvalue="JUnit.ServicioCrearFacturaTest.deberiaLanzarUnaExepcionCuandoSeDigiteUnMesNoAceptado" />
         <item itemvalue="JUnit.ServicioCrearFacturaTest.deberiaCrearLaFacturaDeManeraCorrectaCuandoSonSeisMeses" />
         <item itemvalue="JUnit.ServicioCrearFacturaTest.deberiaCrearLaFacturaDeManeraCorrectaCuandoSoloEsUnMes" />
         <item itemvalue="JUnit.ServicioCrearFacturaTest.deberiaCrearLaFacturaDeManeraCorrecta" />
-        <item itemvalue="JUnit.ServicioCrearFacturaTest.deberiaLanzarUnaExepcionCuandoSeValideLaExistenciaDeUnaFacturaActiva" />
       </list>
     </recent_temporary>
   </component>
@@ -235,7 +235,8 @@
       <workItem from="1646243860162" duration="7810000" />
       <workItem from="1646308503026" duration="30200000" />
       <workItem from="1646395362879" duration="15348000" />
-      <workItem from="1646416338412" duration="12785000" />
+      <workItem from="1646416338412" duration="13175000" />
+      <workItem from="1646654487851" duration="1055000" />
     </task>
     <servers />
   </component>
@@ -268,11 +269,6 @@
           <url>file://$PROJECT_DIR$/dominio/src/test/java/com/ceiba/BasePrueba.java</url>
           <line>21</line>
           <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/dominio/src/main/java/com/ceiba/factura/servicio/ServicioCrearFactura.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

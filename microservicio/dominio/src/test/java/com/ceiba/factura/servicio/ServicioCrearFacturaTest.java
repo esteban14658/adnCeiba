@@ -1,9 +1,8 @@
 package com.ceiba.factura.servicio;
 
 
-import com.ceiba.BasePrueba;
-import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
 import com.ceiba.dominio.excepcion.ExcepcionSinDatos;
+import com.ceiba.dominio.excepcion.ExcepcionValorInvalido;
 import com.ceiba.factura.modelo.entidad.Factura;
 import com.ceiba.factura.puerto.repositorio.RepositorioFactura;
 import com.ceiba.factura.servicio.testdatabuilder.FacturaTestDataBuilder;
@@ -14,12 +13,9 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 
-import java.util.Optional;
-
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.doAnswer;
-import static org.mockito.Mockito.doReturn;
 
 public class ServicioCrearFacturaTest {
 
@@ -93,6 +89,27 @@ public class ServicioCrearFacturaTest {
 
         // act - assert
         assertThrows(ExcepcionSinDatos.class, () -> service.ejecutar(factura, 3L));
+    }
+
+    @Test
+    @DisplayName("Deberia lanzar una exepcion cuando se digite un mes no aceptado")
+    void deberiaLanzarUnaExepcionCuandoSeDigiteUnMesNoAceptado() {
+        // arrange
+        Jugador jugador = new JugadorTestDataBuilder().conId(1L).build();
+        Factura factura = new FacturaTestDataBuilder().conJugador(jugador).build();
+        RepositorioFactura repositorioFactura = Mockito.mock(RepositorioFactura.class);
+        doAnswer(invocation -> {
+            // assert
+            Factura facturaArg = invocation.getArgument(0);
+            assertNotNull(facturaArg);
+            return null;
+        }).when(repositorioFactura).crear(any(Factura.class));
+        //doReturn(Optional.of(factura)).when(repositorioFactura).existePorIdJugador(anyLong());
+        Mockito.when(repositorioFactura.existePorIdJugador(Mockito.anyLong())).thenReturn(false);
+        ServicioCrearFactura service = new ServicioCrearFactura(repositorioFactura);
+
+        // act - assert
+        assertThrows(ExcepcionValorInvalido.class, () -> service.ejecutar(factura, 9L));
     }
 
 }
