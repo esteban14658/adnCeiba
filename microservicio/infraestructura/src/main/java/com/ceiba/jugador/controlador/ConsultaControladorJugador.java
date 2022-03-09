@@ -3,6 +3,8 @@ package com.ceiba.jugador.controlador;
 import com.ceiba.jugador.consulta.*;
 import com.ceiba.jugador.modelo.dto.DtoJugador;
 import com.ceiba.jugador.modelo.dto.DtoPosiciones;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/jugadores")
+@CrossOrigin(origins = "*", methods = {RequestMethod.GET})
 @Api(tags={"Controlador consulta jugador"})
 public class ConsultaControladorJugador {
 
@@ -52,8 +55,10 @@ public class ConsultaControladorJugador {
 
     @GetMapping(value = "/equipo")
     @ApiOperation("obtener equipo")
-    public List<DtoJugador> obtenerEquipo(@RequestBody DtoPosiciones dtoPosiciones) {
-        return this.manejadorObtenerEquipoJugadores.ejecutar(dtoPosiciones);
+    public List<DtoJugador> obtenerEquipo(@RequestParam(value = "defensas") String defensas,
+                                          @RequestParam(value = "mediocampistas") String mediocampistas,
+                                          @RequestParam(value = "delanteros") String delanteros) {
+        return this.manejadorObtenerEquipoJugadores.ejecutar(defensas, mediocampistas, delanteros);
     }
 
     @GetMapping(value = "jugador/{documento}")

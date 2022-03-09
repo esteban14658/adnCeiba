@@ -1,9 +1,7 @@
 package com.ceiba.jugador.controlador;
 
 import com.ceiba.ApplicationMock;
-import com.ceiba.jugador.modelo.dto.DtoPosiciones;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -18,7 +16,6 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.core.Is.is;
-import static org.springframework.http.MediaType.APPLICATION_JSON_UTF8;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -70,16 +67,16 @@ class ConsultaControladorJugadorTest {
     @Test
     @DisplayName("Deberia listar el equipo")
     void deberiaListarElEquipo() throws Exception {
-        String url = "/jugadores/equipo";
-        DtoPosiciones dtoPosiciones = new DtoPosiciones(4L, 4L, 2L);
+        Integer defensas = 4;
+        Integer mediocampistas = 4;
+        Integer delanteros = 2;
+        String url = "/jugadores/equipo?defensas=" + defensas + "&mediocampistas=" + mediocampistas +
+                "&delanteros=" + delanteros;
         //... more
         ObjectMapper mapper = new ObjectMapper();
         mapper.configure(SerializationFeature.WRAP_ROOT_VALUE, false);
-        ObjectWriter ow = mapper.writer().withDefaultPrettyPrinter();
-        String requestJson = ow.writeValueAsString(dtoPosiciones);
 
-        mocMvc.perform(get(url).contentType(MediaType.APPLICATION_JSON)
-                        .content(requestJson))
+        mocMvc.perform(get(url).contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
     }
 

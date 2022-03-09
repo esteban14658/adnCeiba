@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/jugadores")
+@CrossOrigin(origins = "*", methods = {RequestMethod.POST, RequestMethod.DELETE, RequestMethod.PUT})
 @Api(tags = { "Controlador comando jugador"})
 public class ComandoControladorJugador {
 

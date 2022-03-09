@@ -16,7 +16,7 @@ public class ManejadorObtenerEquipoJugadores {
         this.servicioObtenerEquipo = servicioObtenerEquipo;
     }
 
-    public List<DtoJugador> ejecutar(DtoPosiciones dtoPosiciones) {
-        return this.servicioObtenerEquipo.ejecutar(dtoPosiciones);
+    public List<DtoJugador> ejecutar(String defensas, String mediocampistas, String delanteros) {
+        return this.servicioObtenerEquipo.ejecutar(defensas, mediocampistas, delanteros);
     }
 }
