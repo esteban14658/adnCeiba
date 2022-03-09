@@ -2,9 +2,6 @@ package com.ceiba.jugador.controlador;
 
 import com.ceiba.jugador.consulta.*;
 import com.ceiba.jugador.modelo.dto.DtoJugador;
-import com.ceiba.jugador.modelo.dto.DtoPosiciones;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;

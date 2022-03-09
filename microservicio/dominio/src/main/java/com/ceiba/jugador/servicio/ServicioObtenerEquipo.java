@@ -2,7 +2,6 @@ package com.ceiba.jugador.servicio;
 
 import com.ceiba.dominio.excepcion.ExcepcionLongitudValor;
 import com.ceiba.jugador.modelo.dto.DtoJugador;
-import com.ceiba.jugador.modelo.dto.DtoPosiciones;
 import com.ceiba.jugador.puerto.dao.DaoJugador;
 
 import java.util.ArrayList;
