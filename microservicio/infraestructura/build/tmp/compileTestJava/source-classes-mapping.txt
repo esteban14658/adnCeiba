@@ -2,7 +2,13 @@ com/ceiba/jugador/testdatabuilder/ComandoJugadorTestDataBuilder.java
  com.ceiba.jugador.testdatabuilder.ComandoJugadorTestDataBuilder
 com/ceiba/ApplicationMock.java
  com.ceiba.ApplicationMock
-com/ceiba/jugador/controlador/ComandoControladorJugadorTest.java
- com.ceiba.jugador.controlador.ComandoControladorJugadorTest
 com/ceiba/jugador/controlador/ConsultaControladorJugadorTest.java
  com.ceiba.jugador.controlador.ConsultaControladorJugadorTest
+com/ceiba/jugador/controlador/ComandoControladorJugadorTest.java
+ com.ceiba.jugador.controlador.ComandoControladorJugadorTest
+com/ceiba/factura/testdatabuilder/ComandoFacturaTestDataBuilder.java
+ com.ceiba.factura.testdatabuilder.ComandoFacturaTestDataBuilder
+com/ceiba/factura/controlador/ComandoControladorFacturaTest.java
+ com.ceiba.factura.controlador.ComandoControladorFacturaTest
+com/ceiba/factura/controlador/ConsultaControladorFacturaTest.java
+ com.ceiba.factura.controlador.ConsultaControladorFacturaTest

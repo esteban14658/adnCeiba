@@ -39,8 +39,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -101,7 +101,55 @@
       <recent name="com.ceiba.jugador.adaptador.dao" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Application">
+  <component name="RunManager" selected="JUnit.ConsultaControladorFacturaTest.deberiaListarFacturasActivas">
+    <configuration name="ComandoControladorFacturaTest.deberiaCrearUnaFactura" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jugadores.infraestructura.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ceiba.factura.controlador.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ceiba.factura.controlador" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.controlador.ComandoControladorFacturaTest" />
+      <option name="METHOD_NAME" value="deberiaCrearUnaFactura" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ComandoControladorJugadorTest.deberiaCrearUnJugador" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jugadores.infraestructura.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ceiba.jugador.controlador.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ceiba.jugador.controlador" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.controlador.ComandoControladorJugadorTest" />
+      <option name="METHOD_NAME" value="deberiaCrearUnJugador" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConsultaControladorFacturaTest.deberiaListarFacturasActivas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jugadores.infraestructura.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ceiba.factura.controlador.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ceiba.factura.controlador" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.controlador.ConsultaControladorFacturaTest" />
+      <option name="METHOD_NAME" value="deberiaListarFacturasActivas" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ConsultaControladorJugadorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.infraestructura.test" />
       <extension name="coverage">
@@ -113,53 +161,6 @@
       <option name="PACKAGE_NAME" value="com.ceiba.jugador.controlador" />
       <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.controlador.ConsultaControladorJugadorTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConsultaControladorJugadorTest.deberiaListarElEquipo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jugadores.infraestructura.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ceiba.jugador.controlador.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.jugador.controlador" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.controlador.ConsultaControladorJugadorTest" />
-      <option name="METHOD_NAME" value="deberiaListarElEquipo" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServicioCrearFacturaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jugadores.dominio.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ceiba.factura.servicio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.factura.servicio" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.servicio.ServicioCrearFacturaTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServicioObtenerEquipoTest.deberiaLanzarUnaExepcionCuandoHayaMayorCantidadDeJugadoresPermitidos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jugadores.dominio.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ceiba.jugador.servicio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.jugador.servicio" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.servicio.ServicioObtenerEquipoTest" />
-      <option name="METHOD_NAME" value="deberiaLanzarUnaExepcionCuandoHayaMayorCantidadDeJugadoresPermitidos" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -202,11 +203,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ServicioObtenerEquipoTest.deberiaObtenerUnEquipoDeManeraCorrecta" />
-        <item itemvalue="JUnit.ServicioObtenerEquipoTest.deberiaLanzarUnaExepcionCuandoHayaMayorCantidadDeJugadoresPermitidos" />
+        <item itemvalue="JUnit.ConsultaControladorFacturaTest.deberiaListarFacturasActivas" />
+        <item itemvalue="JUnit.ComandoControladorFacturaTest.deberiaCrearUnaFactura" />
+        <item itemvalue="JUnit.ComandoControladorJugadorTest.deberiaCrearUnJugador" />
         <item itemvalue="JUnit.ConsultaControladorJugadorTest" />
-        <item itemvalue="JUnit.ConsultaControladorJugadorTest.deberiaListarElEquipo" />
-        <item itemvalue="JUnit.ServicioCrearFacturaTest" />
+        <item itemvalue="JUnit.ServicioObtenerEquipoTest.deberiaObtenerUnEquipoDeManeraCorrecta" />
       </list>
     </recent_temporary>
   </component>
@@ -240,7 +241,7 @@
       <workItem from="1646654487851" duration="14992000" />
       <workItem from="1646740967638" duration="7476000" />
       <workItem from="1646762941249" duration="3030000" />
-      <workItem from="1646826885549" duration="588000" />
+      <workItem from="1646826885549" duration="2899000" />
     </task>
     <servers />
   </component>
