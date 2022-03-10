@@ -1,6 +1,5 @@
 package com.ceiba.jugador.puerto.dao;
 
-import com.ceiba.asistencia.modelo.dto.DtoAsistencia;
 import com.ceiba.jugador.modelo.dto.DtoJugador;
 
 import java.util.List;
