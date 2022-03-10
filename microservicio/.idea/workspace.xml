@@ -101,7 +101,7 @@
       <recent name="com.ceiba.jugador.adaptador.dao" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ConsultaControladorJugadorTest">
+  <component name="RunManager" selected="Spring Boot.Application">
     <configuration name="ComandoControladorFacturaTest.deberiaCrearUnaFactura" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.infraestructura.test" />
       <extension name="coverage">
@@ -242,7 +242,8 @@
       <workItem from="1646740967638" duration="7476000" />
       <workItem from="1646762941249" duration="3030000" />
       <workItem from="1646826885549" duration="4371000" />
-      <workItem from="1646832962566" duration="10972000" />
+      <workItem from="1646832962566" duration="12890000" />
+      <workItem from="1646914649399" duration="1413000" />
     </task>
     <servers />
   </component>
