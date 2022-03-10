@@ -10,11 +10,11 @@ com/ceiba/asistencia/testdatabuilder/ComandoAsistenciaTestDataBuilder.java
  com.ceiba.asistencia.testdatabuilder.ComandoAsistenciaTestDataBuilder
 com/ceiba/jugador/testdatabuilder/ComandoJugadorTestDataBuilder.java
  com.ceiba.jugador.testdatabuilder.ComandoJugadorTestDataBuilder
-com/ceiba/jugador/controlador/ConsultaControladorJugadorTest.java
- com.ceiba.jugador.controlador.ConsultaControladorJugadorTest
+com/ceiba/asistencia/controlador/ConsultaControladorAsistenciaTest.java
+ com.ceiba.asistencia.controlador.ConsultaControladorAsistenciaTest
 com/ceiba/factura/testdatabuilder/ComandoFacturaTestDataBuilder.java
  com.ceiba.factura.testdatabuilder.ComandoFacturaTestDataBuilder
 com/ceiba/asistencia/controlador/ComandoControladorAsistenciaTest.java
  com.ceiba.asistencia.controlador.ComandoControladorAsistenciaTest
-com/ceiba/asistencia/controlador/ConsultaControladorAsistenciaTest.java
- com.ceiba.asistencia.controlador.ConsultaControladorAsistenciaTest
+com/ceiba/jugador/controlador/ConsultaControladorJugadorTest.java
+ com.ceiba.jugador.controlador.ConsultaControladorJugadorTest

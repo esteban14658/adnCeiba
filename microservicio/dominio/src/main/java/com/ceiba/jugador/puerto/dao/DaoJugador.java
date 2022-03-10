@@ -1,5 +1,6 @@
 package com.ceiba.jugador.puerto.dao;
 
+import com.ceiba.asistencia.modelo.dto.DtoAsistencia;
 import com.ceiba.jugador.modelo.dto.DtoJugador;
 
 import java.util.List;
@@ -31,6 +32,12 @@ public interface DaoJugador {
      * @return los jugadores
      */
     List<DtoJugador> listarJugadoresSinFactura();
+
+    /**
+     * Permite listar asistencias
+     * @return los asistencias
+     */
+    List<DtoJugador> listarSinAsistencias();
 
     /**
      * Permite obtener un solo jugador

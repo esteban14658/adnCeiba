@@ -20,18 +20,20 @@ public class ConsultaControladorJugador {
     private final ManejadorListarJugadoresPorPieHabil manejadorListarJugadoresPorPieHabil;
     private final ManejadorObtenerEquipoJugadores manejadorObtenerEquipoJugadores;
     private final ManejadorListarJugadoresSinFactura manejadorListarJugadoresSinFactura;
+    private final ManejadorListarJugadoresSinAsistencia manejadorListarJugadoresSinAsistencia;
 
     public ConsultaControladorJugador(ManejadorListarJugadores manejadorListarJugadores,
                                       ManejadorObtenerPorDocumentoJugador manejadorObtenerPorDocumentoJugador,
                                       ManejadorListarJugadoresPorPosicion manejadorListarJugadoresPorPosicion,
                                       ManejadorListarJugadoresPorPieHabil manejadorListarJugadoresPorPieHabil,
-                                      ManejadorObtenerEquipoJugadores manejadorObtenerEquipoJugadores, ManejadorListarJugadoresSinFactura manejadorListarJugadoresSinFactura) {
+                                      ManejadorObtenerEquipoJugadores manejadorObtenerEquipoJugadores, ManejadorListarJugadoresSinFactura manejadorListarJugadoresSinFactura, ManejadorListarJugadoresSinAsistencia manejadorListarJugadoresSinAsistencia) {
         this.manejadorListarJugadores = manejadorListarJugadores;
         this.manejadorObtenerPorDocumentoJugador = manejadorObtenerPorDocumentoJugador;
         this.manejadorListarJugadoresPorPosicion = manejadorListarJugadoresPorPosicion;
         this.manejadorListarJugadoresPorPieHabil = manejadorListarJugadoresPorPieHabil;
         this.manejadorObtenerEquipoJugadores = manejadorObtenerEquipoJugadores;
         this.manejadorListarJugadoresSinFactura = manejadorListarJugadoresSinFactura;
+        this.manejadorListarJugadoresSinAsistencia = manejadorListarJugadoresSinAsistencia;
     }
 
     @GetMapping
@@ -44,6 +46,12 @@ public class ConsultaControladorJugador {
     @ApiOperation("Listar jugadores sin factura activa")
     public List<DtoJugador> listarJugadorSinFactura(){
         return this.manejadorListarJugadoresSinFactura.ejecutar();
+    }
+
+    @GetMapping(value = "/asistencia")
+    @ApiOperation("Listar jugadores sin asistencia de hoy")
+    public List<DtoJugador> listarJugadoresSinAsistencia(){
+        return this.manejadorListarJugadoresSinAsistencia.ejecutar();
     }
 
     @GetMapping(value = "/{posicion}")

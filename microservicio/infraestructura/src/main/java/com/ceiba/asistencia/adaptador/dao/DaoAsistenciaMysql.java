@@ -20,7 +20,6 @@ public class DaoAsistenciaMysql implements DaoAsitencia {
         this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;
     }
 
-
     @Override
     public List<DtoAsistencia> listar() {
         return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListar, new MapeoAsistencia());

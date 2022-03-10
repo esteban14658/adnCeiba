@@ -68,7 +68,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/dominio/src/test/java/com/ceiba/asistencia/servicio" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/infraestructura/src/main/resources/sql/asistencia" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/infraestructura/src/main/resources/sql/jugador" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -77,8 +77,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\esteban.beltran\Documents\Proyectos JAVA\java-arquitectura-hexagonal\microservicio\infraestructura\src\main\resources\sql\asistencia" />
       <recent name="C:\Users\esteban.beltran\Documents\Proyectos JAVA\java-arquitectura-hexagonal\microservicio\infraestructura\src\main\resources\sql\jugador" />
+      <recent name="C:\Users\esteban.beltran\Documents\Proyectos JAVA\java-arquitectura-hexagonal\microservicio\infraestructura\src\main\resources\sql\asistencia" />
       <recent name="C:\Users\esteban.beltran\Documents\Proyectos JAVA\java-arquitectura-hexagonal\microservicio\infraestructura\src\main\resources\sql\factura" />
       <recent name="C:\Users\esteban.beltran\Documents\Proyectos JAVA\java-arquitectura-hexagonal\microservicio\infraestructura\src\main\resources" />
       <recent name="C:\Users\esteban.beltran\Documents\Proyectos JAVA\java-arquitectura-hexagonal\microservicio\infraestructura\src\main\java\com\ceiba" />
@@ -101,34 +101,33 @@
       <recent name="com.ceiba.jugador.adaptador.dao" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ServicioEliminarJugadorTest.deberiaLanzarUnaExcepcionSiEstaRegistradoEnOtraTabla">
-    <configuration name="AsistenciaTest.deberiaCrearUnaAsistenciaCorrectamente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jugadores.dominio.test" />
+  <component name="RunManager" selected="JUnit.ConsultaControladorJugadorTest">
+    <configuration name="ConsultaControladorJugadorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jugadores.infraestructura.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ceiba.asistencia.entidad.*" />
+          <option name="PATTERN" value="com.ceiba.jugador.controlador.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.asistencia.entidad" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.asistencia.entidad.AsistenciaTest" />
-      <option name="METHOD_NAME" value="deberiaCrearUnaAsistenciaCorrectamente" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.ceiba.jugador.controlador" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.controlador.ConsultaControladorJugadorTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ComandoControladorAsistenciaTest.deberiaCrearUnaAsistencia" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ConsultaControladorJugadorTest.deberiaListarJugadoresSinAsistenciaHoy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.infraestructura.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ceiba.asistencia.controlador.*" />
+          <option name="PATTERN" value="com.ceiba.jugador.controlador.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.asistencia.controlador" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.asistencia.controlador.ComandoControladorAsistenciaTest" />
-      <option name="METHOD_NAME" value="deberiaCrearUnaAsistencia" />
+      <option name="PACKAGE_NAME" value="com.ceiba.jugador.controlador" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.controlador.ConsultaControladorJugadorTest" />
+      <option name="METHOD_NAME" value="deberiaListarJugadoresSinAsistenciaHoy" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -204,11 +203,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ConsultaControladorJugadorTest" />
+        <item itemvalue="JUnit.ConsultaControladorJugadorTest.deberiaListarJugadoresSinAsistenciaHoy" />
         <item itemvalue="JUnit.ServicioEliminarJugadorTest.deberiaLanzarUnaExcepcionSiEstaRegistradoEnOtraTabla" />
         <item itemvalue="JUnit.ServicioCrearAsistenciaTest.deberiaLanzarUnaExcepcionSiElJugadorYaEsteRegistradoEnEsaFecha" />
         <item itemvalue="JUnit.ServicioCrearAsistenciaTest.deberiaCrearUnaAsistenciaCorrectamente" />
-        <item itemvalue="JUnit.AsistenciaTest.deberiaCrearUnaAsistenciaCorrectamente" />
-        <item itemvalue="JUnit.ComandoControladorAsistenciaTest.deberiaCrearUnaAsistencia" />
       </list>
     </recent_temporary>
   </component>
@@ -244,7 +243,7 @@
       <workItem from="1646762941249" duration="3030000" />
       <workItem from="1646826885549" duration="4371000" />
       <workItem from="1646832962566" duration="12890000" />
-      <workItem from="1646914649399" duration="16490000" />
+      <workItem from="1646914649399" duration="18911000" />
     </task>
     <servers />
   </component>
