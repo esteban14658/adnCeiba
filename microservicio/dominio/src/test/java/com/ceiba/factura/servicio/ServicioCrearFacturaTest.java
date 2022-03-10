@@ -104,7 +104,6 @@ public class ServicioCrearFacturaTest {
             assertNotNull(facturaArg);
             return null;
         }).when(repositorioFactura).crear(any(Factura.class));
-        //doReturn(Optional.of(factura)).when(repositorioFactura).existePorIdJugador(anyLong());
         Mockito.when(repositorioFactura.existePorIdJugador(Mockito.anyLong())).thenReturn(false);
         ServicioCrearFactura service = new ServicioCrearFactura(repositorioFactura);
 

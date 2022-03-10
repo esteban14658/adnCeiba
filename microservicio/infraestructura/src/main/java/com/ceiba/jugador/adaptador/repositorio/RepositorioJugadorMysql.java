@@ -30,6 +30,9 @@ public class RepositorioJugadorMysql implements RepositorioJugador {
     @SqlStatement(namespace="jugador", value="existePorDoc")
     private static String sqlExistePorDoc;
 
+    @SqlStatement(namespace = "jugador", value = "existeJugadorConFactura")
+    private static String sqlExiteJugadorConFactura;
+
     public RepositorioJugadorMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {
         this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;
     }
@@ -70,5 +73,12 @@ public class RepositorioJugadorMysql implements RepositorioJugador {
         MapSqlParameterSource paramSource = new MapSqlParameterSource();
         paramSource.addValue("documento", documento);
         return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExistePorDoc,paramSource, Boolean.class);
+    }
+
+    @Override
+    public boolean existeJugadorConFactura(Long id) {
+        MapSqlParameterSource paramSource = new MapSqlParameterSource();
+        paramSource.addValue("id", id);
+        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExiteJugadorConFactura, paramSource, Boolean.class);
     }
 }

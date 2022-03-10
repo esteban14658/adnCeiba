@@ -67,8 +67,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/dominio/src/test/java/com/ceiba/jugador/servicio" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/infraestructura/src/main/resources/sql/jugador" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/dominio/src/test/java/com/ceiba/asistencia/servicio" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/infraestructura/src/main/resources/sql/asistencia" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -77,11 +77,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\esteban.beltran\Documents\Proyectos JAVA\java-arquitectura-hexagonal\microservicio\infraestructura\src\main\resources\sql\asistencia" />
       <recent name="C:\Users\esteban.beltran\Documents\Proyectos JAVA\java-arquitectura-hexagonal\microservicio\infraestructura\src\main\resources\sql\jugador" />
       <recent name="C:\Users\esteban.beltran\Documents\Proyectos JAVA\java-arquitectura-hexagonal\microservicio\infraestructura\src\main\resources\sql\factura" />
       <recent name="C:\Users\esteban.beltran\Documents\Proyectos JAVA\java-arquitectura-hexagonal\microservicio\infraestructura\src\main\resources" />
       <recent name="C:\Users\esteban.beltran\Documents\Proyectos JAVA\java-arquitectura-hexagonal\microservicio\infraestructura\src\main\java\com\ceiba" />
-      <recent name="C:\Users\esteban.beltran\Documents\Proyectos JAVA\java-arquitectura-hexagonal\microservicio\aplicacion\src\main\java\com\ceiba\usuario\comando\manejador" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\esteban.beltran\Documents\Proyectos JAVA\java-arquitectura-hexagonal\microservicio\gradle\wrapper" />
@@ -102,80 +102,81 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Application">
-    <configuration name="ComandoControladorFacturaTest.deberiaCrearUnaFactura" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jugadores.infraestructura.test" />
+    <configuration name="AsistenciaTest.deberiaCrearUnaAsistenciaCorrectamente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jugadores.dominio.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ceiba.factura.controlador.*" />
+          <option name="PATTERN" value="com.ceiba.asistencia.entidad.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.factura.controlador" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.controlador.ComandoControladorFacturaTest" />
-      <option name="METHOD_NAME" value="deberiaCrearUnaFactura" />
+      <option name="PACKAGE_NAME" value="com.ceiba.asistencia.entidad" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.asistencia.entidad.AsistenciaTest" />
+      <option name="METHOD_NAME" value="deberiaCrearUnaAsistenciaCorrectamente" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ComandoControladorJugadorTest.deberiaCrearUnJugador" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ComandoControladorAsistenciaTest.deberiaCrearUnaAsistencia" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.infraestructura.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ceiba.jugador.controlador.*" />
+          <option name="PATTERN" value="com.ceiba.asistencia.controlador.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.jugador.controlador" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.controlador.ComandoControladorJugadorTest" />
-      <option name="METHOD_NAME" value="deberiaCrearUnJugador" />
+      <option name="PACKAGE_NAME" value="com.ceiba.asistencia.controlador" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.asistencia.controlador.ComandoControladorAsistenciaTest" />
+      <option name="METHOD_NAME" value="deberiaCrearUnaAsistencia" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConsultaControladorFacturaTest.deberiaListarFacturasActivas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ConsultaControladorAsistenciaTest.deberiaListarAsistencias" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.infraestructura.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ceiba.factura.controlador.*" />
+          <option name="PATTERN" value="com.ceiba.asistencia.controlador.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.factura.controlador" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.controlador.ConsultaControladorFacturaTest" />
-      <option name="METHOD_NAME" value="deberiaListarFacturasActivas" />
+      <option name="PACKAGE_NAME" value="com.ceiba.asistencia.controlador" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.asistencia.controlador.ConsultaControladorAsistenciaTest" />
+      <option name="METHOD_NAME" value="deberiaListarAsistencias" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConsultaControladorJugadorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jugadores.infraestructura.test" />
+    <configuration name="ServicioCrearAsistenciaTest.deberiaCrearUnaAsistenciaCorrectamente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jugadores.dominio.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ceiba.jugador.controlador.*" />
+          <option name="PATTERN" value="com.ceiba.asistencia.servicio.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.jugador.controlador" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.controlador.ConsultaControladorJugadorTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.ceiba.asistencia.servicio" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.asistencia.servicio.ServicioCrearAsistenciaTest" />
+      <option name="METHOD_NAME" value="deberiaCrearUnaAsistenciaCorrectamente" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConsultaControladorJugadorTest.deberiaListarJugadoresSinFacturasActivas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jugadores.infraestructura.test" />
+    <configuration name="ServicioCrearAsistenciaTest.deberiaLanzarUnaExcepcionSiElJugadorYaEsteRegistradoEnEsaFecha" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jugadores.dominio.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ceiba.jugador.controlador.*" />
+          <option name="PATTERN" value="com.ceiba.asistencia.servicio.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.jugador.controlador" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.controlador.ConsultaControladorJugadorTest" />
-      <option name="METHOD_NAME" value="deberiaListarJugadoresSinFacturasActivas" />
+      <option name="PACKAGE_NAME" value="com.ceiba.asistencia.servicio" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.asistencia.servicio.ServicioCrearAsistenciaTest" />
+      <option name="METHOD_NAME" value="deberiaLanzarUnaExcepcionSiElJugadorYaEsteRegistradoEnEsaFecha" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -203,11 +204,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ConsultaControladorJugadorTest" />
-        <item itemvalue="JUnit.ConsultaControladorJugadorTest.deberiaListarJugadoresSinFacturasActivas" />
-        <item itemvalue="JUnit.ConsultaControladorFacturaTest.deberiaListarFacturasActivas" />
-        <item itemvalue="JUnit.ComandoControladorFacturaTest.deberiaCrearUnaFactura" />
-        <item itemvalue="JUnit.ComandoControladorJugadorTest.deberiaCrearUnJugador" />
+        <item itemvalue="JUnit.ServicioCrearAsistenciaTest.deberiaLanzarUnaExcepcionSiElJugadorYaEsteRegistradoEnEsaFecha" />
+        <item itemvalue="JUnit.ServicioCrearAsistenciaTest.deberiaCrearUnaAsistenciaCorrectamente" />
+        <item itemvalue="JUnit.AsistenciaTest.deberiaCrearUnaAsistenciaCorrectamente" />
+        <item itemvalue="JUnit.ComandoControladorAsistenciaTest.deberiaCrearUnaAsistencia" />
+        <item itemvalue="JUnit.ConsultaControladorAsistenciaTest.deberiaListarAsistencias" />
       </list>
     </recent_temporary>
   </component>
@@ -243,7 +244,7 @@
       <workItem from="1646762941249" duration="3030000" />
       <workItem from="1646826885549" duration="4371000" />
       <workItem from="1646832962566" duration="12890000" />
-      <workItem from="1646914649399" duration="1413000" />
+      <workItem from="1646914649399" duration="15173000" />
     </task>
     <servers />
   </component>
@@ -253,18 +254,9 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/aplicacion/src/main/java/com/ceiba/factura/consulta/ManejadorListarFacturas.java</url>
-          <line>17</line>
-          <properties class="com.ceiba.factura.consulta.ManejadorListarFacturas" method="ejecutar">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/infraestructura/src/main/java/com/ceiba/jugador/adaptador/repositorio/RepositorioJugadorMysql.java</url>
-          <line>38</line>
+          <line>41</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

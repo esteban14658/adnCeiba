@@ -7,7 +7,6 @@ import com.ceiba.jugador.puerto.dao.DaoJugador;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
-import java.security.SecureRandom;
 
 public class ServicioObtenerEquipo {
 

@@ -44,4 +44,6 @@ insert into jugador (documento, nombre, apellido, fecha_nacimiento, peso, altura
 values (96808080, 'Juanito', 'Perez', now(), 45.6, 1.65, 'Delantero', 'Derecho');
 
 insert into factura (valor, fecha_ingreso, fecha_caducidad, jugador, estado, descripcion)
-values ('420000', now(), '2022-06-01', 1, 1, 'Tres meses')
+values ('420000', now(), '2022-06-01', 1, 1, 'Tres meses');
+
+insert into asistencia (fecha, jugador) values (now(), 1);

@@ -22,3 +22,11 @@ create table factura (
  primary key (id),
  foreign key (jugador) references jugador(id)
 );
+
+create table asistencia (
+id int(11) not null auto_increment,
+fecha date not null,
+jugador int not null,
+primary key (id),
+foreign key (jugador) references jugador(id)
+);

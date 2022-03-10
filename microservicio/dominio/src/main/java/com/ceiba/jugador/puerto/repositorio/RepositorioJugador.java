@@ -41,4 +41,11 @@ public interface RepositorioJugador {
      */
     boolean existePorDocumento(Long documento);
 
+    /**
+     * Permite validar si existe un jugador con dicho id
+     * que cuente con una factura activa o en el historial
+     * @return si existe o no
+     */
+    boolean existeJugadorConFactura(Long id);
+
 }

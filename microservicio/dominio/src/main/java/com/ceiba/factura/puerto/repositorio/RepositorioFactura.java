@@ -5,7 +5,7 @@ import com.ceiba.factura.modelo.entidad.Factura;
 public interface RepositorioFactura{
 
     /**
-     * Permite crear un jugador
+     * Permite crear una factura
      * @param factura
      * @return el id generado
      */

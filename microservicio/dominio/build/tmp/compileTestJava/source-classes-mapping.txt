@@ -1,25 +1,31 @@
-com/ceiba/factura/servicio/ServicioCrearFacturaTest.java
- com.ceiba.factura.servicio.ServicioCrearFacturaTest
+com/ceiba/asistencia/entidad/AsistenciaTest.java
+ com.ceiba.asistencia.entidad.AsistenciaTest
 com/ceiba/BasePrueba.java
  com.ceiba.BasePrueba
  com.ceiba.BasePrueba$Thunk
-com/ceiba/jugador/entidad/JugadorTest.java
- com.ceiba.jugador.entidad.JugadorTest
-com/ceiba/jugador/servicio/ServicioCrearJugadorTest.java
- com.ceiba.jugador.servicio.ServicioCrearJugadorTest
-com/ceiba/jugador/servicio/ServicioEliminarJugadorTest.java
- com.ceiba.jugador.servicio.ServicioEliminarJugadorTest
-com/ceiba/jugador/servicio/testdatabuilder/JugadorTestDataBuilder.java
- com.ceiba.jugador.servicio.testdatabuilder.JugadorTestDataBuilder
-com/ceiba/factura/entidad/FacturaTest.java
- com.ceiba.factura.entidad.FacturaTest
+com/ceiba/factura/servicio/ServicioEliminarFacturaTest.java
+ com.ceiba.factura.servicio.ServicioEliminarFacturaTest
 com/ceiba/jugador/servicio/ServicioObtenerPorDocumentoJugadorTest.java
  com.ceiba.jugador.servicio.ServicioObtenerPorDocumentoJugadorTest
 com/ceiba/jugador/servicio/ServicioActualizarJugadorTest.java
  com.ceiba.jugador.servicio.ServicioActualizarJugadorTest
-com/ceiba/factura/servicio/testdatabuilder/FacturaTestDataBuilder.java
- com.ceiba.factura.servicio.testdatabuilder.FacturaTestDataBuilder
-com/ceiba/factura/servicio/ServicioEliminarFacturaTest.java
- com.ceiba.factura.servicio.ServicioEliminarFacturaTest
 com/ceiba/jugador/servicio/ServicioObtenerEquipoTest.java
  com.ceiba.jugador.servicio.ServicioObtenerEquipoTest
+com/ceiba/factura/entidad/FacturaTest.java
+ com.ceiba.factura.entidad.FacturaTest
+com/ceiba/jugador/entidad/JugadorTest.java
+ com.ceiba.jugador.entidad.JugadorTest
+com/ceiba/jugador/servicio/ServicioCrearJugadorTest.java
+ com.ceiba.jugador.servicio.ServicioCrearJugadorTest
+com/ceiba/factura/servicio/testdatabuilder/FacturaTestDataBuilder.java
+ com.ceiba.factura.servicio.testdatabuilder.FacturaTestDataBuilder
+com/ceiba/jugador/servicio/ServicioEliminarJugadorTest.java
+ com.ceiba.jugador.servicio.ServicioEliminarJugadorTest
+com/ceiba/asistencia/servicio/testdatabuilder/AsistenciaTestDataBuilder.java
+ com.ceiba.asistencia.servicio.testdatabuilder.AsistenciaTestDataBuilder
+com/ceiba/jugador/servicio/testdatabuilder/JugadorTestDataBuilder.java
+ com.ceiba.jugador.servicio.testdatabuilder.JugadorTestDataBuilder
+com/ceiba/asistencia/servicio/ServicioCrearAsistenciaTest.java
+ com.ceiba.asistencia.servicio.ServicioCrearAsistenciaTest
+com/ceiba/factura/servicio/ServicioCrearFacturaTest.java
+ com.ceiba.factura.servicio.ServicioCrearFacturaTest
