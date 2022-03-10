@@ -27,6 +27,12 @@ public interface DaoJugador {
     List<DtoJugador> listarPorPieHabil(String pieHabil);
 
     /**
+     * Permite listar jugadores
+     * @return los jugadores
+     */
+    List<DtoJugador> listarJugadoresSinFactura();
+
+    /**
      * Permite obtener un solo jugador
      * @return un jugador
      */

@@ -19,23 +19,31 @@ public class ConsultaControladorJugador {
     private final ManejadorListarJugadoresPorPosicion manejadorListarJugadoresPorPosicion;
     private final ManejadorListarJugadoresPorPieHabil manejadorListarJugadoresPorPieHabil;
     private final ManejadorObtenerEquipoJugadores manejadorObtenerEquipoJugadores;
+    private final ManejadorListarJugadoresSinFactura manejadorListarJugadoresSinFactura;
 
     public ConsultaControladorJugador(ManejadorListarJugadores manejadorListarJugadores,
                                       ManejadorObtenerPorDocumentoJugador manejadorObtenerPorDocumentoJugador,
                                       ManejadorListarJugadoresPorPosicion manejadorListarJugadoresPorPosicion,
                                       ManejadorListarJugadoresPorPieHabil manejadorListarJugadoresPorPieHabil,
-                                      ManejadorObtenerEquipoJugadores manejadorObtenerEquipoJugadores) {
+                                      ManejadorObtenerEquipoJugadores manejadorObtenerEquipoJugadores, ManejadorListarJugadoresSinFactura manejadorListarJugadoresSinFactura) {
         this.manejadorListarJugadores = manejadorListarJugadores;
         this.manejadorObtenerPorDocumentoJugador = manejadorObtenerPorDocumentoJugador;
         this.manejadorListarJugadoresPorPosicion = manejadorListarJugadoresPorPosicion;
         this.manejadorListarJugadoresPorPieHabil = manejadorListarJugadoresPorPieHabil;
         this.manejadorObtenerEquipoJugadores = manejadorObtenerEquipoJugadores;
+        this.manejadorListarJugadoresSinFactura = manejadorListarJugadoresSinFactura;
     }
 
     @GetMapping
     @ApiOperation("Listar todos los jugadores")
     public List<DtoJugador> listar() {
         return this.manejadorListarJugadores.ejecutar();
+    }
+
+    @GetMapping(value = "/factura")
+    @ApiOperation("Listar jugadores sin factura activa")
+    public List<DtoJugador> listarJugadorSinFactura(){
+        return this.manejadorListarJugadoresSinFactura.ejecutar();
     }
 
     @GetMapping(value = "/{posicion}")

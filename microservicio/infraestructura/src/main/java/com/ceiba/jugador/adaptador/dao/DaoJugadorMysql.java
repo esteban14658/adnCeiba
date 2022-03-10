@@ -23,6 +23,9 @@ public class DaoJugadorMysql implements DaoJugador {
     @SqlStatement(namespace= "jugador", value="listarPorPieHabil")
     private static String sqlListarPorPieHabil;
 
+    @SqlStatement(namespace = "jugador", value = "listarJugadoresSinFactura")
+    private static String sqlListarJugadoresSinFactura;
+
     @SqlStatement(namespace= "jugador", value="obtenerPorDocumento")
     private static String sqlObtener;
 
@@ -47,6 +50,11 @@ public class DaoJugadorMysql implements DaoJugador {
         MapSqlParameterSource paramSource = new MapSqlParameterSource();
         paramSource.addValue("pieHabil", pieHabil);
         return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListarPorPieHabil, paramSource, new MapeoJugador());
+    }
+
+    @Override
+    public List<DtoJugador> listarJugadoresSinFactura() {
+        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListarJugadoresSinFactura, new MapeoJugador());
     }
 
     @Override

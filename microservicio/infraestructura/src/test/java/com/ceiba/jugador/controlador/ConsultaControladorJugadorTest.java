@@ -30,7 +30,7 @@ class ConsultaControladorJugadorTest {
     private MockMvc mocMvc;
 
     @Test
-    @DisplayName("Deberia listar usuarios")
+    @DisplayName("Deberia listar jugadores")
     void deberiaListarJugadores() throws Exception {
         // arrange
         // act - assert
@@ -43,7 +43,20 @@ class ConsultaControladorJugadorTest {
     }
 
     @Test
-    @DisplayName("Deberia listar PorPosicion")
+    @DisplayName("Deberia listar jugadores sin facturas activas")
+    void deberiaListarJugadoresSinFacturasActivas() throws Exception {
+        // arrange
+        // act - assert
+        mocMvc.perform(get("/jugadores/factura")
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$", hasSize(14)))
+                .andExpect(jsonPath("$[0].documento", is(89808080)))
+                .andExpect(jsonPath("$[0].id", is(2)));
+    }
+
+    @Test
+    @DisplayName("Deberia listar porPosicion")
     void deberiaListarPorPosicion() throws Exception {
         String posicion = "Delantero";
         mocMvc.perform(get("/jugadores/" + posicion)
@@ -54,7 +67,7 @@ class ConsultaControladorJugadorTest {
     }
 
     @Test
-    @DisplayName("Deberia listar PorPosicion")
+    @DisplayName("Deberia listar Por Posicion")
     void deberiaListarPorPieHabil() throws Exception {
         String pieHabil = "Derecho";
         mocMvc.perform(get("/jugadores/jugadores/" + pieHabil)
