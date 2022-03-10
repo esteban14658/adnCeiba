@@ -101,7 +101,7 @@
       <recent name="com.ceiba.jugador.adaptador.dao" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Application">
+  <component name="RunManager" selected="JUnit.ServicioEliminarJugadorTest.deberiaLanzarUnaExcepcionSiEstaRegistradoEnOtraTabla">
     <configuration name="AsistenciaTest.deberiaCrearUnaAsistenciaCorrectamente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.dominio.test" />
       <extension name="coverage">
@@ -129,22 +129,6 @@
       <option name="PACKAGE_NAME" value="com.ceiba.asistencia.controlador" />
       <option name="MAIN_CLASS_NAME" value="com.ceiba.asistencia.controlador.ComandoControladorAsistenciaTest" />
       <option name="METHOD_NAME" value="deberiaCrearUnaAsistencia" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConsultaControladorAsistenciaTest.deberiaListarAsistencias" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jugadores.infraestructura.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ceiba.asistencia.controlador.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.asistencia.controlador" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.asistencia.controlador.ConsultaControladorAsistenciaTest" />
-      <option name="METHOD_NAME" value="deberiaListarAsistencias" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -182,6 +166,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ServicioEliminarJugadorTest.deberiaLanzarUnaExcepcionSiEstaRegistradoEnOtraTabla" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jugadores.dominio.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ceiba.jugador.servicio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ceiba.jugador.servicio" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.servicio.ServicioEliminarJugadorTest" />
+      <option name="METHOD_NAME" value="deberiaLanzarUnaExcepcionSiEstaRegistradoEnOtraTabla" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="microservicio" />
       <method v="2">
@@ -204,11 +204,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ServicioEliminarJugadorTest.deberiaLanzarUnaExcepcionSiEstaRegistradoEnOtraTabla" />
         <item itemvalue="JUnit.ServicioCrearAsistenciaTest.deberiaLanzarUnaExcepcionSiElJugadorYaEsteRegistradoEnEsaFecha" />
         <item itemvalue="JUnit.ServicioCrearAsistenciaTest.deberiaCrearUnaAsistenciaCorrectamente" />
         <item itemvalue="JUnit.AsistenciaTest.deberiaCrearUnaAsistenciaCorrectamente" />
         <item itemvalue="JUnit.ComandoControladorAsistenciaTest.deberiaCrearUnaAsistencia" />
-        <item itemvalue="JUnit.ConsultaControladorAsistenciaTest.deberiaListarAsistencias" />
       </list>
     </recent_temporary>
   </component>
@@ -244,7 +244,7 @@
       <workItem from="1646762941249" duration="3030000" />
       <workItem from="1646826885549" duration="4371000" />
       <workItem from="1646832962566" duration="12890000" />
-      <workItem from="1646914649399" duration="15173000" />
+      <workItem from="1646914649399" duration="16490000" />
     </task>
     <servers />
   </component>
