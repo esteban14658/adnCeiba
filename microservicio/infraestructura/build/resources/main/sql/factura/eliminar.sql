@@ -1,3 +1,3 @@
 delete 
-from jugador
+from factura
 where id = :id

@@ -38,3 +38,5 @@ com/ceiba/asistencia/comando/fabrica/FabricaAsistencia.java
  com.ceiba.asistencia.comando.fabrica.FabricaAsistencia
 com/ceiba/asistencia/comando/manejador/ManejadorCrearAsistencia.java
  com.ceiba.asistencia.comando.manejador.ManejadorCrearAsistencia
+com/ceiba/factura/comando/manejador/ManejadorEliminarFactura.java
+ com.ceiba.factura.comando.manejador.ManejadorEliminarFactura
