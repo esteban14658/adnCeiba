@@ -1,11 +1,11 @@
 com/ceiba/jugador/adaptador/dao/MapeoJugador.java
  com.ceiba.jugador.adaptador.dao.MapeoJugador
-com/ceiba/jugador/controlador/ComandoControladorJugador.java
- com.ceiba.jugador.controlador.ComandoControladorJugador
+com/ceiba/asistencia/controlador/ComandoControladorAsistencia.java
+ com.ceiba.asistencia.controlador.ComandoControladorAsistencia
 com/ceiba/factura/controlador/ConsultaControladorFactura.java
  com.ceiba.factura.controlador.ConsultaControladorFactura
-com/ceiba/configuracion/BeanServicioJugador.java
- com.ceiba.configuracion.BeanServicioJugador
+com/ceiba/configuracion/BeanServicioFactura.java
+ com.ceiba.configuracion.BeanServicioFactura
 com/ceiba/asistencia/controlador/ConsultaControladorAsistencia.java
  com.ceiba.asistencia.controlador.ConsultaControladorAsistencia
 com/ceiba/asistencia/adaptador/dao/MapeoAsistencia.java
@@ -18,19 +18,19 @@ com/ceiba/asistencia/adaptador/repositorio/RepositorioAsistenciaMysql.java
  com.ceiba.asistencia.adaptador.repositorio.RepositorioAsistenciaMysql
 com/ceiba/asistencia/adaptador/dao/DaoAsistenciaMysql.java
  com.ceiba.asistencia.adaptador.dao.DaoAsistenciaMysql
-com/ceiba/jugador/controlador/ConsultaControladorJugador.java
- com.ceiba.jugador.controlador.ConsultaControladorJugador
+com/ceiba/factura/controlador/ComandoControladorFactura.java
+ com.ceiba.factura.controlador.ComandoControladorFactura
 com/ceiba/configuracion/BeanServicioAsistencia.java
  com.ceiba.configuracion.BeanServicioAsistencia
 com/ceiba/factura/adaptador/repositorio/RepositorioFacturaMysql.java
  com.ceiba.factura.adaptador.repositorio.RepositorioFacturaMysql
-com/ceiba/jugador/adaptador/repositorio/RepositorioJugadorMysql.java
- com.ceiba.jugador.adaptador.repositorio.RepositorioJugadorMysql
 com/ceiba/jugador/adaptador/dao/DaoJugadorMysql.java
  com.ceiba.jugador.adaptador.dao.DaoJugadorMysql
-com/ceiba/configuracion/BeanServicioFactura.java
- com.ceiba.configuracion.BeanServicioFactura
-com/ceiba/asistencia/controlador/ComandoControladorAsistencia.java
- com.ceiba.asistencia.controlador.ComandoControladorAsistencia
-com/ceiba/factura/controlador/ComandoControladorFactura.java
- com.ceiba.factura.controlador.ComandoControladorFactura
+com/ceiba/jugador/controlador/ComandoControladorJugador.java
+ com.ceiba.jugador.controlador.ComandoControladorJugador
+com/ceiba/configuracion/BeanServicioJugador.java
+ com.ceiba.configuracion.BeanServicioJugador
+com/ceiba/jugador/adaptador/repositorio/RepositorioJugadorMysql.java
+ com.ceiba.jugador.adaptador.repositorio.RepositorioJugadorMysql
+com/ceiba/jugador/controlador/ConsultaControladorJugador.java
+ com.ceiba.jugador.controlador.ConsultaControladorJugador

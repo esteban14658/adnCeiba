@@ -1,20 +1,20 @@
 com/ceiba/factura/controlador/ConsultaControladorFacturaTest.java
  com.ceiba.factura.controlador.ConsultaControladorFacturaTest
-com/ceiba/jugador/controlador/ComandoControladorJugadorTest.java
- com.ceiba.jugador.controlador.ComandoControladorJugadorTest
+com/ceiba/asistencia/controlador/ConsultaControladorAsistenciaTest.java
+ com.ceiba.asistencia.controlador.ConsultaControladorAsistenciaTest
 com/ceiba/ApplicationMock.java
  com.ceiba.ApplicationMock
-com/ceiba/factura/controlador/ComandoControladorFacturaTest.java
- com.ceiba.factura.controlador.ComandoControladorFacturaTest
+com/ceiba/factura/testdatabuilder/ComandoFacturaTestDataBuilder.java
+ com.ceiba.factura.testdatabuilder.ComandoFacturaTestDataBuilder
 com/ceiba/asistencia/testdatabuilder/ComandoAsistenciaTestDataBuilder.java
  com.ceiba.asistencia.testdatabuilder.ComandoAsistenciaTestDataBuilder
 com/ceiba/jugador/testdatabuilder/ComandoJugadorTestDataBuilder.java
  com.ceiba.jugador.testdatabuilder.ComandoJugadorTestDataBuilder
-com/ceiba/asistencia/controlador/ConsultaControladorAsistenciaTest.java
- com.ceiba.asistencia.controlador.ConsultaControladorAsistenciaTest
-com/ceiba/factura/testdatabuilder/ComandoFacturaTestDataBuilder.java
- com.ceiba.factura.testdatabuilder.ComandoFacturaTestDataBuilder
+com/ceiba/jugador/controlador/ComandoControladorJugadorTest.java
+ com.ceiba.jugador.controlador.ComandoControladorJugadorTest
 com/ceiba/asistencia/controlador/ComandoControladorAsistenciaTest.java
  com.ceiba.asistencia.controlador.ComandoControladorAsistenciaTest
+com/ceiba/factura/controlador/ComandoControladorFacturaTest.java
+ com.ceiba.factura.controlador.ComandoControladorFacturaTest
 com/ceiba/jugador/controlador/ConsultaControladorJugadorTest.java
  com.ceiba.jugador.controlador.ConsultaControladorJugadorTest

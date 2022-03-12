@@ -7,6 +7,7 @@ import com.ceiba.jugador.puerto.repositorio.RepositorioJugador;
 public class ServicioEliminarJugador {
 
     public static final String NO_PUEDE_ELIMINAR_UN_JUGADOR_CON_FACTURA_PREVIA = "No puede eliminar un jugador con factura previa";
+    public static final String NO_SE_PUEDE_ELIMINAR_UN_JUGADOR_CON_ASISTENCIAS_PREVIAS = "No se puede eliminar un jugador con asistencias previas";
     private final RepositorioJugador repositorioJugador;
 
     public ServicioEliminarJugador(RepositorioJugador repositorioJugador) {
@@ -15,6 +16,7 @@ public class ServicioEliminarJugador {
 
     public void ejecutar(Long id) {
         validarExistenciaDeFactura(id);
+        validarExistenciaDeAsistencia(id);
         this.repositorioJugador.eliminar(id);
     }
 
@@ -22,6 +24,13 @@ public class ServicioEliminarJugador {
         boolean existe = this.repositorioJugador.existeJugadorConFactura(id);
         if (existe){
             throw new ExcepcionDuplicidad(NO_PUEDE_ELIMINAR_UN_JUGADOR_CON_FACTURA_PREVIA);
+        }
+    }
+
+    private void validarExistenciaDeAsistencia(Long id){
+        boolean existe = this.repositorioJugador.existeJugadorConAsistencias(id);
+        if (existe){
+            throw new ExcepcionDuplicidad(NO_SE_PUEDE_ELIMINAR_UN_JUGADOR_CON_ASISTENCIAS_PREVIAS);
         }
     }
 

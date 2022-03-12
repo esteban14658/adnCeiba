@@ -21,12 +21,13 @@ public class ConsultaControladorJugador {
     private final ManejadorObtenerEquipoJugadores manejadorObtenerEquipoJugadores;
     private final ManejadorListarJugadoresSinFactura manejadorListarJugadoresSinFactura;
     private final ManejadorListarJugadoresSinAsistencia manejadorListarJugadoresSinAsistencia;
+    private final ManejadorListarJugadoresPorCategoria manejadorListarJugadoresPorCategoria;
 
     public ConsultaControladorJugador(ManejadorListarJugadores manejadorListarJugadores,
                                       ManejadorObtenerPorDocumentoJugador manejadorObtenerPorDocumentoJugador,
                                       ManejadorListarJugadoresPorPosicion manejadorListarJugadoresPorPosicion,
                                       ManejadorListarJugadoresPorPieHabil manejadorListarJugadoresPorPieHabil,
-                                      ManejadorObtenerEquipoJugadores manejadorObtenerEquipoJugadores, ManejadorListarJugadoresSinFactura manejadorListarJugadoresSinFactura, ManejadorListarJugadoresSinAsistencia manejadorListarJugadoresSinAsistencia) {
+                                      ManejadorObtenerEquipoJugadores manejadorObtenerEquipoJugadores, ManejadorListarJugadoresSinFactura manejadorListarJugadoresSinFactura, ManejadorListarJugadoresSinAsistencia manejadorListarJugadoresSinAsistencia, ManejadorListarJugadoresPorCategoria manejadorListarJugadoresPorCategoria) {
         this.manejadorListarJugadores = manejadorListarJugadores;
         this.manejadorObtenerPorDocumentoJugador = manejadorObtenerPorDocumentoJugador;
         this.manejadorListarJugadoresPorPosicion = manejadorListarJugadoresPorPosicion;
@@ -34,6 +35,7 @@ public class ConsultaControladorJugador {
         this.manejadorObtenerEquipoJugadores = manejadorObtenerEquipoJugadores;
         this.manejadorListarJugadoresSinFactura = manejadorListarJugadoresSinFactura;
         this.manejadorListarJugadoresSinAsistencia = manejadorListarJugadoresSinAsistencia;
+        this.manejadorListarJugadoresPorCategoria = manejadorListarJugadoresPorCategoria;
     }
 
     @GetMapping
@@ -64,6 +66,12 @@ public class ConsultaControladorJugador {
     @ApiOperation("Listar jugadores por pie habil")
     public List<DtoJugador> listarPorPieHabil(@PathVariable String pieHabil) {
         return this.manejadorListarJugadoresPorPieHabil.ejecutar(pieHabil);
+    }
+
+    @GetMapping(value = "/categoria/{fecha}")
+    @ApiOperation("Listar jugadores por categoria")
+    public List<DtoJugador> listarPorCategoria(@PathVariable String fecha) {
+        return this.manejadorListarJugadoresPorCategoria.ejecutar(fecha);
     }
 
     @GetMapping(value = "/equipo")

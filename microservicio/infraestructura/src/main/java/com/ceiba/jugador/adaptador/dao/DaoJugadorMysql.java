@@ -29,6 +29,9 @@ public class DaoJugadorMysql implements DaoJugador {
     @SqlStatement(namespace = "jugador", value = "listarJugadoresSinAsistencia")
     private static String sqlListarJugadoresSinAsistencias;
 
+    @SqlStatement(namespace = "jugador", value = "listarPorCategoria")
+    private static String sqlListarJugadoresPorCategoria;
+
     @SqlStatement(namespace= "jugador", value="obtenerPorDocumento")
     private static String sqlObtener;
 
@@ -63,6 +66,14 @@ public class DaoJugadorMysql implements DaoJugador {
     @Override
     public List<DtoJugador> listarSinAsistencias() {
         return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListarJugadoresSinAsistencias, new MapeoJugador());
+    }
+
+    @Override
+    public List<DtoJugador> listarPorCategoria(String fecha) {
+        MapSqlParameterSource paramSource = new MapSqlParameterSource();
+        paramSource.addValue("fecha", fecha);
+        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate()
+                .query(sqlListarJugadoresPorCategoria, paramSource, new MapeoJugador());
     }
 
     @Override

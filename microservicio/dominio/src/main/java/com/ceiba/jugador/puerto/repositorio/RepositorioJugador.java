@@ -48,4 +48,10 @@ public interface RepositorioJugador {
      */
     boolean existeJugadorConFactura(Long id);
 
+    /**
+     * Permite validar si hay un jugador relacionado con asistencias
+     * @return si existe o no
+     */
+    boolean existeJugadorConAsistencias(Long id);
+
 }

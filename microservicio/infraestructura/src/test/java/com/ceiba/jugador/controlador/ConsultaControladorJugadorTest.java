@@ -14,6 +14,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.time.LocalDate;
+
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.core.Is.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -88,6 +90,17 @@ class ConsultaControladorJugadorTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(15)))
                 .andExpect(jsonPath("$[0].pieHabil", is("Derecho")));
+    }
+
+    @Test
+    @DisplayName("Deberia listar Por categoria")
+    void deberiaListarPorCategoria() throws Exception {
+        String fecha = "2022";
+        mocMvc.perform(get("/jugadores/categoria/" + fecha)
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$", hasSize(15)))
+                .andExpect(jsonPath("$[0].fechaNacimiento", is(LocalDate.now().toString())));
     }
 
     @Test

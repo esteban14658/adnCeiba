@@ -30,8 +30,8 @@ public class ServicioEliminarJugadorTest {
     }
 
     @Test
-    @DisplayName("Deberia lanzar una excepcion si esta registrado en otra tabla")
-    void deberiaLanzarUnaExcepcionSiEstaRegistradoEnOtraTabla(){
+    @DisplayName("Deberia lanzar una excepcion si esta registrado en tabla factura")
+    void deberiaLanzarUnaExcepcionSiEstaRegistradoEnTablaFactura(){
         Jugador jugador = new JugadorTestDataBuilder().conId(1L).build();
         RepositorioJugador repositorioJugador = Mockito.mock(RepositorioJugador.class);
 
@@ -41,6 +41,23 @@ public class ServicioEliminarJugadorTest {
             return null;
         }).when(repositorioJugador).crear(any(Jugador.class));
         Mockito.when(repositorioJugador.existeJugadorConFactura(Mockito.anyLong())).thenReturn(true);
+        ServicioEliminarJugador servicioEliminarJugador = new ServicioEliminarJugador(repositorioJugador);
+        // act - assert
+        assertThrows(ExcepcionDuplicidad.class, () -> servicioEliminarJugador.ejecutar(jugador.getId()));
+    }
+
+    @Test
+    @DisplayName("Deberia lanzar una excepcion si esta registrado en tabla asistencia")
+    void deberiaLanzarUnaExcepcionSiEstaRegistradoEnTablaAsistencia(){
+        Jugador jugador = new JugadorTestDataBuilder().conId(1L).build();
+        RepositorioJugador repositorioJugador = Mockito.mock(RepositorioJugador.class);
+
+        doAnswer(invocation -> {
+            Jugador jugadorArg = invocation.getArgument(0);
+            assertNotNull(jugadorArg);
+            return null;
+        }).when(repositorioJugador).crear(any(Jugador.class));
+        Mockito.when(repositorioJugador.existeJugadorConAsistencias(Mockito.anyLong())).thenReturn(true);
         ServicioEliminarJugador servicioEliminarJugador = new ServicioEliminarJugador(repositorioJugador);
         // act - assert
         assertThrows(ExcepcionDuplicidad.class, () -> servicioEliminarJugador.ejecutar(jugador.getId()));

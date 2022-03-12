@@ -39,6 +39,12 @@ public interface DaoJugador {
     List<DtoJugador> listarSinAsistencias();
 
     /**
+     * Permite listar por categoras
+     * @return lista por año de nacimiento
+     */
+    List<DtoJugador> listarPorCategoria(String fecha);
+
+    /**
      * Permite obtener un solo jugador
      * @return un jugador
      */

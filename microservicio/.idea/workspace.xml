@@ -101,7 +101,7 @@
       <recent name="com.ceiba.jugador.adaptador.dao" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Application">
+  <component name="RunManager" selected="JUnit.ConsultaControladorJugadorTest">
     <configuration name="ConsultaControladorJugadorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.infraestructura.test" />
       <extension name="coverage">
@@ -133,39 +133,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServicioCrearAsistenciaTest.deberiaCrearUnaAsistenciaCorrectamente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jugadores.dominio.test" />
+    <configuration name="ConsultaControladorJugadorTest.deberiaListarPorCategoria" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jugadores.infraestructura.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ceiba.asistencia.servicio.*" />
+          <option name="PATTERN" value="com.ceiba.jugador.controlador.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.asistencia.servicio" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.asistencia.servicio.ServicioCrearAsistenciaTest" />
-      <option name="METHOD_NAME" value="deberiaCrearUnaAsistenciaCorrectamente" />
+      <option name="PACKAGE_NAME" value="com.ceiba.jugador.controlador" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.controlador.ConsultaControladorJugadorTest" />
+      <option name="METHOD_NAME" value="deberiaListarPorCategoria" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServicioCrearAsistenciaTest.deberiaLanzarUnaExcepcionSiElJugadorYaEsteRegistradoEnEsaFecha" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jugadores.dominio.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ceiba.asistencia.servicio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.asistencia.servicio" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.asistencia.servicio.ServicioCrearAsistenciaTest" />
-      <option name="METHOD_NAME" value="deberiaLanzarUnaExcepcionSiElJugadorYaEsteRegistradoEnEsaFecha" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServicioEliminarJugadorTest.deberiaLanzarUnaExcepcionSiEstaRegistradoEnOtraTabla" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ServicioEliminarJugadorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.dominio.test" />
       <extension name="coverage">
         <pattern>
@@ -175,7 +159,22 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.ceiba.jugador.servicio" />
       <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.servicio.ServicioEliminarJugadorTest" />
-      <option name="METHOD_NAME" value="deberiaLanzarUnaExcepcionSiEstaRegistradoEnOtraTabla" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServicioEliminarJugadorTest.deberiaLanzarUnaExcepcionSiEstaRegistradoEnTablaAsistencia" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jugadores.dominio.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ceiba.jugador.servicio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ceiba.jugador.servicio" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.servicio.ServicioEliminarJugadorTest" />
+      <option name="METHOD_NAME" value="deberiaLanzarUnaExcepcionSiEstaRegistradoEnTablaAsistencia" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -204,10 +203,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ConsultaControladorJugadorTest" />
+        <item itemvalue="JUnit.ConsultaControladorJugadorTest.deberiaListarPorCategoria" />
+        <item itemvalue="JUnit.ServicioEliminarJugadorTest" />
+        <item itemvalue="JUnit.ServicioEliminarJugadorTest.deberiaLanzarUnaExcepcionSiEstaRegistradoEnTablaAsistencia" />
         <item itemvalue="JUnit.ConsultaControladorJugadorTest.deberiaListarJugadoresSinAsistenciaHoy" />
-        <item itemvalue="JUnit.ServicioEliminarJugadorTest.deberiaLanzarUnaExcepcionSiEstaRegistradoEnOtraTabla" />
-        <item itemvalue="JUnit.ServicioCrearAsistenciaTest.deberiaLanzarUnaExcepcionSiElJugadorYaEsteRegistradoEnEsaFecha" />
-        <item itemvalue="JUnit.ServicioCrearAsistenciaTest.deberiaCrearUnaAsistenciaCorrectamente" />
       </list>
     </recent_temporary>
   </component>
@@ -245,7 +244,8 @@
       <workItem from="1646832962566" duration="12890000" />
       <workItem from="1646914649399" duration="21752000" />
       <workItem from="1646990324993" duration="4578000" />
-      <workItem from="1647000151401" duration="183000" />
+      <workItem from="1647000151401" duration="8538000" />
+      <workItem from="1647112777024" duration="2463000" />
     </task>
     <servers />
   </component>
@@ -257,7 +257,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/infraestructura/src/main/java/com/ceiba/jugador/adaptador/repositorio/RepositorioJugadorMysql.java</url>
-          <line>41</line>
+          <line>44</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
