@@ -94,14 +94,46 @@
       <recent name="com.ceiba.jugador.servicio" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ceiba.factura.consulta" />
       <recent name="com.ceiba.jugador.consulta" />
       <recent name="com.ceiba.factura.comando.manejador" />
       <recent name="com.ceiba.jugador.controlador" />
       <recent name="com.ceiba.jugador.comando.manejador" />
-      <recent name="com.ceiba.jugador.adaptador.dao" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ConsultaControladorJugadorTest">
+  <component name="RunManager" selected="Spring Boot.Application">
+    <configuration name="ConsultaControladorFacturaTest.deberiaListarFacturasActivas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jugadores.infraestructura.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ceiba.factura.controlador.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ceiba.factura.controlador" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.controlador.ConsultaControladorFacturaTest" />
+      <option name="METHOD_NAME" value="deberiaListarFacturasActivas" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConsultaControladorFacturaTest.deberiaListarJugadoresSinFacturasActivas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jugadores.infraestructura.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ceiba.factura.controlador.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ceiba.factura.controlador" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.controlador.ConsultaControladorFacturaTest" />
+      <option name="METHOD_NAME" value="deberiaListarJugadoresSinFacturasActivas" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ConsultaControladorJugadorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.infraestructura.test" />
       <extension name="coverage">
@@ -113,22 +145,6 @@
       <option name="PACKAGE_NAME" value="com.ceiba.jugador.controlador" />
       <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.controlador.ConsultaControladorJugadorTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConsultaControladorJugadorTest.deberiaListarJugadoresSinAsistenciaHoy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jugadores.infraestructura.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ceiba.jugador.controlador.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.jugador.controlador" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.controlador.ConsultaControladorJugadorTest" />
-      <option name="METHOD_NAME" value="deberiaListarJugadoresSinAsistenciaHoy" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -164,22 +180,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServicioEliminarJugadorTest.deberiaLanzarUnaExcepcionSiEstaRegistradoEnTablaAsistencia" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jugadores.dominio.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ceiba.jugador.servicio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.jugador.servicio" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.servicio.ServicioEliminarJugadorTest" />
-      <option name="METHOD_NAME" value="deberiaLanzarUnaExcepcionSiEstaRegistradoEnTablaAsistencia" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="microservicio" />
       <method v="2">
@@ -202,11 +202,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ConsultaControladorFacturaTest.deberiaListarJugadoresSinFacturasActivas" />
+        <item itemvalue="JUnit.ConsultaControladorFacturaTest.deberiaListarFacturasActivas" />
         <item itemvalue="JUnit.ConsultaControladorJugadorTest" />
         <item itemvalue="JUnit.ConsultaControladorJugadorTest.deberiaListarPorCategoria" />
         <item itemvalue="JUnit.ServicioEliminarJugadorTest" />
-        <item itemvalue="JUnit.ServicioEliminarJugadorTest.deberiaLanzarUnaExcepcionSiEstaRegistradoEnTablaAsistencia" />
-        <item itemvalue="JUnit.ConsultaControladorJugadorTest.deberiaListarJugadoresSinAsistenciaHoy" />
       </list>
     </recent_temporary>
   </component>
@@ -245,7 +245,8 @@
       <workItem from="1646914649399" duration="21752000" />
       <workItem from="1646990324993" duration="4578000" />
       <workItem from="1647000151401" duration="8538000" />
-      <workItem from="1647112777024" duration="2463000" />
+      <workItem from="1647112777024" duration="4279000" />
+      <workItem from="1647117582190" duration="1922000" />
     </task>
     <servers />
   </component>

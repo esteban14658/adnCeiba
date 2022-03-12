@@ -1,4 +1,4 @@
-package com.ceiba.jugador.consulta;
+package com.ceiba.factura.consulta;
 
 import com.ceiba.jugador.modelo.dto.DtoJugador;
 import com.ceiba.jugador.puerto.dao.DaoJugador;

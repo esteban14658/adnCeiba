@@ -19,7 +19,6 @@ public class ConsultaControladorJugador {
     private final ManejadorListarJugadoresPorPosicion manejadorListarJugadoresPorPosicion;
     private final ManejadorListarJugadoresPorPieHabil manejadorListarJugadoresPorPieHabil;
     private final ManejadorObtenerEquipoJugadores manejadorObtenerEquipoJugadores;
-    private final ManejadorListarJugadoresSinFactura manejadorListarJugadoresSinFactura;
     private final ManejadorListarJugadoresSinAsistencia manejadorListarJugadoresSinAsistencia;
     private final ManejadorListarJugadoresPorCategoria manejadorListarJugadoresPorCategoria;
 
@@ -27,27 +26,23 @@ public class ConsultaControladorJugador {
                                       ManejadorObtenerPorDocumentoJugador manejadorObtenerPorDocumentoJugador,
                                       ManejadorListarJugadoresPorPosicion manejadorListarJugadoresPorPosicion,
                                       ManejadorListarJugadoresPorPieHabil manejadorListarJugadoresPorPieHabil,
-                                      ManejadorObtenerEquipoJugadores manejadorObtenerEquipoJugadores, ManejadorListarJugadoresSinFactura manejadorListarJugadoresSinFactura, ManejadorListarJugadoresSinAsistencia manejadorListarJugadoresSinAsistencia, ManejadorListarJugadoresPorCategoria manejadorListarJugadoresPorCategoria) {
+                                      ManejadorObtenerEquipoJugadores manejadorObtenerEquipoJugadores,
+                                      ManejadorListarJugadoresSinAsistencia manejadorListarJugadoresSinAsistencia,
+                                      ManejadorListarJugadoresPorCategoria manejadorListarJugadoresPorCategoria) {
         this.manejadorListarJugadores = manejadorListarJugadores;
         this.manejadorObtenerPorDocumentoJugador = manejadorObtenerPorDocumentoJugador;
         this.manejadorListarJugadoresPorPosicion = manejadorListarJugadoresPorPosicion;
         this.manejadorListarJugadoresPorPieHabil = manejadorListarJugadoresPorPieHabil;
         this.manejadorObtenerEquipoJugadores = manejadorObtenerEquipoJugadores;
-        this.manejadorListarJugadoresSinFactura = manejadorListarJugadoresSinFactura;
         this.manejadorListarJugadoresSinAsistencia = manejadorListarJugadoresSinAsistencia;
         this.manejadorListarJugadoresPorCategoria = manejadorListarJugadoresPorCategoria;
     }
+
 
     @GetMapping
     @ApiOperation("Listar todos los jugadores")
     public List<DtoJugador> listar() {
         return this.manejadorListarJugadores.ejecutar();
-    }
-
-    @GetMapping(value = "/factura")
-    @ApiOperation("Listar jugadores sin factura activa")
-    public List<DtoJugador> listarJugadorSinFactura(){
-        return this.manejadorListarJugadoresSinFactura.ejecutar();
     }
 
     @GetMapping(value = "/asistencia")

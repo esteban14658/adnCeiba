@@ -45,19 +45,6 @@ class ConsultaControladorJugadorTest {
     }
 
     @Test
-    @DisplayName("Deberia listar jugadores sin facturas activas")
-    void deberiaListarJugadoresSinFacturasActivas() throws Exception {
-        // arrange
-        // act - assert
-        mocMvc.perform(get("/jugadores/factura")
-                        .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$", hasSize(14)))
-                .andExpect(jsonPath("$[0].documento", is(89808080)))
-                .andExpect(jsonPath("$[0].id", is(2)));
-    }
-
-    @Test
     @DisplayName("Deberia listar jugadores sin asistencia hoy")
     void deberiaListarJugadoresSinAsistenciaHoy() throws Exception {
         // arrange

@@ -30,8 +30,8 @@ com/ceiba/jugador/consulta/ManejadorListarJugadoresSinAsistencia.java
  com.ceiba.jugador.consulta.ManejadorListarJugadoresSinAsistencia
 com/ceiba/jugador/consulta/ManejadorObtenerEquipoJugadores.java
  com.ceiba.jugador.consulta.ManejadorObtenerEquipoJugadores
-com/ceiba/jugador/consulta/ManejadorListarJugadoresSinFactura.java
- com.ceiba.jugador.consulta.ManejadorListarJugadoresSinFactura
+com/ceiba/factura/consulta/ManejadorListarJugadoresSinFactura.java
+ com.ceiba.factura.consulta.ManejadorListarJugadoresSinFactura
 com/ceiba/jugador/comando/manejador/ManejadorEliminarJugador.java
  com.ceiba.jugador.comando.manejador.ManejadorEliminarJugador
 com/ceiba/jugador/consulta/ManejadorListarJugadoresPorPosicion.java

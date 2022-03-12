@@ -1,5 +1,5 @@
-com/ceiba/factura/controlador/ConsultaControladorFacturaTest.java
- com.ceiba.factura.controlador.ConsultaControladorFacturaTest
+com/ceiba/factura/controlador/ComandoControladorFacturaTest.java
+ com.ceiba.factura.controlador.ComandoControladorFacturaTest
 com/ceiba/asistencia/controlador/ConsultaControladorAsistenciaTest.java
  com.ceiba.asistencia.controlador.ConsultaControladorAsistenciaTest
 com/ceiba/ApplicationMock.java
@@ -12,9 +12,9 @@ com/ceiba/jugador/testdatabuilder/ComandoJugadorTestDataBuilder.java
  com.ceiba.jugador.testdatabuilder.ComandoJugadorTestDataBuilder
 com/ceiba/jugador/controlador/ComandoControladorJugadorTest.java
  com.ceiba.jugador.controlador.ComandoControladorJugadorTest
+com/ceiba/factura/controlador/ConsultaControladorFacturaTest.java
+ com.ceiba.factura.controlador.ConsultaControladorFacturaTest
 com/ceiba/asistencia/controlador/ComandoControladorAsistenciaTest.java
  com.ceiba.asistencia.controlador.ComandoControladorAsistenciaTest
-com/ceiba/factura/controlador/ComandoControladorFacturaTest.java
- com.ceiba.factura.controlador.ComandoControladorFacturaTest
 com/ceiba/jugador/controlador/ConsultaControladorJugadorTest.java
  com.ceiba.jugador.controlador.ConsultaControladorJugadorTest

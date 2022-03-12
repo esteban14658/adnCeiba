@@ -39,4 +39,17 @@ public class ConsultaControladorFacturaTest {
                 .andExpect(jsonPath("$[0].valor", is(420000)))
                 .andExpect(jsonPath("$[0].id", is(1)));
     }
+
+    @Test
+    @DisplayName("Deberia listar jugadores sin facturas activas")
+    void deberiaListarJugadoresSinFacturasActivas() throws Exception {
+        // arrange
+        // act - assert
+        mocMvc.perform(get("/facturas/factura")
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$", hasSize(14)))
+                .andExpect(jsonPath("$[0].documento", is(89808080)))
+                .andExpect(jsonPath("$[0].id", is(2)));
+    }
 }
