@@ -10,12 +10,17 @@ import com.ceiba.jugador.modelo.entidad.Jugador;
 import com.ceiba.jugador.servicio.testdatabuilder.JugadorTestDataBuilder;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.mockito.ArgumentCaptor;
+import org.mockito.Captor;
 import org.mockito.Mockito;
 
 
+import static net.bytebuddy.matcher.ElementMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.doAnswer;
+import static org.mockito.Mockito.verify;
 
 public class ServicioCrearFacturaTest {
 
@@ -89,6 +94,54 @@ public class ServicioCrearFacturaTest {
 
         // act - assert
         assertThrows(ExcepcionSinDatos.class, () -> service.ejecutar(factura, 3L));
+    }
+
+    @Test
+    @DisplayName("Deberia devolver el valor cuando se ingresa el plan mensual")
+    void deberiaDevolverElValorCuandoSeIngresaElPlanMensual() {
+        Jugador jugador = new JugadorTestDataBuilder().conId(1L).build();
+        Factura factura = new FacturaTestDataBuilder().conJugador(jugador).build();
+        RepositorioFactura repositorioFactura = Mockito.mock(RepositorioFactura.class);
+        ServicioCrearFactura servicioCrearFactura = new ServicioCrearFactura(repositorioFactura);
+        ArgumentCaptor<Factura> facturaArgumentCaptor = ArgumentCaptor.forClass(Factura.class);
+        servicioCrearFactura.ejecutar(factura, 1L);
+        verify(repositorioFactura).crear(facturaArgumentCaptor.capture());
+        Factura capturarValor = facturaArgumentCaptor.getValue();
+
+        assertEquals(100000, capturarValor.getValor());
+
+    }
+
+    @Test
+    @DisplayName("Deberia devolver el valor cuando se ingresa el plan trimestral")
+    void deberiaDevolverElValorCuandoSeIngresaElPlanTrimestral() {
+        Jugador jugador = new JugadorTestDataBuilder().conId(1L).build();
+        Factura factura = new FacturaTestDataBuilder().conJugador(jugador).build();
+        RepositorioFactura repositorioFactura = Mockito.mock(RepositorioFactura.class);
+        ServicioCrearFactura servicioCrearFactura = new ServicioCrearFactura(repositorioFactura);
+        ArgumentCaptor<Factura> facturaArgumentCaptor = ArgumentCaptor.forClass(Factura.class);
+        servicioCrearFactura.ejecutar(factura, 3L);
+        verify(repositorioFactura).crear(facturaArgumentCaptor.capture());
+        Factura capturarValor = facturaArgumentCaptor.getValue();
+
+        assertEquals(255000, capturarValor.getValor());
+
+    }
+
+    @Test
+    @DisplayName("Deberia devolver el valor cuando se ingresa el plan semestral")
+    void deberiaDevolverElValorCuandoSeIngresaElPlanSemestral() {
+        Jugador jugador = new JugadorTestDataBuilder().conId(1L).build();
+        Factura factura = new FacturaTestDataBuilder().conJugador(jugador).build();
+        RepositorioFactura repositorioFactura = Mockito.mock(RepositorioFactura.class);
+        ServicioCrearFactura servicioCrearFactura = new ServicioCrearFactura(repositorioFactura);
+        ArgumentCaptor<Factura> facturaArgumentCaptor = ArgumentCaptor.forClass(Factura.class);
+        servicioCrearFactura.ejecutar(factura, 6L);
+        verify(repositorioFactura).crear(facturaArgumentCaptor.capture());
+        Factura capturarValor = facturaArgumentCaptor.getValue();
+
+        assertEquals(420000, capturarValor.getValor());
+
     }
 
     @Test

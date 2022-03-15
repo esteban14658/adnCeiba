@@ -28,6 +28,17 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="jugadores" type="f1a62948:ProjectNode" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="jugadores" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="jugadores" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
+              </path>
             </expand>
             <select />
           </tree_state>
@@ -73,6 +84,9 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
@@ -101,81 +115,86 @@
       <recent name="com.ceiba.jugador.comando.manejador" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ServicioCrearJugadorTest.deberiaLanzarUnaExepcionCuandoSeValideLaExistenciaDelJugador">
-    <configuration name="ConsultaControladorFacturaTest.deberiaListarFacturasActivas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jugadores.infraestructura.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ceiba.factura.controlador.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.factura.controlador" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.controlador.ConsultaControladorFacturaTest" />
-      <option name="METHOD_NAME" value="deberiaListarFacturasActivas" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="JUnit.ServicioCrearFacturaTest">
+    <configuration name="microservicio [pitest]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="pitest" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="ConsultaControladorFacturaTest.deberiaListarJugadoresSinFacturasActivas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jugadores.infraestructura.test" />
+    <configuration name="ServicioCrearFacturaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jugadores.dominio.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ceiba.factura.controlador.*" />
+          <option name="PATTERN" value="com.ceiba.factura.servicio.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.factura.controlador" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.controlador.ConsultaControladorFacturaTest" />
-      <option name="METHOD_NAME" value="deberiaListarJugadoresSinFacturasActivas" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConsultaControladorJugadorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jugadores.infraestructura.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ceiba.jugador.controlador.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.jugador.controlador" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.controlador.ConsultaControladorJugadorTest" />
+      <option name="PACKAGE_NAME" value="com.ceiba.factura.servicio" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.servicio.ServicioCrearFacturaTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConsultaControladorJugadorTest.deberiaListarPorCategoria" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jugadores.infraestructura.test" />
+    <configuration name="ServicioCrearFacturaTest.deberiaDevolverElValorCuandoSeIngresaElPlanMensual" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jugadores.dominio.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ceiba.jugador.controlador.*" />
+          <option name="PATTERN" value="com.ceiba.factura.servicio.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.jugador.controlador" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.controlador.ConsultaControladorJugadorTest" />
-      <option name="METHOD_NAME" value="deberiaListarPorCategoria" />
+      <option name="PACKAGE_NAME" value="com.ceiba.factura.servicio" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.servicio.ServicioCrearFacturaTest" />
+      <option name="METHOD_NAME" value="deberiaDevolverElValorCuandoSeIngresaElPlanMensual" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServicioCrearJugadorTest.deberiaLanzarUnaExepcionCuandoSeValideLaExistenciaDelJugador" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ServicioCrearFacturaTest.deberiaDevolverElValorCuandoSeIngresaElPlanSemestral" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.dominio.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ceiba.jugador.servicio.*" />
+          <option name="PATTERN" value="com.ceiba.factura.servicio.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.jugador.servicio" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.servicio.ServicioCrearJugadorTest" />
-      <option name="METHOD_NAME" value="deberiaLanzarUnaExepcionCuandoSeValideLaExistenciaDelJugador" />
+      <option name="PACKAGE_NAME" value="com.ceiba.factura.servicio" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.servicio.ServicioCrearFacturaTest" />
+      <option name="METHOD_NAME" value="deberiaDevolverElValorCuandoSeIngresaElPlanSemestral" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServicioCrearFacturaTest.deberiaDevolverElValorCuandoSeIngresaElPlanTrimestral" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jugadores.dominio.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ceiba.factura.servicio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ceiba.factura.servicio" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.servicio.ServicioCrearFacturaTest" />
+      <option name="METHOD_NAME" value="deberiaDevolverElValorCuandoSeIngresaElPlanTrimestral" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -203,11 +222,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ServicioCrearJugadorTest.deberiaLanzarUnaExepcionCuandoSeValideLaExistenciaDelJugador" />
-        <item itemvalue="JUnit.ConsultaControladorFacturaTest.deberiaListarJugadoresSinFacturasActivas" />
-        <item itemvalue="JUnit.ConsultaControladorFacturaTest.deberiaListarFacturasActivas" />
-        <item itemvalue="JUnit.ConsultaControladorJugadorTest" />
-        <item itemvalue="JUnit.ConsultaControladorJugadorTest.deberiaListarPorCategoria" />
+        <item itemvalue="JUnit.ServicioCrearFacturaTest" />
+        <item itemvalue="JUnit.ServicioCrearFacturaTest.deberiaDevolverElValorCuandoSeIngresaElPlanSemestral" />
+        <item itemvalue="JUnit.ServicioCrearFacturaTest.deberiaDevolverElValorCuandoSeIngresaElPlanTrimestral" />
+        <item itemvalue="JUnit.ServicioCrearFacturaTest.deberiaDevolverElValorCuandoSeIngresaElPlanMensual" />
+        <item itemvalue="Gradle.microservicio [pitest]" />
       </list>
     </recent_temporary>
   </component>
@@ -257,7 +276,9 @@
       <workItem from="1647281056769" duration="2943000" />
       <workItem from="1647302669016" duration="3292000" />
       <workItem from="1647344485670" duration="2023000" />
-      <workItem from="1647347886227" duration="2675000" />
+      <workItem from="1647347886227" duration="3765000" />
+      <workItem from="1647364066721" duration="3881000" />
+      <workItem from="1647374952948" duration="3988000" />
     </task>
     <servers />
   </component>
