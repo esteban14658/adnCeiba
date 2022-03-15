@@ -101,7 +101,7 @@
       <recent name="com.ceiba.jugador.comando.manejador" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Application">
+  <component name="RunManager" selected="JUnit.ServicioCrearJugadorTest.deberiaLanzarUnaExepcionCuandoSeValideLaExistenciaDelJugador">
     <configuration name="ConsultaControladorFacturaTest.deberiaListarFacturasActivas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.infraestructura.test" />
       <extension name="coverage">
@@ -165,7 +165,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServicioEliminarJugadorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ServicioCrearJugadorTest.deberiaLanzarUnaExepcionCuandoSeValideLaExistenciaDelJugador" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.dominio.test" />
       <extension name="coverage">
         <pattern>
@@ -174,8 +174,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.ceiba.jugador.servicio" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.servicio.ServicioEliminarJugadorTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.servicio.ServicioCrearJugadorTest" />
+      <option name="METHOD_NAME" value="deberiaLanzarUnaExepcionCuandoSeValideLaExistenciaDelJugador" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -202,11 +203,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ServicioCrearJugadorTest.deberiaLanzarUnaExepcionCuandoSeValideLaExistenciaDelJugador" />
         <item itemvalue="JUnit.ConsultaControladorFacturaTest.deberiaListarJugadoresSinFacturasActivas" />
         <item itemvalue="JUnit.ConsultaControladorFacturaTest.deberiaListarFacturasActivas" />
         <item itemvalue="JUnit.ConsultaControladorJugadorTest" />
         <item itemvalue="JUnit.ConsultaControladorJugadorTest.deberiaListarPorCategoria" />
-        <item itemvalue="JUnit.ServicioEliminarJugadorTest" />
       </list>
     </recent_temporary>
   </component>
@@ -256,7 +257,7 @@
       <workItem from="1647281056769" duration="2943000" />
       <workItem from="1647302669016" duration="3292000" />
       <workItem from="1647344485670" duration="2023000" />
-      <workItem from="1647347886227" duration="2423000" />
+      <workItem from="1647347886227" duration="2675000" />
     </task>
     <servers />
   </component>

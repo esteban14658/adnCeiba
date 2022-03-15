@@ -38,7 +38,7 @@ public class ServicioCrearJugadorTest {
         Mockito.when(repositorioJugador.existePorDocumento(Mockito.anyLong())).thenReturn(true);
         ServicioCrearJugador servicioCrearJugador = new ServicioCrearJugador(repositorioJugador);
         // act - assert
-        BasePrueba.assertThrows(() -> servicioCrearJugador.ejecutar(jugador), ExcepcionDuplicidad.class,"El usuario ya existe en el sistema");
+        BasePrueba.assertThrows(() -> servicioCrearJugador.ejecutar(jugador), ExcepcionDuplicidad.class,"El jugador ya existe en el sistema");
     }
 
 }

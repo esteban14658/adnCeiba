@@ -28,13 +28,13 @@ com/ceiba/jugador/puerto/repositorio/RepositorioJugador.java
  com.ceiba.jugador.puerto.repositorio.RepositorioJugador
 com/ceiba/jugador/servicio/ServicioEliminarJugador.java
  com.ceiba.jugador.servicio.ServicioEliminarJugador
-com/ceiba/jugador/servicio/ServicioCrearJugador.java
- com.ceiba.jugador.servicio.ServicioCrearJugador
+com/ceiba/asistencia/puerto/dao/DaoAsitencia.java
+ com.ceiba.asistencia.puerto.dao.DaoAsitencia
 com/ceiba/asistencia/puerto/repositorio/RepositorioAsistencia.java
  com.ceiba.asistencia.puerto.repositorio.RepositorioAsistencia
 com/ceiba/factura/servicio/ServicioCrearFactura.java
  com.ceiba.factura.servicio.ServicioCrearFactura
 com/ceiba/factura/modelo/entidad/Factura.java
  com.ceiba.factura.modelo.entidad.Factura
-com/ceiba/asistencia/puerto/dao/DaoAsitencia.java
- com.ceiba.asistencia.puerto.dao.DaoAsitencia
+com/ceiba/jugador/servicio/ServicioCrearJugador.java
+ com.ceiba.jugador.servicio.ServicioCrearJugador
