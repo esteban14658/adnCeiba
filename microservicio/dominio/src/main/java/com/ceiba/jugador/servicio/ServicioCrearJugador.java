@@ -7,7 +7,7 @@ import com.ceiba.jugador.puerto.repositorio.RepositorioJugador;
 
 public class ServicioCrearJugador {
 
-    private static final String EL_USUARIO_YA_EXISTE_EN_EL_SISTEMA = "El usuario ya existe en el sistema";
+    private static final String EL_JUGADOR_YA_EXISTE_EN_EL_SISTEMA = "El jugador ya existe en el sistema";
 
     private final RepositorioJugador repositorioJugador;
 
@@ -23,7 +23,7 @@ public class ServicioCrearJugador {
     private void validarExistenciaPrevia(Jugador jugador) {
         boolean existe = this.repositorioJugador.existePorDocumento(jugador.getDocumento());
         if(existe) {
-            throw new ExcepcionDuplicidad(EL_USUARIO_YA_EXISTE_EN_EL_SISTEMA);
+            throw new ExcepcionDuplicidad(EL_JUGADOR_YA_EXISTE_EN_EL_SISTEMA);
         }
     }
 }

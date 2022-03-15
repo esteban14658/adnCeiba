@@ -12,7 +12,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/facturas")
-@CrossOrigin(origins = "http://localhost:4200", methods = {RequestMethod.GET})
 @Api(tags={"Controlador consulta factura"})
 public class ConsultaControladorFactura {
 

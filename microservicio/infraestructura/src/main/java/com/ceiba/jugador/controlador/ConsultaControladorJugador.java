@@ -10,7 +10,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/jugadores")
-@CrossOrigin(origins = "http://localhost:4200", methods = {RequestMethod.GET})
 @Api(tags={"Controlador consulta jugador"})
 public class ConsultaControladorJugador {
 
@@ -77,9 +76,9 @@ public class ConsultaControladorJugador {
         return this.manejadorObtenerEquipoJugadores.ejecutar(defensas, mediocampistas, delanteros);
     }
 
-    @GetMapping(value = "jugador/{documento}")
+    @GetMapping(value = "/jugador/{documento}")
     @ApiOperation("obtener jugador por documento")
-    public DtoJugador obtenerPorId(@PathVariable Long documento) {
+    public DtoJugador obtenerPorDocumento(@PathVariable Long documento) {
         return this.manejadorObtenerPorDocumentoJugador.ejecutar(documento);
     }
 

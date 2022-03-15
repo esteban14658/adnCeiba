@@ -10,7 +10,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/asistencias")
-@CrossOrigin(origins = "http://localhost:4200", methods = {RequestMethod.GET})
 @Api(tags={"Controlador consulta asistencia"})
 public class ConsultaControladorAsistencia {
 

@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/asistencias")
-@CrossOrigin(origins = "http://localhost:4200", methods = {RequestMethod.POST, RequestMethod.DELETE, RequestMethod.PUT})
 @Api(tags = { "Controlador comando asistencia"})
 public class ComandoControladorAsistencia {
 
