@@ -2,6 +2,7 @@ package com.ceiba.jugador.servicio;
 
 import com.ceiba.BasePrueba;
 import com.ceiba.dominio.excepcion.ExcepcionLongitudValor;
+import com.ceiba.jugador.modelo.dto.DtoFiltro;
 import com.ceiba.jugador.modelo.dto.DtoJugador;
 import com.ceiba.jugador.puerto.dao.DaoJugador;
 import com.ceiba.jugador.servicio.testdatabuilder.JugadorTestDataBuilder;
@@ -20,15 +21,17 @@ public class ServicioObtenerEquipoTest {
             "maximo permitido")
     void deberiaLanzarUnaExepcionCuandoHayaMayorCantidadDeJugadoresPermitidos() {
         // arrange
+        DtoFiltro dtoFiltro = new DtoFiltro("4", "4", "4");
         DaoJugador daoJugador = Mockito.mock(DaoJugador.class);
         ServicioObtenerEquipo servicioObtenerEquipo = new ServicioObtenerEquipo(daoJugador);
         // act - assert
-        BasePrueba.assertThrows(() -> servicioObtenerEquipo.ejecutar("4","4","4"), ExcepcionLongitudValor.class,"No puede sobrepasar la cantidad permitida de jugadores");
+        BasePrueba.assertThrows(() -> servicioObtenerEquipo.ejecutar(dtoFiltro), ExcepcionLongitudValor.class,"No puede sobrepasar la cantidad permitida de jugadores");
     }
 
     @Test
     @DisplayName("Deberia obtener un equipo de manera correcta")
     void deberiaObtenerUnEquipoDeManeraCorrecta() {
+        DtoFiltro dtoFiltro = new DtoFiltro("4", "4", "2");
         List<DtoJugador> listaJugadores = new JugadorTestDataBuilder().listaDeJugadores();
         DaoJugador daoJugador = Mockito.mock(DaoJugador.class);
         Mockito.when(daoJugador.listarPorPosicion("Portero")).thenReturn(listaJugadores);
@@ -36,7 +39,7 @@ public class ServicioObtenerEquipoTest {
         Mockito.when(daoJugador.listarPorPosicion("Mediocampista")).thenReturn(listaJugadores);
         Mockito.when(daoJugador.listarPorPosicion("Delantero")).thenReturn(listaJugadores);
         ServicioObtenerEquipo servicioObtenerEquipo = new ServicioObtenerEquipo(daoJugador);
-        List<DtoJugador> listaJugadoresRetornados = servicioObtenerEquipo.ejecutar("4","4","2");
+        List<DtoJugador> listaJugadoresRetornados = servicioObtenerEquipo.ejecutar(dtoFiltro);
 
         assertTrue(!listaJugadoresRetornados.isEmpty());
 

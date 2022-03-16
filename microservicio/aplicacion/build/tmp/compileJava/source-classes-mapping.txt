@@ -26,8 +26,8 @@ com/ceiba/jugador/consulta/ManejadorListarJugadoresSinAsistencia.java
  com.ceiba.jugador.consulta.ManejadorListarJugadoresSinAsistencia
 com/ceiba/factura/comando/fabrica/FabricaFactura.java
  com.ceiba.factura.comando.fabrica.FabricaFactura
-com/ceiba/jugador/consulta/ManejadorObtenerEquipoJugadores.java
- com.ceiba.jugador.consulta.ManejadorObtenerEquipoJugadores
+com/ceiba/factura/comando/manejador/ManejadorCrearFactura.java
+ com.ceiba.factura.comando.manejador.ManejadorCrearFactura
 com/ceiba/asistencia/consulta/ManejadorListarAsistencias.java
  com.ceiba.asistencia.consulta.ManejadorListarAsistencias
 com/ceiba/jugador/consulta/ManejadorListarJugadoresPorPosicion.java
@@ -40,5 +40,5 @@ com/ceiba/asistencia/comando/ComandoAsistencia.java
  com.ceiba.asistencia.comando.ComandoAsistencia
 com/ceiba/jugador/comando/manejador/ManejadorCrearJugador.java
  com.ceiba.jugador.comando.manejador.ManejadorCrearJugador
-com/ceiba/factura/comando/manejador/ManejadorCrearFactura.java
- com.ceiba.factura.comando.manejador.ManejadorCrearFactura
+com/ceiba/jugador/consulta/ManejadorObtenerEquipoJugadores.java
+ com.ceiba.jugador.consulta.ManejadorObtenerEquipoJugadores

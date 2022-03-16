@@ -1,6 +1,7 @@
 package com.ceiba.jugador.servicio;
 
 import com.ceiba.dominio.excepcion.ExcepcionLongitudValor;
+import com.ceiba.jugador.modelo.dto.DtoFiltro;
 import com.ceiba.jugador.modelo.dto.DtoJugador;
 import com.ceiba.jugador.puerto.dao.DaoJugador;
 
@@ -17,10 +18,10 @@ public class ServicioObtenerEquipo {
         this.daoJugador = daoJugador;
     }
 
-    public List<DtoJugador> ejecutar(String defensas, String mediocampistas, String delanteros) {
-        Long defensasNumero = Long.parseLong(defensas);
-        Long mediocampistasNumero = Long.parseLong(mediocampistas);
-        Long delanterosNumero = Long.parseLong(delanteros);
+    public List<DtoJugador> ejecutar(DtoFiltro dtoFiltro) {
+        Long defensasNumero = Long.parseLong(dtoFiltro.getDefensas());
+        Long mediocampistasNumero = Long.parseLong(dtoFiltro.getMediocampistas());
+        Long delanterosNumero = Long.parseLong(dtoFiltro.getDelanteros());
         String[] posiciones = new String[] {"Portero","Defensa", "Mediocampista", "Delantero"};
         Long[] keys = new Long[] {1L, defensasNumero, mediocampistasNumero, delanterosNumero};
         Long sumatoria = 1L + defensasNumero + mediocampistasNumero + delanterosNumero;

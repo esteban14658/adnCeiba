@@ -58,7 +58,7 @@ class ConsultaControladorJugadorTest {
     }
 
     @Test
-    @DisplayName("Deberia listar porPosicion")
+    @DisplayName("Deberia listar por Posicion")
     void deberiaListarPorPosicion() throws Exception {
         String posicion = "Delantero";
         mocMvc.perform(get("/jugadores/" + posicion)
@@ -69,7 +69,7 @@ class ConsultaControladorJugadorTest {
     }
 
     @Test
-    @DisplayName("Deberia listar Por Posicion")
+    @DisplayName("Deberia listar Por pie habils")
     void deberiaListarPorPieHabil() throws Exception {
         String pieHabil = "Derecho";
         mocMvc.perform(get("/jugadores/jugadores/" + pieHabil)

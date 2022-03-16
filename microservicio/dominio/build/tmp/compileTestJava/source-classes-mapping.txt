@@ -11,8 +11,8 @@ com/ceiba/jugador/servicio/ServicioActualizarJugadorTest.java
  com.ceiba.jugador.servicio.ServicioActualizarJugadorTest
 com/ceiba/asistencia/servicio/ServicioCrearAsistenciaTest.java
  com.ceiba.asistencia.servicio.ServicioCrearAsistenciaTest
-com/ceiba/jugador/servicio/ServicioObtenerEquipoTest.java
- com.ceiba.jugador.servicio.ServicioObtenerEquipoTest
+com/ceiba/factura/servicio/ServicioCrearFacturaTest.java
+ com.ceiba.factura.servicio.ServicioCrearFacturaTest
 com/ceiba/factura/entidad/FacturaTest.java
  com.ceiba.factura.entidad.FacturaTest
 com/ceiba/jugador/entidad/JugadorTest.java
@@ -27,5 +27,5 @@ com/ceiba/jugador/servicio/testdatabuilder/JugadorTestDataBuilder.java
  com.ceiba.jugador.servicio.testdatabuilder.JugadorTestDataBuilder
 com/ceiba/factura/servicio/testdatabuilder/FacturaTestDataBuilder.java
  com.ceiba.factura.servicio.testdatabuilder.FacturaTestDataBuilder
-com/ceiba/factura/servicio/ServicioCrearFacturaTest.java
- com.ceiba.factura.servicio.ServicioCrearFacturaTest
+com/ceiba/jugador/servicio/ServicioObtenerEquipoTest.java
+ com.ceiba.jugador.servicio.ServicioObtenerEquipoTest

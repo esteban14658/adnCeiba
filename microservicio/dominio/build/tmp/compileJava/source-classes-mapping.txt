@@ -30,6 +30,8 @@ com/ceiba/jugador/servicio/ServicioEliminarJugador.java
  com.ceiba.jugador.servicio.ServicioEliminarJugador
 com/ceiba/jugador/servicio/ServicioCrearJugador.java
  com.ceiba.jugador.servicio.ServicioCrearJugador
+com/ceiba/jugador/modelo/dto/DtoFiltro.java
+ com.ceiba.jugador.modelo.dto.DtoFiltro
 com/ceiba/asistencia/puerto/repositorio/RepositorioAsistencia.java
  com.ceiba.asistencia.puerto.repositorio.RepositorioAsistencia
 com/ceiba/factura/servicio/ServicioCrearFactura.java

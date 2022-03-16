@@ -1,6 +1,7 @@
 package com.ceiba.jugador.controlador;
 
 import com.ceiba.jugador.consulta.*;
+import com.ceiba.jugador.modelo.dto.DtoFiltro;
 import com.ceiba.jugador.modelo.dto.DtoJugador;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -72,8 +73,12 @@ public class ConsultaControladorJugador {
     @ApiOperation("obtener equipo")
     public List<DtoJugador> obtenerEquipo(@RequestParam(value = "defensas") String defensas,
                                           @RequestParam(value = "mediocampistas") String mediocampistas,
-                                          @RequestParam(value = "delanteros") String delanteros) {
-        return this.manejadorObtenerEquipoJugadores.ejecutar(defensas, mediocampistas, delanteros);
+                                          @RequestParam(value = "delanteros") String delanteros,
+                                          DtoFiltro dtoFiltro) {
+        dtoFiltro.setDefensas(defensas);
+        dtoFiltro.setMediocampistas(mediocampistas);
+        dtoFiltro.setDelanteros(delanteros);
+        return this.manejadorObtenerEquipoJugadores.ejecutar(dtoFiltro);
     }
 
     @GetMapping(value = "/jugador/{documento}")

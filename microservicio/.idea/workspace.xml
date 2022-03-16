@@ -116,6 +116,22 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.ServicioCrearFacturaTest">
+    <configuration name="ConsultaControladorJugadorTest.deberiaListarElEquipo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jugadores.infraestructura.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ceiba.jugador.controlador.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ceiba.jugador.controlador" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.controlador.ConsultaControladorJugadorTest" />
+      <option name="METHOD_NAME" value="deberiaListarElEquipo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ServicioCrearFacturaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.dominio.test" />
       <extension name="coverage">
@@ -127,22 +143,6 @@
       <option name="PACKAGE_NAME" value="com.ceiba.factura.servicio" />
       <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.servicio.ServicioCrearFacturaTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServicioCrearFacturaTest.deberiaDevolverElValorCuandoSeIngresaElPlanSemestral" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jugadores.dominio.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ceiba.factura.servicio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.factura.servicio" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.servicio.ServicioCrearFacturaTest" />
-      <option name="METHOD_NAME" value="deberiaDevolverElValorCuandoSeIngresaElPlanSemestral" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -163,22 +163,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServicioCrearFacturaTest.deberiaDevolverElValorDeLaFechaCuandoSeIngresaElPlanSemestral" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jugadores.dominio.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ceiba.factura.servicio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.factura.servicio" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.servicio.ServicioCrearFacturaTest" />
-      <option name="METHOD_NAME" value="deberiaDevolverElValorDeLaFechaCuandoSeIngresaElPlanSemestral" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ServicioCrearFacturaTest.deberiaDevolverElValorDeLaFechaCuandoSeIngresaElPlanTrimestrall" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.dominio.test" />
       <extension name="coverage">
@@ -191,6 +175,21 @@
       <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.servicio.ServicioCrearFacturaTest" />
       <option name="METHOD_NAME" value="deberiaDevolverElValorDeLaFechaCuandoSeIngresaElPlanTrimestrall" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServicioObtenerEquipoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jugadores.dominio.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ceiba.jugador.servicio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ceiba.jugador.servicio" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.servicio.ServicioObtenerEquipoTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -218,10 +217,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ServicioCrearFacturaTest" />
+        <item itemvalue="JUnit.ServicioObtenerEquipoTest" />
+        <item itemvalue="JUnit.ConsultaControladorJugadorTest.deberiaListarElEquipo" />
         <item itemvalue="JUnit.ServicioCrearFacturaTest.deberiaDevolverElValorDeLaFechaCuandoSeIngresaElPlanMensual" />
         <item itemvalue="JUnit.ServicioCrearFacturaTest.deberiaDevolverElValorDeLaFechaCuandoSeIngresaElPlanTrimestrall" />
-        <item itemvalue="JUnit.ServicioCrearFacturaTest.deberiaDevolverElValorDeLaFechaCuandoSeIngresaElPlanSemestral" />
-        <item itemvalue="JUnit.ServicioCrearFacturaTest.deberiaDevolverElValorCuandoSeIngresaElPlanSemestral" />
       </list>
     </recent_temporary>
   </component>
@@ -274,7 +273,7 @@
       <workItem from="1647347886227" duration="3765000" />
       <workItem from="1647364066721" duration="3881000" />
       <workItem from="1647374952948" duration="4794000" />
-      <workItem from="1647433062293" duration="398000" />
+      <workItem from="1647433062293" duration="5874000" />
     </task>
     <servers />
   </component>
@@ -293,6 +292,16 @@
           <url>file://$PROJECT_DIR$/dominio/src/test/java/com/ceiba/jugador/servicio/ServicioObtenerPorDocumentoJugadorTest.java</url>
           <line>38</line>
           <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/infraestructura/src/test/java/com/ceiba/jugador/controlador/ConsultaControladorJugadorTest.java</url>
+          <line>95</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dominio/src/main/java/com/ceiba/jugador/servicio/ServicioObtenerEquipo.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
