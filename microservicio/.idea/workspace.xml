@@ -116,27 +116,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.ServicioCrearFacturaTest">
-    <configuration name="microservicio [pitest]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="pitest" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="ServicioCrearFacturaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.dominio.test" />
       <extension name="coverage">
@@ -148,22 +127,6 @@
       <option name="PACKAGE_NAME" value="com.ceiba.factura.servicio" />
       <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.servicio.ServicioCrearFacturaTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServicioCrearFacturaTest.deberiaDevolverElValorCuandoSeIngresaElPlanMensual" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jugadores.dominio.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ceiba.factura.servicio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.factura.servicio" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.servicio.ServicioCrearFacturaTest" />
-      <option name="METHOD_NAME" value="deberiaDevolverElValorCuandoSeIngresaElPlanMensual" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -184,7 +147,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServicioCrearFacturaTest.deberiaDevolverElValorCuandoSeIngresaElPlanTrimestral" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ServicioCrearFacturaTest.deberiaDevolverElValorDeLaFechaCuandoSeIngresaElPlanMensual" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.dominio.test" />
       <extension name="coverage">
         <pattern>
@@ -194,7 +157,39 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.ceiba.factura.servicio" />
       <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.servicio.ServicioCrearFacturaTest" />
-      <option name="METHOD_NAME" value="deberiaDevolverElValorCuandoSeIngresaElPlanTrimestral" />
+      <option name="METHOD_NAME" value="deberiaDevolverElValorDeLaFechaCuandoSeIngresaElPlanMensual" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServicioCrearFacturaTest.deberiaDevolverElValorDeLaFechaCuandoSeIngresaElPlanSemestral" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jugadores.dominio.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ceiba.factura.servicio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ceiba.factura.servicio" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.servicio.ServicioCrearFacturaTest" />
+      <option name="METHOD_NAME" value="deberiaDevolverElValorDeLaFechaCuandoSeIngresaElPlanSemestral" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServicioCrearFacturaTest.deberiaDevolverElValorDeLaFechaCuandoSeIngresaElPlanTrimestrall" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jugadores.dominio.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ceiba.factura.servicio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ceiba.factura.servicio" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.servicio.ServicioCrearFacturaTest" />
+      <option name="METHOD_NAME" value="deberiaDevolverElValorDeLaFechaCuandoSeIngresaElPlanTrimestrall" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -223,10 +218,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ServicioCrearFacturaTest" />
+        <item itemvalue="JUnit.ServicioCrearFacturaTest.deberiaDevolverElValorDeLaFechaCuandoSeIngresaElPlanMensual" />
+        <item itemvalue="JUnit.ServicioCrearFacturaTest.deberiaDevolverElValorDeLaFechaCuandoSeIngresaElPlanTrimestrall" />
+        <item itemvalue="JUnit.ServicioCrearFacturaTest.deberiaDevolverElValorDeLaFechaCuandoSeIngresaElPlanSemestral" />
         <item itemvalue="JUnit.ServicioCrearFacturaTest.deberiaDevolverElValorCuandoSeIngresaElPlanSemestral" />
-        <item itemvalue="JUnit.ServicioCrearFacturaTest.deberiaDevolverElValorCuandoSeIngresaElPlanTrimestral" />
-        <item itemvalue="JUnit.ServicioCrearFacturaTest.deberiaDevolverElValorCuandoSeIngresaElPlanMensual" />
-        <item itemvalue="Gradle.microservicio [pitest]" />
       </list>
     </recent_temporary>
   </component>
@@ -278,7 +273,8 @@
       <workItem from="1647344485670" duration="2023000" />
       <workItem from="1647347886227" duration="3765000" />
       <workItem from="1647364066721" duration="3881000" />
-      <workItem from="1647374952948" duration="3988000" />
+      <workItem from="1647374952948" duration="4794000" />
+      <workItem from="1647433062293" duration="398000" />
     </task>
     <servers />
   </component>

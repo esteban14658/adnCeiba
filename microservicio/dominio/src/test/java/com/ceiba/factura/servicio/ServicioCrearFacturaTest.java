@@ -145,6 +145,51 @@ public class ServicioCrearFacturaTest {
     }
 
     @Test
+    @DisplayName("Deberia devolver el valor de la fecha cuando se ingresa el plan mensual")
+    void deberiaDevolverElValorDeLaFechaCuandoSeIngresaElPlanMensual() {
+        Jugador jugador = new JugadorTestDataBuilder().conId(1L).build();
+        Factura factura = new FacturaTestDataBuilder().conJugador(jugador).build();
+        RepositorioFactura repositorioFactura = Mockito.mock(RepositorioFactura.class);
+        ServicioCrearFactura servicioCrearFactura = new ServicioCrearFactura(repositorioFactura);
+        ArgumentCaptor<Factura> facturaArgumentCaptor = ArgumentCaptor.forClass(Factura.class);
+        servicioCrearFactura.ejecutar(factura, 1L);
+        verify(repositorioFactura).crear(facturaArgumentCaptor.capture());
+        Factura capturarValor = facturaArgumentCaptor.getValue();
+
+        assertEquals(4, capturarValor.getFechaCaducidad().getMonthValue());
+    }
+
+    @Test
+    @DisplayName("Deberia devolver el valor de la fecha cuando se ingresa el plan trimestral")
+    void deberiaDevolverElValorDeLaFechaCuandoSeIngresaElPlanTrimestrall() {
+        Jugador jugador = new JugadorTestDataBuilder().conId(1L).build();
+        Factura factura = new FacturaTestDataBuilder().conJugador(jugador).build();
+        RepositorioFactura repositorioFactura = Mockito.mock(RepositorioFactura.class);
+        ServicioCrearFactura servicioCrearFactura = new ServicioCrearFactura(repositorioFactura);
+        ArgumentCaptor<Factura> facturaArgumentCaptor = ArgumentCaptor.forClass(Factura.class);
+        servicioCrearFactura.ejecutar(factura, 3L);
+        verify(repositorioFactura).crear(facturaArgumentCaptor.capture());
+        Factura capturarValor = facturaArgumentCaptor.getValue();
+
+        assertEquals(6, capturarValor.getFechaCaducidad().getMonthValue());
+    }
+
+    @Test
+    @DisplayName("Deberia devolver el valor de la fecha cuando se ingresa el plan semestral")
+    void deberiaDevolverElValorDeLaFechaCuandoSeIngresaElPlanSemestral() {
+        Jugador jugador = new JugadorTestDataBuilder().conId(1L).build();
+        Factura factura = new FacturaTestDataBuilder().conJugador(jugador).build();
+        RepositorioFactura repositorioFactura = Mockito.mock(RepositorioFactura.class);
+        ServicioCrearFactura servicioCrearFactura = new ServicioCrearFactura(repositorioFactura);
+        ArgumentCaptor<Factura> facturaArgumentCaptor = ArgumentCaptor.forClass(Factura.class);
+        servicioCrearFactura.ejecutar(factura, 6L);
+        verify(repositorioFactura).crear(facturaArgumentCaptor.capture());
+        Factura capturarValor = facturaArgumentCaptor.getValue();
+
+        assertEquals(9, capturarValor.getFechaCaducidad().getMonthValue());
+    }
+
+    @Test
     @DisplayName("Deberia lanzar una exepcion cuando se digite un mes no aceptado")
     void deberiaLanzarUnaExepcionCuandoSeDigiteUnMesNoAceptado() {
         // arrange
