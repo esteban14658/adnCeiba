@@ -16,23 +16,17 @@ public class ConsultaControladorJugador {
 
     private final ManejadorListarJugadores manejadorListarJugadores;
     private final ManejadorObtenerPorDocumentoJugador manejadorObtenerPorDocumentoJugador;
-    private final ManejadorListarJugadoresPorPosicion manejadorListarJugadoresPorPosicion;
-    private final ManejadorListarJugadoresPorPieHabil manejadorListarJugadoresPorPieHabil;
     private final ManejadorObtenerEquipoJugadores manejadorObtenerEquipoJugadores;
     private final ManejadorListarJugadoresSinAsistencia manejadorListarJugadoresSinAsistencia;
     private final ManejadorListarJugadoresPorCategoria manejadorListarJugadoresPorCategoria;
 
     public ConsultaControladorJugador(ManejadorListarJugadores manejadorListarJugadores,
                                       ManejadorObtenerPorDocumentoJugador manejadorObtenerPorDocumentoJugador,
-                                      ManejadorListarJugadoresPorPosicion manejadorListarJugadoresPorPosicion,
-                                      ManejadorListarJugadoresPorPieHabil manejadorListarJugadoresPorPieHabil,
                                       ManejadorObtenerEquipoJugadores manejadorObtenerEquipoJugadores,
                                       ManejadorListarJugadoresSinAsistencia manejadorListarJugadoresSinAsistencia,
                                       ManejadorListarJugadoresPorCategoria manejadorListarJugadoresPorCategoria) {
         this.manejadorListarJugadores = manejadorListarJugadores;
         this.manejadorObtenerPorDocumentoJugador = manejadorObtenerPorDocumentoJugador;
-        this.manejadorListarJugadoresPorPosicion = manejadorListarJugadoresPorPosicion;
-        this.manejadorListarJugadoresPorPieHabil = manejadorListarJugadoresPorPieHabil;
         this.manejadorObtenerEquipoJugadores = manejadorObtenerEquipoJugadores;
         this.manejadorListarJugadoresSinAsistencia = manejadorListarJugadoresSinAsistencia;
         this.manejadorListarJugadoresPorCategoria = manejadorListarJugadoresPorCategoria;
@@ -49,18 +43,6 @@ public class ConsultaControladorJugador {
     @ApiOperation("Listar jugadores sin asistencia de hoy")
     public List<DtoJugador> listarJugadoresSinAsistencia(){
         return this.manejadorListarJugadoresSinAsistencia.ejecutar();
-    }
-
-    @GetMapping(value = "/{posicion}")
-    @ApiOperation("Listar jugadores por posicion")
-    public List<DtoJugador> listarPorPosicion(@PathVariable String posicion) {
-        return this.manejadorListarJugadoresPorPosicion.ejecutar(posicion);
-    }
-
-    @GetMapping(value = "/jugadores/{pieHabil}")
-    @ApiOperation("Listar jugadores por pie habil")
-    public List<DtoJugador> listarPorPieHabil(@PathVariable String pieHabil) {
-        return this.manejadorListarJugadoresPorPieHabil.ejecutar(pieHabil);
     }
 
     @GetMapping(value = "/categoria/{fecha}")

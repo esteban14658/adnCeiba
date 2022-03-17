@@ -58,28 +58,6 @@ class ConsultaControladorJugadorTest {
     }
 
     @Test
-    @DisplayName("Deberia listar por Posicion")
-    void deberiaListarPorPosicion() throws Exception {
-        String posicion = "Delantero";
-        mocMvc.perform(get("/jugadores/" + posicion)
-                .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$", hasSize(4)))
-                .andExpect(jsonPath("$[0].posicion", is("Delantero")));
-    }
-
-    @Test
-    @DisplayName("Deberia listar Por pie habils")
-    void deberiaListarPorPieHabil() throws Exception {
-        String pieHabil = "Derecho";
-        mocMvc.perform(get("/jugadores/jugadores/" + pieHabil)
-                .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$", hasSize(15)))
-                .andExpect(jsonPath("$[0].pieHabil", is("Derecho")));
-    }
-
-    @Test
     @DisplayName("Deberia listar Por categoria")
     void deberiaListarPorCategoria() throws Exception {
         String fecha = "2022";
