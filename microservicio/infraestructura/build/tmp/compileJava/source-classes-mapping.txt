@@ -2,8 +2,8 @@ com/ceiba/jugador/adaptador/dao/MapeoJugador.java
  com.ceiba.jugador.adaptador.dao.MapeoJugador
 com/ceiba/asistencia/controlador/ConsultaControladorAsistencia.java
  com.ceiba.asistencia.controlador.ConsultaControladorAsistencia
-com/ceiba/jugador/adaptador/repositorio/RepositorioJugadorMysql.java
- com.ceiba.jugador.adaptador.repositorio.RepositorioJugadorMysql
+com/ceiba/jugador/controlador/ConsultaControladorJugador.java
+ com.ceiba.jugador.controlador.ConsultaControladorJugador
 com/ceiba/configuracion/BeanServicioFactura.java
  com.ceiba.configuracion.BeanServicioFactura
 com/ceiba/asistencia/adaptador/repositorio/RepositorioAsistenciaMysql.java
@@ -32,5 +32,5 @@ com/ceiba/factura/controlador/ConsultaControladorFactura.java
  com.ceiba.factura.controlador.ConsultaControladorFactura
 com/ceiba/configuracion/BeanServicioJugador.java
  com.ceiba.configuracion.BeanServicioJugador
-com/ceiba/jugador/controlador/ConsultaControladorJugador.java
- com.ceiba.jugador.controlador.ConsultaControladorJugador
+com/ceiba/jugador/adaptador/repositorio/RepositorioJugadorMysql.java
+ com.ceiba.jugador.adaptador.repositorio.RepositorioJugadorMysql

@@ -124,7 +124,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConsultaControladorJugadorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ComandoControladorJugadorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.infraestructura.test" />
       <extension name="coverage">
         <pattern>
@@ -133,13 +133,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.ceiba.jugador.controlador" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.controlador.ConsultaControladorJugadorTest" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.controlador.ComandoControladorJugadorTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConsultaControladorJugadorTest.deberiaListarElEquipo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ComandoControladorJugadorTest.deberiaActualizarUnJugador" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.infraestructura.test" />
       <extension name="coverage">
         <pattern>
@@ -148,29 +148,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.ceiba.jugador.controlador" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.controlador.ConsultaControladorJugadorTest" />
-      <option name="METHOD_NAME" value="deberiaListarElEquipo" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.controlador.ComandoControladorJugadorTest" />
+      <option name="METHOD_NAME" value="deberiaActualizarUnJugador" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServicioCrearFacturaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jugadores.dominio.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ceiba.factura.servicio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ceiba.factura.servicio" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.factura.servicio.ServicioCrearFacturaTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServicioObtenerEquipoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ServicioActualizarJugadorTest.deberiaActualizarCorrectamenteEnElRepositorio" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jugadores.dominio.test" />
       <extension name="coverage">
         <pattern>
@@ -179,8 +164,25 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.ceiba.jugador.servicio" />
-      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.servicio.ServicioObtenerEquipoTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.servicio.ServicioActualizarJugadorTest" />
+      <option name="METHOD_NAME" value="deberiaActualizarCorrectamenteEnElRepositorio" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServicioActualizarJugadorTest.deberiaValidarLaExistenciaPreviaDelJugador" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jugadores.dominio.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ceiba.jugador.servicio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ceiba.jugador.servicio" />
+      <option name="MAIN_CLASS_NAME" value="com.ceiba.jugador.servicio.ServicioActualizarJugadorTest" />
+      <option name="METHOD_NAME" value="deberiaValidarLaExistenciaPreviaDelJugador" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -207,11 +209,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ServicioActualizarJugadorTest.deberiaValidarLaExistenciaPreviaDelJugador" />
+        <item itemvalue="JUnit.ServicioActualizarJugadorTest.deberiaActualizarCorrectamenteEnElRepositorio" />
+        <item itemvalue="JUnit.ComandoControladorJugadorTest" />
+        <item itemvalue="JUnit.ComandoControladorJugadorTest.deberiaActualizarUnJugador" />
         <item itemvalue="JUnit.All in jugadores" />
-        <item itemvalue="JUnit.ConsultaControladorJugadorTest" />
-        <item itemvalue="JUnit.ServicioCrearFacturaTest" />
-        <item itemvalue="JUnit.ServicioObtenerEquipoTest" />
-        <item itemvalue="JUnit.ConsultaControladorJugadorTest.deberiaListarElEquipo" />
       </list>
     </recent_temporary>
   </component>
@@ -268,7 +270,10 @@
       <workItem from="1647445607753" duration="2196000" />
       <workItem from="1647454802601" duration="3643000" />
       <workItem from="1647473556185" duration="1846000" />
-      <workItem from="1647518261819" duration="1549000" />
+      <workItem from="1647518261819" duration="2779000" />
+      <workItem from="1647526845677" duration="3593000" />
+      <workItem from="1647540753016" duration="5786000" />
+      <workItem from="1647552235403" duration="620000" />
     </task>
     <servers />
   </component>
@@ -292,6 +297,16 @@
           <url>file://$PROJECT_DIR$/dominio/src/main/java/com/ceiba/jugador/servicio/ServicioObtenerEquipo.java</url>
           <line>21</line>
           <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/infraestructura/src/main/java/com/ceiba/jugador/controlador/ComandoControladorJugador.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dominio/src/main/java/com/ceiba/jugador/servicio/ServicioActualizarJugador.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

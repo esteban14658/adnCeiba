@@ -1,6 +1,5 @@
 update jugador
-set documento = :documento,
-    nombre = :nombre,
+set nombre = :nombre,
 	apellido = :apellido,
 	fecha_nacimiento = :fechaNacimiento,
     peso = :peso,

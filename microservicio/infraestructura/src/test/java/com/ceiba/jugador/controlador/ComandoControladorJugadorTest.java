@@ -17,6 +17,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import static org.hamcrest.core.Is.is;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @RunWith(SpringRunner.class)
@@ -41,6 +42,20 @@ public class ComandoControladorJugadorTest {
                 .content(objectMapper.writeValueAsString(comandoJugador)))
                 .andExpect(status().isOk())
                 .andExpect(content().json("{'valor': 16}"));
+    }
+
+    @Test
+    @DisplayName("Deberia actualizar un jugador")
+    public void deberiaActualizarUnJugador() throws Exception{
+        Long idJugador = 1L;
+        ComandoJugador comandoJugador = new ComandoJugadorTestDataBuilder().build();
+        comandoJugador.setId(idJugador);
+        mocMvc.perform(put("/jugadores/" + idJugador)
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(comandoJugador)))
+                .andExpect(status().isOk());
+
+
     }
 
 }

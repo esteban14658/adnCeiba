@@ -61,7 +61,16 @@ public class RepositorioJugadorMysql implements RepositorioJugador {
 
     @Override
     public void actualizar(Jugador jugador) {
-        this.customNamedParameterJdbcTemplate.actualizar(jugador, sqlActualizar);
+        MapSqlParameterSource paramSource = new MapSqlParameterSource();
+        paramSource.addValue("id", jugador.getId());
+        paramSource.addValue("nombre", jugador.getNombre());
+        paramSource.addValue("apellido", jugador.getApellido());
+        paramSource.addValue("fechaNacimiento", jugador.getFechaNacimiento());
+        paramSource.addValue("peso", jugador.getPeso());
+        paramSource.addValue("altura", jugador.getAltura());
+        paramSource.addValue("posicion", jugador.getPosicion());
+        paramSource.addValue("pieHabil", jugador.getPieHabil());
+        this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().update(sqlActualizar, paramSource);
     }
 
     @Override
