@@ -7,24 +7,24 @@ import com.ceiba.jugador.puerto.repositorio.RepositorioJugador;
 
 public class ServicioCrearJugador {
 
-    private static final String EL_USUARIO_YA_EXISTE_EN_EL_SISTEMA = &quot;El usuario ya existe en el sistema&quot;;
+    private static final String EL_JUGADOR_YA_EXISTE_EN_EL_SISTEMA = &quot;El jugador ya existe en el sistema&quot;;
 
     private final RepositorioJugador repositorioJugador;
 
-<span class="nc" id="L14">    public ServicioCrearJugador(RepositorioJugador repositorioJugador) {</span>
-<span class="nc" id="L15">        this.repositorioJugador = repositorioJugador;</span>
-<span class="nc" id="L16">    }</span>
+<span class="fc" id="L14">    public ServicioCrearJugador(RepositorioJugador repositorioJugador) {</span>
+<span class="fc" id="L15">        this.repositorioJugador = repositorioJugador;</span>
+<span class="fc" id="L16">    }</span>
 
     public Long ejecutar(Jugador jugador) {
-<span class="nc" id="L19">        validarExistenciaPrevia(jugador);</span>
-<span class="nc" id="L20">        return this.repositorioJugador.crear(jugador);</span>
+<span class="fc" id="L19">        validarExistenciaPrevia(jugador);</span>
+<span class="fc" id="L20">        return this.repositorioJugador.crear(jugador);</span>
     }
 
     private void validarExistenciaPrevia(Jugador jugador) {
-<span class="nc" id="L24">        boolean existe = this.repositorioJugador.existePorDocumento(jugador.getDocumento());</span>
-<span class="nc bnc" id="L25" title="All 2 branches missed.">        if(existe) {</span>
-<span class="nc" id="L26">            throw new ExcepcionDuplicidad(EL_USUARIO_YA_EXISTE_EN_EL_SISTEMA);</span>
+<span class="fc" id="L24">        boolean existe = this.repositorioJugador.existePorDocumento(jugador.getDocumento());</span>
+<span class="fc bfc" id="L25" title="All 2 branches covered.">        if(existe) {</span>
+<span class="fc" id="L26">            throw new ExcepcionDuplicidad(EL_JUGADOR_YA_EXISTE_EN_EL_SISTEMA);</span>
         }
-<span class="nc" id="L28">    }</span>
+<span class="fc" id="L28">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

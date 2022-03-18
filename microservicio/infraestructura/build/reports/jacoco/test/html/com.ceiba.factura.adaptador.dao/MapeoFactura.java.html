@@ -12,22 +12,22 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.HashMap;
 
-<span class="nc" id="L15">public class MapeoFactura implements RowMapper&lt;DtoFactura&gt;, MapperResult {</span>
+<span class="fc" id="L15">public class MapeoFactura implements RowMapper&lt;DtoFactura&gt;, MapperResult {</span>
 
     @Override
     public DtoFactura mapRow(ResultSet resultSet, int rowNum) throws SQLException {
 
-<span class="nc" id="L20">        MapeoJugador mapeoJugador = new MapeoJugador();</span>
+<span class="fc" id="L20">        MapeoJugador mapeoJugador = new MapeoJugador();</span>
 
-<span class="nc" id="L22">        Long id = resultSet.getLong(&quot;id&quot;);</span>
-<span class="nc" id="L23">        Integer valor = resultSet.getInt(&quot;valor&quot;);</span>
-<span class="nc" id="L24">        LocalDate fechaIngreso = extraerLocalDate(resultSet, &quot;fecha_ingreso&quot;);</span>
-<span class="nc" id="L25">        LocalDate fechaCaducidad = extraerLocalDate(resultSet, &quot;fecha_caducidad&quot;);</span>
-<span class="nc" id="L26">        DtoJugador jugador = mapeoJugador.mapRow(resultSet, rowNum);</span>
-<span class="nc" id="L27">        Integer estado = resultSet.getInt(&quot;estado&quot;);</span>
-<span class="nc" id="L28">        String descripcion = resultSet.getString(&quot;descripcion&quot;);</span>
+<span class="fc" id="L22">        Long id = resultSet.getLong(&quot;id&quot;);</span>
+<span class="fc" id="L23">        Integer valor = resultSet.getInt(&quot;valor&quot;);</span>
+<span class="fc" id="L24">        LocalDate fechaIngreso = extraerLocalDate(resultSet, &quot;fecha_ingreso&quot;);</span>
+<span class="fc" id="L25">        LocalDate fechaCaducidad = extraerLocalDate(resultSet, &quot;fecha_caducidad&quot;);</span>
+<span class="fc" id="L26">        DtoJugador jugador = mapeoJugador.mapRow(resultSet, rowNum);</span>
+<span class="fc" id="L27">        Integer estado = resultSet.getInt(&quot;estado&quot;);</span>
+<span class="fc" id="L28">        String descripcion = resultSet.getString(&quot;descripcion&quot;);</span>
 
-<span class="nc" id="L30">        return new DtoFactura(id, valor, fechaIngreso, fechaCaducidad, jugador, estado, descripcion);</span>
+<span class="fc" id="L30">        return new DtoFactura(id, valor, fechaIngreso, fechaCaducidad, jugador, estado, descripcion);</span>
 
     }
 }

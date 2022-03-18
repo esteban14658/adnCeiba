@@ -16,13 +16,13 @@ public class DaoFacturaMysql implements DaoFactura {
     @SqlStatement(namespace= &quot;factura&quot;, value=&quot;listar&quot;)
     private static String sqlListar;
 
-<span class="nc" id="L19">    public DaoFacturaMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {</span>
-<span class="nc" id="L20">        this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;</span>
-<span class="nc" id="L21">    }</span>
+<span class="fc" id="L19">    public DaoFacturaMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {</span>
+<span class="fc" id="L20">        this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;</span>
+<span class="fc" id="L21">    }</span>
 
     @Override
     public List&lt;DtoFactura&gt; listar() {
-<span class="nc" id="L25">        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListar, new MapeoFactura());</span>
+<span class="fc" id="L25">        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListar, new MapeoFactura());</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

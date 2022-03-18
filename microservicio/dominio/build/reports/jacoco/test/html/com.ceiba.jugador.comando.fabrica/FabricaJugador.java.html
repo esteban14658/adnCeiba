@@ -2,24 +2,22 @@
 
 import com.ceiba.jugador.comando.ComandoJugador;
 import com.ceiba.jugador.modelo.entidad.Jugador;
-import com.ceiba.usuario.comando.ComandoUsuario;
-import com.ceiba.usuario.modelo.entidad.Usuario;
 import org.springframework.stereotype.Component;
 
 @Component
-<span class="nc" id="L10">public class FabricaJugador {</span>
+<span class="nc" id="L8">public class FabricaJugador {</span>
 
     public Jugador crear(ComandoJugador comandoJugador) {
-<span class="nc" id="L13">        return new Jugador(</span>
-<span class="nc" id="L14">                comandoJugador.getId(),</span>
-<span class="nc" id="L15">                comandoJugador.getDocumento(),</span>
-<span class="nc" id="L16">                comandoJugador.getNombre(),</span>
-<span class="nc" id="L17">                comandoJugador.getApellido(),</span>
-<span class="nc" id="L18">                comandoJugador.getFechaNacimiento(),</span>
-<span class="nc" id="L19">                comandoJugador.getPeso(),</span>
-<span class="nc" id="L20">                comandoJugador.getAltura(),</span>
-<span class="nc" id="L21">                comandoJugador.getPosicion(),</span>
-<span class="nc" id="L22">                comandoJugador.getPieHabil()</span>
+<span class="nc" id="L11">        return new Jugador(</span>
+<span class="nc" id="L12">                comandoJugador.getId(),</span>
+<span class="nc" id="L13">                comandoJugador.getDocumento(),</span>
+<span class="nc" id="L14">                comandoJugador.getNombre(),</span>
+<span class="nc" id="L15">                comandoJugador.getApellido(),</span>
+<span class="nc" id="L16">                comandoJugador.getFechaNacimiento(),</span>
+<span class="nc" id="L17">                comandoJugador.getPeso(),</span>
+<span class="nc" id="L18">                comandoJugador.getAltura(),</span>
+<span class="nc" id="L19">                comandoJugador.getPosicion(),</span>
+<span class="nc" id="L20">                comandoJugador.getPieHabil()</span>
         );
     }
 

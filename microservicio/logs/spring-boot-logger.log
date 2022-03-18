@@ -1702,3 +1702,202 @@ org.springframework.dao.InvalidDataAccessApiUsageException: No value supplied fo
 2022-03-17 16:57:52,902 INFO org.springframework.web.servlet.FrameworkServlet [RMI TCP Connection(1)-192.168.20.113] Completed initialization in 16 ms
 2022-03-17 17:00:51,866 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8083-exec-5] Resolved [com.ceiba.dominio.excepcion.ExcepcionDuplicidad: No se puede eliminar un jugador con asistencias previas]
 2022-03-17 17:01:18,644 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8083-exec-1] Resolved [com.ceiba.dominio.excepcion.ExcepcionDuplicidad: No puede eliminar un jugador con factura previa]
+2022-03-17 17:42:07,604 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8083-exec-6] Resolved [com.ceiba.dominio.excepcion.ExcepcionDuplicidad: No puede eliminar un jugador con factura previa]
+2022-03-17 17:57:00,980 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] pool - Shutdown initiated...
+2022-03-17 17:57:00,990 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] pool - Shutdown completed.
+2022-03-17 18:08:34,477 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application using Java 1.8.0_322 on ESTEBAN-BELTRAN with PID 5372 (C:\Users\esteban.beltran\Documents\Proyectos JAVA\java-arquitectura-hexagonal\microservicio\build\classes\java\main started by esteban.beltran in C:\Users\esteban.beltran\Documents\Proyectos JAVA\java-arquitectura-hexagonal\microservicio)
+2022-03-17 18:08:34,483 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-17 18:08:34,570 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-17 18:08:34,571 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-17 18:08:37,758 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2022-03-17 18:08:37,859 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2022-03-17 18:08:37,862 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2022-03-17 18:08:37,862 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2022-03-17 18:08:37,864 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2022-03-17 18:08:37,864 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2022-03-17 18:08:37,864 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2022-03-17 18:08:37,865 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-03-17 18:08:37,865 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-03-17 18:08:37,902 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2022-03-17 18:08:38,115 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2022-03-17 18:08:38,117 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2022-03-17 18:08:38,470 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8083 (http)
+2022-03-17 18:08:38,485 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8083"]
+2022-03-17 18:08:38,486 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-03-17 18:08:38,487 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-03-17 18:08:38,647 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-17 18:08:38,648 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 4075 ms
+2022-03-17 18:08:38,971 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2022-03-17 18:08:39,605 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2022-03-17 18:08:39,642 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2022-03-17 18:08:39,656 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:mysql://localhost:3306/dbtest (MySQL 8.0)
+2022-03-17 18:08:39,792 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.036s)
+2022-03-17 18:08:39,808 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema `dbtest`: 1
+2022-03-17 18:08:39,810 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Schema `dbtest` is up to date. No migration necessary.
+2022-03-17 18:08:40,776 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-17 18:08:40,935 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-03-17 18:08:41,112 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-03-17 18:08:41,558 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8083"]
+2022-03-17 18:08:41,605 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8083 (http) with context path '/api'
+2022-03-17 18:08:41,611 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2022-03-17 18:08:41,653 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2022-03-17 18:08:41,739 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2022-03-17 18:08:41,979 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: crearUsingPOST_1
+2022-03-17 18:08:41,993 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: crearUsingPOST_2
+2022-03-17 18:08:41,996 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: eliminarUsingDELETE_1
+2022-03-17 18:08:42,011 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: listarUsingGET_1
+2022-03-17 18:08:42,022 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: listarUsingGET_2
+2022-03-17 18:08:42,113 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Application in 8.577 seconds (JVM running for 10.267)
+2022-03-17 18:08:42,416 INFO org.apache.juli.logging.DirectJDKLog [RMI TCP Connection(1)-192.168.20.113] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-17 18:08:42,417 INFO org.springframework.web.servlet.FrameworkServlet [RMI TCP Connection(1)-192.168.20.113] Initializing Servlet 'dispatcherServlet'
+2022-03-17 18:08:42,421 INFO org.springframework.web.servlet.FrameworkServlet [RMI TCP Connection(1)-192.168.20.113] Completed initialization in 3 ms
+2022-03-17 18:09:24,089 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8083-exec-2] Resolved [org.springframework.web.bind.MissingPathVariableException: Required URI template variable 'cantidad' for method parameter type Integer is not present]
+2022-03-17 18:10:36,844 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] pool - Shutdown initiated...
+2022-03-17 18:10:36,868 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] pool - Shutdown completed.
+2022-03-17 18:11:23,462 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application using Java 1.8.0_322 on ESTEBAN-BELTRAN with PID 6912 (C:\Users\esteban.beltran\Documents\Proyectos JAVA\java-arquitectura-hexagonal\microservicio\build\classes\java\main started by esteban.beltran in C:\Users\esteban.beltran\Documents\Proyectos JAVA\java-arquitectura-hexagonal\microservicio)
+2022-03-17 18:11:23,469 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-17 18:11:23,566 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-17 18:11:23,567 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-17 18:11:27,093 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2022-03-17 18:11:27,206 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2022-03-17 18:11:27,210 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2022-03-17 18:11:27,210 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2022-03-17 18:11:27,212 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2022-03-17 18:11:27,212 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2022-03-17 18:11:27,213 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2022-03-17 18:11:27,213 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-03-17 18:11:27,214 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-03-17 18:11:27,256 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2022-03-17 18:11:27,512 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2022-03-17 18:11:27,516 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2022-03-17 18:11:27,914 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8083 (http)
+2022-03-17 18:11:27,931 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8083"]
+2022-03-17 18:11:27,933 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-03-17 18:11:27,933 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-03-17 18:11:28,110 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-17 18:11:28,111 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 4543 ms
+2022-03-17 18:11:28,503 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2022-03-17 18:11:29,212 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2022-03-17 18:11:29,255 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2022-03-17 18:11:29,271 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:mysql://localhost:3306/dbtest (MySQL 8.0)
+2022-03-17 18:11:29,419 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.038s)
+2022-03-17 18:11:29,438 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema `dbtest`: 1
+2022-03-17 18:11:29,440 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Schema `dbtest` is up to date. No migration necessary.
+2022-03-17 18:11:30,580 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-17 18:11:30,751 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-03-17 18:11:30,950 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-03-17 18:11:31,467 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8083"]
+2022-03-17 18:11:31,498 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8083 (http) with context path '/api'
+2022-03-17 18:11:31,500 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2022-03-17 18:11:31,548 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2022-03-17 18:11:31,649 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2022-03-17 18:11:31,919 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: crearUsingPOST_1
+2022-03-17 18:11:31,933 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: crearUsingPOST_2
+2022-03-17 18:11:31,936 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: eliminarUsingDELETE_1
+2022-03-17 18:11:31,950 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: listarUsingGET_1
+2022-03-17 18:11:31,961 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: listarUsingGET_2
+2022-03-17 18:11:32,067 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Application in 9.7 seconds (JVM running for 12.304)
+2022-03-17 18:11:32,660 INFO org.apache.juli.logging.DirectJDKLog [RMI TCP Connection(2)-192.168.20.113] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-17 18:11:32,661 INFO org.springframework.web.servlet.FrameworkServlet [RMI TCP Connection(2)-192.168.20.113] Initializing Servlet 'dispatcherServlet'
+2022-03-17 18:11:32,665 INFO org.springframework.web.servlet.FrameworkServlet [RMI TCP Connection(2)-192.168.20.113] Completed initialization in 3 ms
+2022-03-17 18:11:58,691 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8083-exec-1] Resolved [org.springframework.web.bind.MissingPathVariableException: Required URI template variable 'cantidad' for method parameter type Integer is not present]
+2022-03-17 18:12:27,234 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8083-exec-4] Resolved [org.springframework.web.bind.MissingPathVariableException: Required URI template variable 'cantidad' for method parameter type Integer is not present]
+2022-03-17 18:12:55,248 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] pool - Shutdown initiated...
+2022-03-17 18:12:55,278 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] pool - Shutdown completed.
+2022-03-17 18:13:03,019 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application using Java 1.8.0_322 on ESTEBAN-BELTRAN with PID 13208 (C:\Users\esteban.beltran\Documents\Proyectos JAVA\java-arquitectura-hexagonal\microservicio\build\classes\java\main started by esteban.beltran in C:\Users\esteban.beltran\Documents\Proyectos JAVA\java-arquitectura-hexagonal\microservicio)
+2022-03-17 18:13:03,025 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-17 18:13:03,113 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-17 18:13:03,114 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-17 18:13:06,281 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2022-03-17 18:13:06,386 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2022-03-17 18:13:06,389 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2022-03-17 18:13:06,390 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2022-03-17 18:13:06,392 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2022-03-17 18:13:06,392 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2022-03-17 18:13:06,392 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2022-03-17 18:13:06,393 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-03-17 18:13:06,393 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-03-17 18:13:06,430 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2022-03-17 18:13:06,654 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2022-03-17 18:13:06,657 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2022-03-17 18:13:07,019 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8083 (http)
+2022-03-17 18:13:07,034 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8083"]
+2022-03-17 18:13:07,035 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-03-17 18:13:07,036 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-03-17 18:13:07,203 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-17 18:13:07,203 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 4088 ms
+2022-03-17 18:13:07,532 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2022-03-17 18:13:08,173 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2022-03-17 18:13:08,211 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2022-03-17 18:13:08,226 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:mysql://localhost:3306/dbtest (MySQL 8.0)
+2022-03-17 18:13:08,355 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.032s)
+2022-03-17 18:13:08,375 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema `dbtest`: 1
+2022-03-17 18:13:08,378 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Schema `dbtest` is up to date. No migration necessary.
+2022-03-17 18:13:09,320 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-17 18:13:09,478 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-03-17 18:13:09,656 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-03-17 18:13:10,105 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8083"]
+2022-03-17 18:13:10,153 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8083 (http) with context path '/api'
+2022-03-17 18:13:10,159 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2022-03-17 18:13:10,202 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2022-03-17 18:13:10,292 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2022-03-17 18:13:10,544 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: crearUsingPOST_1
+2022-03-17 18:13:10,558 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: crearUsingPOST_2
+2022-03-17 18:13:10,560 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: eliminarUsingDELETE_1
+2022-03-17 18:13:10,573 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: listarUsingGET_1
+2022-03-17 18:13:10,583 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: listarUsingGET_2
+2022-03-17 18:13:10,678 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Application in 8.611 seconds (JVM running for 10.308)
+2022-03-17 18:13:11,441 INFO org.apache.juli.logging.DirectJDKLog [RMI TCP Connection(1)-192.168.20.113] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-17 18:13:11,442 INFO org.springframework.web.servlet.FrameworkServlet [RMI TCP Connection(1)-192.168.20.113] Initializing Servlet 'dispatcherServlet'
+2022-03-17 18:13:11,446 INFO org.springframework.web.servlet.FrameworkServlet [RMI TCP Connection(1)-192.168.20.113] Completed initialization in 4 ms
+2022-03-17 19:20:57,229 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8083-exec-3] Resolved [com.ceiba.dominio.excepcion.ExcepcionDuplicidad: No se puede eliminar un jugador con asistencias previas]
+2022-03-17 19:21:12,002 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] pool - Shutdown initiated...
+2022-03-17 19:21:12,034 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] pool - Shutdown completed.
+2022-03-17 19:34:41,922 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application using Java 1.8.0_322 on ESTEBAN-BELTRAN with PID 11656 (C:\Users\esteban.beltran\Documents\Proyectos JAVA\java-arquitectura-hexagonal\microservicio\build\classes\java\main started by esteban.beltran in C:\Users\esteban.beltran\Documents\Proyectos JAVA\java-arquitectura-hexagonal\microservicio)
+2022-03-17 19:34:41,922 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-17 19:34:42,016 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-17 19:34:42,016 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-17 19:34:45,198 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2022-03-17 19:34:45,292 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2022-03-17 19:34:45,292 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2022-03-17 19:34:45,292 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2022-03-17 19:34:45,292 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2022-03-17 19:34:45,292 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2022-03-17 19:34:45,292 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2022-03-17 19:34:45,292 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-03-17 19:34:45,292 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-03-17 19:34:45,339 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2022-03-17 19:34:45,567 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2022-03-17 19:34:45,567 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2022-03-17 19:34:45,957 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8083 (http)
+2022-03-17 19:34:45,973 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8083"]
+2022-03-17 19:34:45,973 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-03-17 19:34:45,973 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-03-17 19:34:46,145 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-17 19:34:46,145 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 4129 ms
+2022-03-17 19:34:46,457 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2022-03-17 19:34:47,060 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2022-03-17 19:34:47,107 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2022-03-17 19:34:47,107 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:mysql://localhost:3306/dbtest (MySQL 8.0)
+2022-03-17 19:34:47,232 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.033s)
+2022-03-17 19:34:47,247 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema `dbtest`: 1
+2022-03-17 19:34:47,263 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Schema `dbtest` is up to date. No migration necessary.
+2022-03-17 19:34:48,178 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-17 19:34:48,319 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-03-17 19:34:48,491 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-03-17 19:34:48,937 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8083"]
+2022-03-17 19:34:48,953 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8083 (http) with context path '/api'
+2022-03-17 19:34:48,968 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2022-03-17 19:34:49,031 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2022-03-17 19:34:49,109 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2022-03-17 19:34:49,343 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: crearUsingPOST_1
+2022-03-17 19:34:49,359 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: crearUsingPOST_2
+2022-03-17 19:34:49,359 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: eliminarUsingDELETE_1
+2022-03-17 19:34:49,375 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: listarUsingGET_1
+2022-03-17 19:34:49,390 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: listarUsingGET_2
+2022-03-17 19:34:49,484 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Application in 8.522 seconds (JVM running for 10.229)
+2022-03-17 19:34:49,852 INFO org.apache.juli.logging.DirectJDKLog [RMI TCP Connection(2)-192.168.20.113] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-17 19:34:49,852 INFO org.springframework.web.servlet.FrameworkServlet [RMI TCP Connection(2)-192.168.20.113] Initializing Servlet 'dispatcherServlet'
+2022-03-17 19:34:49,852 INFO org.springframework.web.servlet.FrameworkServlet [RMI TCP Connection(2)-192.168.20.113] Completed initialization in 0 ms
+2022-03-17 19:43:33,917 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] pool - Shutdown initiated...
+2022-03-17 19:43:33,948 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] pool - Shutdown completed.

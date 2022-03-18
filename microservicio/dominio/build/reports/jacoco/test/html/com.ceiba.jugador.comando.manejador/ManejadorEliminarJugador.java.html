@@ -2,7 +2,6 @@
 
 import com.ceiba.jugador.servicio.ServicioEliminarJugador;
 import com.ceiba.manejador.ManejadorComando;
-import com.ceiba.usuario.servicio.ServicioEliminarUsuario;
 import org.springframework.stereotype.Component;
 
 
@@ -11,12 +10,12 @@ public class ManejadorEliminarJugador implements ManejadorComando&lt;Long&gt; {
 
     private final ServicioEliminarJugador servicioEliminarJugador;
 
-<span class="nc" id="L14">    public ManejadorEliminarJugador(ServicioEliminarJugador servicioEliminarJugador) {</span>
-<span class="nc" id="L15">        this.servicioEliminarJugador = servicioEliminarJugador;</span>
-<span class="nc" id="L16">    }</span>
+<span class="nc" id="L13">    public ManejadorEliminarJugador(ServicioEliminarJugador servicioEliminarJugador) {</span>
+<span class="nc" id="L14">        this.servicioEliminarJugador = servicioEliminarJugador;</span>
+<span class="nc" id="L15">    }</span>
 
     public void ejecutar(Long idUsuario) {
-<span class="nc" id="L19">        this.servicioEliminarJugador.ejecutar(idUsuario);</span>
-<span class="nc" id="L20">    }</span>
+<span class="nc" id="L18">        this.servicioEliminarJugador.ejecutar(idUsuario);</span>
+<span class="nc" id="L19">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

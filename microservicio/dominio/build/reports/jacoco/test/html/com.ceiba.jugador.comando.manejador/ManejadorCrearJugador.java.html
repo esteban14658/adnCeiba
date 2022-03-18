@@ -6,10 +6,6 @@ import com.ceiba.jugador.comando.fabrica.FabricaJugador;
 import com.ceiba.jugador.modelo.entidad.Jugador;
 import com.ceiba.jugador.servicio.ServicioCrearJugador;
 import com.ceiba.manejador.ManejadorComandoRespuesta;
-import com.ceiba.usuario.comando.ComandoUsuario;
-import com.ceiba.usuario.comando.fabrica.FabricaUsuario;
-import com.ceiba.usuario.modelo.entidad.Usuario;
-import com.ceiba.usuario.servicio.ServicioCrearUsuario;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -18,14 +14,14 @@ public class ManejadorCrearJugador implements ManejadorComandoRespuesta&lt;Coman
     private final FabricaJugador fabricaJugador;
     private final ServicioCrearJugador servicioCrearJugador;
 
-<span class="nc" id="L21">    public ManejadorCrearJugador(FabricaJugador fabricaJugador, ServicioCrearJugador servicioCrearJugador) {</span>
-<span class="nc" id="L22">        this.fabricaJugador = fabricaJugador;</span>
-<span class="nc" id="L23">        this.servicioCrearJugador = servicioCrearJugador;</span>
-<span class="nc" id="L24">    }</span>
+<span class="nc" id="L17">    public ManejadorCrearJugador(FabricaJugador fabricaJugador, ServicioCrearJugador servicioCrearJugador) {</span>
+<span class="nc" id="L18">        this.fabricaJugador = fabricaJugador;</span>
+<span class="nc" id="L19">        this.servicioCrearJugador = servicioCrearJugador;</span>
+<span class="nc" id="L20">    }</span>
 
     public ComandoRespuesta&lt;Long&gt; ejecutar(ComandoJugador comandoJugador) {
-<span class="nc" id="L27">        Jugador jugador = this.fabricaJugador.crear(comandoJugador);</span>
-<span class="nc" id="L28">        return new ComandoRespuesta&lt;&gt;(this.servicioCrearJugador.ejecutar(jugador));</span>
+<span class="nc" id="L23">        Jugador jugador = this.fabricaJugador.crear(comandoJugador);</span>
+<span class="nc" id="L24">        return new ComandoRespuesta&lt;&gt;(this.servicioCrearJugador.ejecutar(jugador));</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

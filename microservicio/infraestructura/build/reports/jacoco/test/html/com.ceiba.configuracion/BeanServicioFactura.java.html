@@ -2,15 +2,21 @@
 
 import com.ceiba.factura.puerto.repositorio.RepositorioFactura;
 import com.ceiba.factura.servicio.ServicioCrearFactura;
+import com.ceiba.factura.servicio.ServicioEliminarFactura;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-<span class="nc" id="L9">public class BeanServicioFactura {</span>
+<span class="fc" id="L10">public class BeanServicioFactura {</span>
 
     @Bean
     public ServicioCrearFactura servicioCrearFactura(RepositorioFactura repositorioFactura) {
-<span class="nc" id="L13">        return new ServicioCrearFactura(repositorioFactura);</span>
+<span class="fc" id="L14">        return new ServicioCrearFactura(repositorioFactura);</span>
+    }
+
+    @Bean
+    public ServicioEliminarFactura servicioEliminarFactura(RepositorioFactura repositorioFactura) {
+<span class="fc" id="L19">        return new ServicioEliminarFactura(repositorioFactura);</span>
     }
 
 }

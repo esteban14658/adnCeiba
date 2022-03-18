@@ -4,26 +4,19 @@ import com.ceiba.factura.modelo.entidad.Factura;
 import com.ceiba.factura.puerto.repositorio.RepositorioFactura;
 import com.ceiba.infraestructura.jdbc.CustomNamedParameterJdbcTemplate;
 import com.ceiba.infraestructura.jdbc.sqlstatement.SqlStatement;
-import io.swagger.models.auth.In;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class RepositorioFacturaMysql implements RepositorioFactura {
+public class RepositorioFacturaMysql implements RepositorioFactura{
 
     private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
 
     @SqlStatement(namespace=&quot;factura&quot;, value=&quot;crear&quot;)
     private static String sqlCrear;
 
-    @SqlStatement(namespace=&quot;factura&quot;, value=&quot;actualizar&quot;)
-    private static String sqlActualizar;
-
     @SqlStatement(namespace=&quot;factura&quot;, value=&quot;eliminar&quot;)
     private static String sqlEliminar;
-
-    @SqlStatement(namespace=&quot;factura&quot;, value=&quot;existe&quot;)
-    private static String sqlExiste;
 
     @SqlStatement(namespace=&quot;factura&quot;, value=&quot;existePorId&quot;)
     private static String sqlExistePorId;
@@ -34,42 +27,48 @@ public class RepositorioFacturaMysql implements RepositorioFactura {
     @SqlStatement(namespace = &quot;factura&quot;, value = &quot;existePorIdJugador&quot;)
     private static String sqlExistePorIdJugador;
 
-<span class="nc" id="L37">    public RepositorioFacturaMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {</span>
-<span class="nc" id="L38">        this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;</span>
-<span class="nc" id="L39">    }</span>
+<span class="fc" id="L30">    public RepositorioFacturaMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {</span>
+<span class="fc" id="L31">        this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;</span>
+<span class="fc" id="L32">    }</span>
 
     @Override
     public Long crear(Factura factura) {
-<span class="nc" id="L43">        return this.customNamedParameterJdbcTemplate.crear(factura, sqlCrear);</span>
+<span class="nc" id="L36">        MapSqlParameterSource parameterSource = new MapSqlParameterSource();</span>
+<span class="nc" id="L37">        parameterSource.addValue(&quot;valor&quot;, factura.getValor());</span>
+<span class="nc" id="L38">        parameterSource.addValue(&quot;fechaIngreso&quot;, factura.getFechaIngreso());</span>
+<span class="nc" id="L39">        parameterSource.addValue(&quot;fechaCaducidad&quot;, factura.getFechaCaducidad());</span>
+<span class="nc" id="L40">        parameterSource.addValue(&quot;jugador&quot;, factura.getJugador().getId());</span>
+<span class="nc" id="L41">        parameterSource.addValue(&quot;estado&quot;, factura.getEstado());</span>
+<span class="nc" id="L42">        parameterSource.addValue(&quot;descripcion&quot;, factura.getDescripcion());</span>
+<span class="nc" id="L43">        return Long.valueOf(this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().update(sqlCrear, parameterSource));</span>
     }
 
     @Override
-    public void actualizar(Factura factura) {
-
-<span class="nc" id="L49">    }</span>
-
-    @Override
-    public void eliminar(Integer id) {
-
-<span class="nc" id="L54">    }</span>
+    public void eliminar(Long id) {
+<span class="nc" id="L48">        MapSqlParameterSource paramSource = new MapSqlParameterSource();</span>
+<span class="nc" id="L49">        paramSource.addValue(&quot;id&quot;, id);</span>
+<span class="nc" id="L50">        this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().update(sqlEliminar, paramSource);</span>
+<span class="nc" id="L51">    }</span>
 
     @Override
-    public boolean existePorId(Integer id) {
-<span class="nc" id="L58">        return false;</span>
+    public boolean existePorId(Long id) {
+<span class="nc" id="L55">        MapSqlParameterSource paramSource = new MapSqlParameterSource();</span>
+<span class="nc" id="L56">        paramSource.addValue(&quot;id&quot;, id);</span>
+<span class="nc" id="L57">        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExistePorId,paramSource, Boolean.class);</span>
     }
 
     @Override
     public boolean existePorDocumento(Long documento) {
-<span class="nc" id="L63">        MapSqlParameterSource paramSource = new MapSqlParameterSource();</span>
-<span class="nc" id="L64">        paramSource.addValue(&quot;documento&quot;, documento);</span>
-<span class="nc" id="L65">        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExistePorDocumento,paramSource, Boolean.class);</span>
+<span class="nc" id="L62">        MapSqlParameterSource paramSource = new MapSqlParameterSource();</span>
+<span class="nc" id="L63">        paramSource.addValue(&quot;documento&quot;, documento);</span>
+<span class="nc" id="L64">        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExistePorDocumento,paramSource, Boolean.class);</span>
     }
 
     @Override
-    public boolean existePorIdJugador(Integer jugador) {
-<span class="nc" id="L70">        MapSqlParameterSource paramSource = new MapSqlParameterSource();</span>
-<span class="nc" id="L71">        paramSource.addValue(&quot;jugador&quot;, jugador);</span>
-<span class="nc" id="L72">        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExistePorIdJugador,paramSource, Boolean.class);</span>
+    public boolean existePorIdJugador(Long jugador) {
+<span class="nc" id="L69">        MapSqlParameterSource paramSource = new MapSqlParameterSource();</span>
+<span class="nc" id="L70">        paramSource.addValue(&quot;jugador&quot;, jugador);</span>
+<span class="nc" id="L71">        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExistePorIdJugador,paramSource, Boolean.class);</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

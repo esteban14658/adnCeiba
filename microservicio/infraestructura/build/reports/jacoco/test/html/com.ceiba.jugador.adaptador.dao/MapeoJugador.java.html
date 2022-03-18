@@ -8,22 +8,22 @@ import com.ceiba.infraestructura.jdbc.MapperResult;
 import com.ceiba.jugador.modelo.dto.DtoJugador;
 import org.springframework.jdbc.core.RowMapper;
 
-<span class="nc" id="L11">public class MapeoJugador implements RowMapper&lt;DtoJugador&gt;, MapperResult {</span>
+<span class="fc" id="L11">public class MapeoJugador implements RowMapper&lt;DtoJugador&gt;, MapperResult {</span>
 
     @Override
     public DtoJugador mapRow(ResultSet resultSet, int rowNum) throws SQLException {
 
-<span class="nc" id="L16">        Long id = resultSet.getLong(&quot;id&quot;);</span>
-<span class="nc" id="L17">        Long documento = resultSet.getLong(&quot;documento&quot;);</span>
-<span class="nc" id="L18">        String nombre = resultSet.getString(&quot;nombre&quot;);</span>
-<span class="nc" id="L19">        String apellido = resultSet.getString(&quot;apellido&quot;);</span>
-<span class="nc" id="L20">        LocalDate fechaNacimiento = extraerLocalDate(resultSet, &quot;fecha_nacimiento&quot;);</span>
-<span class="nc" id="L21">        float peso = resultSet.getFloat(&quot;peso&quot;);</span>
-<span class="nc" id="L22">        float altura = resultSet.getFloat(&quot;altura&quot;);</span>
-<span class="nc" id="L23">        String posicion = resultSet.getString(&quot;posicion&quot;);</span>
-<span class="nc" id="L24">        String pieHabil = resultSet.getString(&quot;pie_habil&quot;);</span>
+<span class="fc" id="L16">        Long id = resultSet.getLong(&quot;id&quot;);</span>
+<span class="fc" id="L17">        Long documento = resultSet.getLong(&quot;documento&quot;);</span>
+<span class="fc" id="L18">        String nombre = resultSet.getString(&quot;nombre&quot;);</span>
+<span class="fc" id="L19">        String apellido = resultSet.getString(&quot;apellido&quot;);</span>
+<span class="fc" id="L20">        LocalDate fechaNacimiento = extraerLocalDate(resultSet, &quot;fecha_nacimiento&quot;);</span>
+<span class="fc" id="L21">        float peso = resultSet.getFloat(&quot;peso&quot;);</span>
+<span class="fc" id="L22">        float altura = resultSet.getFloat(&quot;altura&quot;);</span>
+<span class="fc" id="L23">        String posicion = resultSet.getString(&quot;posicion&quot;);</span>
+<span class="fc" id="L24">        String pieHabil = resultSet.getString(&quot;pie_habil&quot;);</span>
 
-<span class="nc" id="L26">        return new DtoJugador(id, documento, nombre, apellido, fechaNacimiento, peso, altura, posicion, pieHabil);</span>
+<span class="fc" id="L26">        return new DtoJugador(id, documento, nombre, apellido, fechaNacimiento, peso, altura, posicion, pieHabil);</span>
     }
 
 }

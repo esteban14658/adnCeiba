@@ -20,40 +20,60 @@ public class DaoJugadorMysql implements DaoJugador {
     @SqlStatement(namespace= &quot;jugador&quot;, value=&quot;listarPorPosicion&quot;)
     private static String sqlListarPorPosicion;
 
-    @SqlStatement(namespace= &quot;jugador&quot;, value=&quot;listarPorPieHabil&quot;)
-    private static String sqlListarPorPieHabil;
+    @SqlStatement(namespace = &quot;jugador&quot;, value = &quot;listarJugadoresSinFactura&quot;)
+    private static String sqlListarJugadoresSinFactura;
 
-    @SqlStatement(namespace= &quot;jugador&quot;, value=&quot;obtenerPorId&quot;)
+    @SqlStatement(namespace = &quot;jugador&quot;, value = &quot;listarJugadoresSinAsistencia&quot;)
+    private static String sqlListarJugadoresSinAsistencias;
+
+    @SqlStatement(namespace = &quot;jugador&quot;, value = &quot;listarPorCategoria&quot;)
+    private static String sqlListarJugadoresPorCategoria;
+
+    @SqlStatement(namespace= &quot;jugador&quot;, value=&quot;obtenerPorDocumento&quot;)
     private static String sqlObtener;
 
-<span class="nc" id="L29">    public DaoJugadorMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {</span>
-<span class="nc" id="L30">        this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;</span>
-<span class="nc" id="L31">    }</span>
+<span class="fc" id="L35">    public DaoJugadorMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {</span>
+<span class="fc" id="L36">        this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;</span>
+<span class="fc" id="L37">    }</span>
 
     @Override
-    public List&lt;DtoJugador&gt; listar() {
-<span class="nc" id="L35">        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListar, new MapeoJugador());</span>
+    public List&lt;DtoJugador&gt; listar(Integer cantidad, Integer pagina) {
+<span class="nc" id="L41">        MapSqlParameterSource parameterSource = new MapSqlParameterSource();</span>
+<span class="nc" id="L42">        parameterSource.addValue(&quot;cantidad&quot;, cantidad);</span>
+<span class="nc" id="L43">        parameterSource.addValue(&quot;pagina&quot;, cantidad * pagina);</span>
+<span class="nc" id="L44">        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListar, parameterSource, new MapeoJugador());</span>
     }
 
     @Override
     public List&lt;DtoJugador&gt; listarPorPosicion(String posicion) {
-<span class="nc" id="L40">        MapSqlParameterSource paramSource = new MapSqlParameterSource();</span>
-<span class="nc" id="L41">        paramSource.addValue(&quot;posicion&quot;, posicion);</span>
-<span class="nc" id="L42">        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListarPorPosicion, paramSource, new MapeoJugador());</span>
+<span class="fc" id="L49">        MapSqlParameterSource paramSource = new MapSqlParameterSource();</span>
+<span class="fc" id="L50">        paramSource.addValue(&quot;posicion&quot;, posicion);</span>
+<span class="fc" id="L51">        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListarPorPosicion, paramSource, new MapeoJugador());</span>
     }
 
     @Override
-    public List&lt;DtoJugador&gt; listarPorPieHabil(String pieHabil) {
-<span class="nc" id="L47">        MapSqlParameterSource paramSource = new MapSqlParameterSource();</span>
-<span class="nc" id="L48">        paramSource.addValue(&quot;pieHabil&quot;, pieHabil);</span>
-<span class="nc" id="L49">        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListarPorPieHabil, paramSource, new MapeoJugador());</span>
+    public List&lt;DtoJugador&gt; listarJugadoresSinFactura() {
+<span class="fc" id="L56">        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListarJugadoresSinFactura, new MapeoJugador());</span>
     }
 
     @Override
-    public DtoJugador obtenerPorId(Long id) {
-<span class="nc" id="L54">        MapSqlParameterSource paramSource = new MapSqlParameterSource();</span>
-<span class="nc" id="L55">        paramSource.addValue(&quot;id&quot;, id);</span>
-<span class="nc" id="L56">        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlObtener, paramSource, new MapeoJugador());</span>
+    public List&lt;DtoJugador&gt; listarSinAsistencias() {
+<span class="fc" id="L61">        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListarJugadoresSinAsistencias, new MapeoJugador());</span>
+    }
+
+    @Override
+    public List&lt;DtoJugador&gt; listarPorCategoria(String fecha) {
+<span class="fc" id="L66">        MapSqlParameterSource paramSource = new MapSqlParameterSource();</span>
+<span class="fc" id="L67">        paramSource.addValue(&quot;fecha&quot;, fecha);</span>
+<span class="fc" id="L68">        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate()</span>
+<span class="fc" id="L69">                .query(sqlListarJugadoresPorCategoria, paramSource, new MapeoJugador());</span>
+    }
+
+    @Override
+    public DtoJugador obtenerPorDocumento(Long documento) {
+<span class="fc" id="L74">        MapSqlParameterSource paramSource = new MapSqlParameterSource();</span>
+<span class="fc" id="L75">        paramSource.addValue(&quot;documento&quot;, documento);</span>
+<span class="fc" id="L76">        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlObtener, paramSource, new MapeoJugador());</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

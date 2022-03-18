@@ -37,8 +37,11 @@ public class DaoJugadorMysql implements DaoJugador {
     }
 
     @Override
-    public List<DtoJugador> listar() {
-        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListar, new MapeoJugador());
+    public List<DtoJugador> listar(Integer cantidad, Integer pagina) {
+        MapSqlParameterSource parameterSource = new MapSqlParameterSource();
+        parameterSource.addValue("cantidad", cantidad);
+        parameterSource.addValue("pagina", cantidad * pagina);
+        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListar, parameterSource, new MapeoJugador());
     }
 
     @Override

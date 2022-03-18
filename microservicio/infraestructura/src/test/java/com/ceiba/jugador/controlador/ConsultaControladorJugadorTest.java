@@ -36,10 +36,12 @@ class ConsultaControladorJugadorTest {
     void deberiaListarJugadores() throws Exception {
         // arrange
         // act - assert
-        mocMvc.perform(get("/jugadores")
+        Integer cantidad = 10;
+        Integer pagina = 0;
+        mocMvc.perform(get("/jugadores/" + cantidad + "/" + pagina)
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$", hasSize(15)))
+                .andExpect(jsonPath("$", hasSize(10)))
                 .andExpect(jsonPath("$[0].documento", is(80808080)))
                 .andExpect(jsonPath("$[0].id", is(1)));
     }

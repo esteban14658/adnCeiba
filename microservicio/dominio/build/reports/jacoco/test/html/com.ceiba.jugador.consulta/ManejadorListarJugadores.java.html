@@ -15,6 +15,6 @@ public class ManejadorListarJugadores {
 <span class="nc" id="L15">        this.daoJugador = daoJugador;</span>
 <span class="nc" id="L16">    }</span>
 
-<span class="nc" id="L18">    public List&lt;DtoJugador&gt; ejecutar(){ return this.daoJugador.listar(); }</span>
+<span class="nc" id="L18">    public List&lt;DtoJugador&gt; ejecutar(Integer cantidad, Integer pagina){ return this.daoJugador.listar(cantidad, pagina); }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

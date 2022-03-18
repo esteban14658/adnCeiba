@@ -2,39 +2,21 @@
 
 import com.ceiba.factura.comando.ComandoFactura;
 import com.ceiba.factura.modelo.entidad.Factura;
-import com.ceiba.jugador.modelo.dto.DtoJugador;
-import com.ceiba.jugador.modelo.entidad.Jugador;
 import org.springframework.stereotype.Component;
 
 @Component
-<span class="nc" id="L10">public class FabricaFactura {</span>
+<span class="fc" id="L8">public class FabricaFactura {</span>
 
     public Factura crear(ComandoFactura comandoFactura){
-<span class="nc" id="L13">        return new Factura(</span>
-<span class="nc" id="L14">              comandoFactura.getId(),</span>
-<span class="nc" id="L15">              comandoFactura.getValor(),</span>
-<span class="nc" id="L16">              comandoFactura.getFechaIngreso(),</span>
-<span class="nc" id="L17">              comandoFactura.getFechaCaducidad(),</span>
-<span class="nc" id="L18">              mapToEntity(comandoFactura.getJugador()),</span>
-<span class="nc" id="L19">              comandoFactura.getEstado(),</span>
-<span class="nc" id="L20">              comandoFactura.getDescripcion()</span>
+<span class="nc" id="L11">        return new Factura(</span>
+<span class="nc" id="L12">              comandoFactura.getId(),</span>
+<span class="nc" id="L13">              comandoFactura.getValor(),</span>
+<span class="nc" id="L14">              comandoFactura.getFechaIngreso(),</span>
+<span class="nc" id="L15">              comandoFactura.getFechaCaducidad(),</span>
+<span class="nc" id="L16">              comandoFactura.getJugador(),</span>
+<span class="nc" id="L17">              comandoFactura.getEstado(),</span>
+<span class="nc" id="L18">              comandoFactura.getDescripcion()</span>
         );
     }
-
-    private Jugador mapToEntity(final DtoJugador dtoJugador){
-<span class="nc" id="L25">        final Jugador jugador = new Jugador(</span>
-<span class="nc" id="L26">                dtoJugador.getId(),</span>
-<span class="nc" id="L27">                dtoJugador.getDocumento(),</span>
-<span class="nc" id="L28">                dtoJugador.getNombre(),</span>
-<span class="nc" id="L29">                dtoJugador.getApellido(),</span>
-<span class="nc" id="L30">                dtoJugador.getFechaNacimiento(),</span>
-<span class="nc" id="L31">                dtoJugador.getPeso(),</span>
-<span class="nc" id="L32">                dtoJugador.getAltura(),</span>
-<span class="nc" id="L33">                dtoJugador.getPosicion(),</span>
-<span class="nc" id="L34">                dtoJugador.getPieHabil()</span>
-        );
-<span class="nc" id="L36">        return jugador;</span>
-    }
-
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

@@ -33,10 +33,11 @@ public class ConsultaControladorJugador {
     }
 
 
-    @GetMapping
+    @GetMapping(value = "/{cantidad}/{pagina}")
     @ApiOperation("Listar todos los jugadores")
-    public List<DtoJugador> listar() {
-        return this.manejadorListarJugadores.ejecutar();
+    public List<DtoJugador> listar(@PathVariable Integer cantidad,
+                                   @PathVariable Integer pagina) {
+        return this.manejadorListarJugadores.ejecutar(cantidad, pagina);
     }
 
     @GetMapping(value = "/asistencia")

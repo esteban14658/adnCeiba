@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.ceiba.jugador.servicio.ServicioObtenerEquipoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-03-01T18:11:38" hostname="ESTEBAN-BELTRAN" time="2.051">
+<testsuite name="com.ceiba.jugador.servicio.ServicioObtenerEquipoTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-03-18T00:21:28" hostname="ESTEBAN-BELTRAN" time="0.146">
   <properties/>
-  <testcase name="Deberia lanzar una exepcion cuando la cantidad de jugadores en el equipo supere el maximo permitido" classname="com.ceiba.jugador.servicio.ServicioObtenerEquipoTest" time="2.051"/>
+  <testcase name="Deberia obtener un equipo de manera correcta" classname="com.ceiba.jugador.servicio.ServicioObtenerEquipoTest" time="0.14"/>
+  <testcase name="Deberia lanzar una exepcion cuando la cantidad de jugadores en el equipo supere el maximo permitido" classname="com.ceiba.jugador.servicio.ServicioObtenerEquipoTest" time="0.004"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

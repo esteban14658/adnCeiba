@@ -8,9 +8,11 @@ public interface DaoJugador {
 
     /**
      * Permite listar jugadores
+     * @param cantidad hace referencia al numero de datos solicitados
+     * @param pagina hace referencia al salto en los datos solicitados
      * @return los jugadores
      */
-    List<DtoJugador> listar();
+    List<DtoJugador> listar(Integer cantidad, Integer pagina);
 
     /**
      * Permite listar jugadores

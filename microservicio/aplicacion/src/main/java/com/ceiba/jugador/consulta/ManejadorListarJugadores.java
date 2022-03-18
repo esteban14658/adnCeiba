@@ -15,5 +15,5 @@ public class ManejadorListarJugadores {
         this.daoJugador = daoJugador;
     }
 
-    public List<DtoJugador> ejecutar(){ return this.daoJugador.listar(); }
+    public List<DtoJugador> ejecutar(Integer cantidad, Integer pagina){ return this.daoJugador.listar(cantidad, pagina); }
 }

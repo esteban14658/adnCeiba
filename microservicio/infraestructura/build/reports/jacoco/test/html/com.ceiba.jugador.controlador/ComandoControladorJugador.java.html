@@ -5,10 +5,6 @@ import com.ceiba.jugador.comando.ComandoJugador;
 import com.ceiba.jugador.comando.manejador.ManejadorActualizarJugador;
 import com.ceiba.jugador.comando.manejador.ManejadorCrearJugador;
 import com.ceiba.jugador.comando.manejador.ManejadorEliminarJugador;
-import com.ceiba.usuario.comando.ComandoUsuario;
-import com.ceiba.usuario.comando.manejador.ManejadorActualizarUsuario;
-import com.ceiba.usuario.comando.manejador.ManejadorCrearUsuario;
-import com.ceiba.usuario.comando.manejador.ManejadorEliminarUsuario;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,29 +22,29 @@ public class ComandoControladorJugador {
     @Autowired
     public ComandoControladorJugador(ManejadorCrearJugador manejadorCrearJugador,
 									 ManejadorEliminarJugador manejadorEliminarJugador,
-<span class="nc" id="L29">									 ManejadorActualizarJugador manejadorActualizarJugador) {</span>
-<span class="nc" id="L30">        this.manejadorCrearJugador = manejadorCrearJugador;</span>
-<span class="nc" id="L31">		this.manejadorEliminarJugador = manejadorEliminarJugador;</span>
-<span class="nc" id="L32">		this.manejadorActualizarJugador = manejadorActualizarJugador;</span>
-<span class="nc" id="L33">    }</span>
+<span class="fc" id="L25">									 ManejadorActualizarJugador manejadorActualizarJugador) {</span>
+<span class="fc" id="L26">        this.manejadorCrearJugador = manejadorCrearJugador;</span>
+<span class="fc" id="L27">		this.manejadorEliminarJugador = manejadorEliminarJugador;</span>
+<span class="fc" id="L28">		this.manejadorActualizarJugador = manejadorActualizarJugador;</span>
+<span class="fc" id="L29">    }</span>
 
     @PostMapping
     @ApiOperation(&quot;Crear Usuario&quot;)
     public ComandoRespuesta&lt;Long&gt; crear(@RequestBody ComandoJugador comandoJugador) {
-<span class="nc" id="L38">        return manejadorCrearJugador.ejecutar(comandoJugador);</span>
+<span class="nc" id="L34">        return manejadorCrearJugador.ejecutar(comandoJugador);</span>
     }
 
     @DeleteMapping(value=&quot;/{id}&quot;)
 	@ApiOperation(&quot;Eliminar Usuario&quot;)
 	public void eliminar(@PathVariable Long id) {
-<span class="nc" id="L44">		manejadorEliminarJugador.ejecutar(id);</span>
-<span class="nc" id="L45">	}</span>
+<span class="nc" id="L40">		manejadorEliminarJugador.ejecutar(id);</span>
+<span class="nc" id="L41">	}</span>
 
 	@PutMapping(value=&quot;/{id}&quot;)
 	@ApiOperation(&quot;Actualizar Usuario&quot;)
 	public void actualizar(@RequestBody ComandoJugador comandoJugador,@PathVariable Long id) {
-<span class="nc" id="L50">		comandoJugador.setId(id);</span>
-<span class="nc" id="L51">		manejadorActualizarJugador.ejecutar(comandoJugador);</span>
-<span class="nc" id="L52">	}</span>
+<span class="nc" id="L46">		comandoJugador.setId(id);</span>
+<span class="nc" id="L47">		manejadorActualizarJugador.ejecutar(comandoJugador);</span>
+<span class="nc" id="L48">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

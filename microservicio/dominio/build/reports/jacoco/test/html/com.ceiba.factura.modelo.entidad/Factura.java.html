@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Factura.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">dominio</a> &gt; <a href="index.source.html" class="el_package">com.ceiba.factura.modelo.entidad</a> &gt; <span class="el_source">Factura.java</span></div><h1>Factura.java</h1><pre class="source lang-java linenums">package com.ceiba.factura.modelo.entidad;
 
+import com.ceiba.jugador.modelo.dto.DtoJugador;
 import com.ceiba.jugador.modelo.entidad.Jugador;
+import lombok.Data;
 import lombok.Getter;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;
 
@@ -16,31 +19,53 @@ public class Factura {
     private static final String SE_DEBE_INGRESAR_EL_ID_DEL_JUGADOR = &quot;Se debe ingresar el id del jugador&quot;;
     private static final String SE_DEBE_INGRESAR_EL_ESTADO_DE_LA_SUSCRIPCION = &quot;Se debe ingresar el estado de la suscripcion&quot;;
     private static final String SE_DEBE_INGRESAR_UNA_DESCRIPCION = &quot;Se debe ingresar una descripcion&quot;;
+    public static final long VALOR_MENSUAL = 100000L;
+    public static final long TRES_MESES = 3L;
+    public static final double MENOS_QUINCE_PORCIENTO = 0.85;
+    public static final int SEIS_MESES = 6;
+    public static final double MENOS_TREINTA_PORCIENTO = 0.7;
 
-<span class="nc" id="L20">    private Long id;</span>
-<span class="nc" id="L21">    private Long valor;</span>
-<span class="nc" id="L22">    private LocalDate fechaIngreso;</span>
-<span class="nc" id="L23">    private LocalDate fechaCaducidad;</span>
-<span class="nc" id="L24">    private Jugador jugador;</span>
-<span class="nc" id="L25">    private Integer estado;</span>
-<span class="nc" id="L26">    private String descripcion;</span>
+<span class="fc" id="L28">    private Long id;</span>
+<span class="fc" id="L29">    private Long valor;</span>
+<span class="fc" id="L30">    private LocalDate fechaIngreso;</span>
+<span class="fc" id="L31">    private LocalDate fechaCaducidad;</span>
+<span class="fc" id="L32">    private Jugador jugador;</span>
+<span class="fc" id="L33">    private Integer estado;</span>
+<span class="fc" id="L34">    private String descripcion;</span>
 
     public Factura(Long id, Long valor, LocalDate fechaIngreso, LocalDate fechaCaducidad, Jugador jugador,
-<span class="nc" id="L29">                   Integer estado, String descripcion) {</span>
+<span class="fc" id="L37">                   Integer estado, String descripcion) {</span>
 
-<span class="nc" id="L31">        validarObligatorio(valor, SE_DEBE_INGRESAR_EL_VALOR_DE_LA_FACTURA);</span>
-<span class="nc" id="L32">        validarObligatorio(fechaIngreso, SE_DEBE_INGRESAR_LA_FECHA_DE_INGRESO);</span>
-<span class="nc" id="L33">        validarObligatorio(fechaCaducidad, SE_DEBE_INGRESAR_LA_FECHA_DE_CADUCIDAD);</span>
-<span class="nc" id="L34">        validarObligatorio(estado, SE_DEBE_INGRESAR_EL_ESTADO_DE_LA_SUSCRIPCION);</span>
-<span class="nc" id="L35">        validarObligatorio(descripcion, SE_DEBE_INGRESAR_UNA_DESCRIPCION);</span>
+<span class="fc" id="L39">        validarObligatorio(valor, SE_DEBE_INGRESAR_EL_VALOR_DE_LA_FACTURA);</span>
+<span class="fc" id="L40">        validarObligatorio(fechaIngreso, SE_DEBE_INGRESAR_LA_FECHA_DE_INGRESO);</span>
+<span class="fc" id="L41">        validarObligatorio(fechaCaducidad, SE_DEBE_INGRESAR_LA_FECHA_DE_CADUCIDAD);</span>
+<span class="fc" id="L42">        validarObligatorio(estado, SE_DEBE_INGRESAR_EL_ESTADO_DE_LA_SUSCRIPCION);</span>
+<span class="fc" id="L43">        validarObligatorio(descripcion, SE_DEBE_INGRESAR_UNA_DESCRIPCION);</span>
 
-<span class="nc" id="L37">        this.id = id;</span>
-<span class="nc" id="L38">        this.valor = valor;</span>
-<span class="nc" id="L39">        this.fechaIngreso = fechaIngreso;</span>
-<span class="nc" id="L40">        this.fechaCaducidad = fechaCaducidad;</span>
-<span class="nc" id="L41">        this.jugador = jugador;</span>
-<span class="nc" id="L42">        this.estado = estado;</span>
-<span class="nc" id="L43">        this.descripcion = descripcion;</span>
-<span class="nc" id="L44">    }</span>
+<span class="fc" id="L45">        this.id = id;</span>
+<span class="fc" id="L46">        this.valor = valor;</span>
+<span class="fc" id="L47">        this.fechaIngreso = fechaIngreso;</span>
+<span class="fc" id="L48">        this.fechaCaducidad = fechaCaducidad;</span>
+<span class="fc" id="L49">        this.jugador = jugador;</span>
+<span class="fc" id="L50">        this.estado = estado;</span>
+<span class="fc" id="L51">        this.descripcion = descripcion;</span>
+<span class="fc" id="L52">    }</span>
+
+<span class="fc" id="L54">    public double mensualidadNormal() { return VALOR_MENSUAL; }</span>
+
+    public double promocionTresMeses(){
+<span class="fc" id="L57">        return VALOR_MENSUAL * TRES_MESES * MENOS_QUINCE_PORCIENTO;</span>
+    }
+
+    public double promocionSeisMeses(){
+<span class="fc" id="L61">        return VALOR_MENSUAL * SEIS_MESES * MENOS_TREINTA_PORCIENTO;</span>
+    }
+
+    public String sumarMeses(String fecha, Long meses) {
+<span class="fc" id="L65">        DateTimeFormatter formateador = DateTimeFormatter.ofPattern(&quot;uuuu-MM-dd&quot;);</span>
+<span class="fc" id="L66">        LocalDate fechaLocal = LocalDate.parse(fecha, formateador);</span>
+<span class="fc" id="L67">        fechaLocal = fechaLocal.plusMonths(meses);</span>
+<span class="fc" id="L68">        return fechaLocal.format(formateador);</span>
+    }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

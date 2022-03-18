@@ -5,10 +5,6 @@ import com.ceiba.jugador.comando.fabrica.FabricaJugador;
 import com.ceiba.jugador.modelo.entidad.Jugador;
 import com.ceiba.jugador.servicio.ServicioActualizarJugador;
 import com.ceiba.manejador.ManejadorComando;
-import com.ceiba.usuario.comando.ComandoUsuario;
-import com.ceiba.usuario.comando.fabrica.FabricaUsuario;
-import com.ceiba.usuario.modelo.entidad.Usuario;
-import com.ceiba.usuario.servicio.ServicioActualizarUsuario;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -17,14 +13,14 @@ public class ManejadorActualizarJugador implements ManejadorComando&lt;ComandoJu
     private final FabricaJugador fabricaJugador;
     private final ServicioActualizarJugador servicioActualizarJugador;
 
-<span class="nc" id="L20">    public ManejadorActualizarJugador(FabricaJugador fabricaJugador, ServicioActualizarJugador servicioActualizarJugador) {</span>
-<span class="nc" id="L21">        this.fabricaJugador = fabricaJugador;</span>
-<span class="nc" id="L22">        this.servicioActualizarJugador = servicioActualizarJugador;</span>
-<span class="nc" id="L23">    }</span>
+<span class="fc" id="L16">    public ManejadorActualizarJugador(FabricaJugador fabricaJugador, ServicioActualizarJugador servicioActualizarJugador) {</span>
+<span class="fc" id="L17">        this.fabricaJugador = fabricaJugador;</span>
+<span class="fc" id="L18">        this.servicioActualizarJugador = servicioActualizarJugador;</span>
+<span class="fc" id="L19">    }</span>
 
     public void ejecutar(ComandoJugador comandoJugador) {
-<span class="nc" id="L26">        Jugador jugador = this.fabricaJugador.crear(comandoJugador);</span>
-<span class="nc" id="L27">        this.servicioActualizarJugador.ejecutar(jugador);</span>
-<span class="nc" id="L28">    }</span>
+<span class="nc" id="L22">        Jugador jugador = this.fabricaJugador.crear(comandoJugador);</span>
+<span class="nc" id="L23">        this.servicioActualizarJugador.ejecutar(jugador);</span>
+<span class="nc" id="L24">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

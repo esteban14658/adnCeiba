@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ServicioObtenerEquipo.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">dominio</a> &gt; <a href="index.source.html" class="el_package">com.ceiba.jugador.servicio</a> &gt; <span class="el_source">ServicioObtenerEquipo.java</span></div><h1>ServicioObtenerEquipo.java</h1><pre class="source lang-java linenums">package com.ceiba.jugador.servicio;
 
 import com.ceiba.dominio.excepcion.ExcepcionLongitudValor;
-import com.ceiba.dominio.excepcion.ExcepcionValorInvalido;
+import com.ceiba.jugador.modelo.dto.DtoFiltro;
 import com.ceiba.jugador.modelo.dto.DtoJugador;
 import com.ceiba.jugador.puerto.dao.DaoJugador;
-import com.ceiba.jugador.puerto.repositorio.RepositorioJugador;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,86 +11,60 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class ServicioObtenerEquipo {
 
+    public static final long CANTIDAD_MAXIMA_JUGADORES_PERMITIDA = 11L;
     private final DaoJugador daoJugador;
-    private final RepositorioJugador repositorioJugador;
 
-<span class="fc" id="L18">    public ServicioObtenerEquipo(DaoJugador daoJugador, RepositorioJugador repositorioJugador) {</span>
-<span class="fc" id="L19">        this.daoJugador = daoJugador;</span>
-<span class="fc" id="L20">        this.repositorioJugador = repositorioJugador;</span>
-<span class="fc" id="L21">    }</span>
+<span class="fc" id="L17">    public ServicioObtenerEquipo(DaoJugador daoJugador) {</span>
+<span class="fc" id="L18">        this.daoJugador = daoJugador;</span>
+<span class="fc" id="L19">    }</span>
 
-    public List&lt;DtoJugador&gt; ejecutar(Long defensas, Long mediocampistas, Long delanteros) {
-<span class="fc" id="L24">        Long sumatoria = 1L + defensas + mediocampistas + delanteros;</span>
-<span class="pc bpc" id="L25" title="1 of 2 branches missed.">        if (sumatoria &gt; 11L){</span>
-<span class="fc" id="L26">            throw new ExcepcionLongitudValor(&quot;No puede sobrepasar la cantidad permitida de jugadores&quot;);</span>
+    public List&lt;DtoJugador&gt; ejecutar(DtoFiltro dtoFiltro) {
+<span class="fc" id="L22">        Long defensasNumero = Long.parseLong(dtoFiltro.getDefensas());</span>
+<span class="fc" id="L23">        Long mediocampistasNumero = Long.parseLong(dtoFiltro.getMediocampistas());</span>
+<span class="fc" id="L24">        Long delanterosNumero = Long.parseLong(dtoFiltro.getDelanteros());</span>
+<span class="fc" id="L25">        String[] posiciones = new String[] {&quot;Portero&quot;,&quot;Defensa&quot;, &quot;Mediocampista&quot;, &quot;Delantero&quot;};</span>
+<span class="fc" id="L26">        Long[] keys = new Long[] {1L, defensasNumero, mediocampistasNumero, delanterosNumero};</span>
+<span class="fc" id="L27">        Long sumatoria = 1L + defensasNumero + mediocampistasNumero + delanterosNumero;</span>
+<span class="fc bfc" id="L28" title="All 2 branches covered.">        if (sumatoria &gt; CANTIDAD_MAXIMA_JUGADORES_PERMITIDA){</span>
+<span class="fc" id="L29">            throw new ExcepcionLongitudValor(&quot;No puede sobrepasar la cantidad permitida de jugadores&quot;);</span>
         }
-<span class="nc" id="L28">        List&lt;DtoJugador&gt; equipoA = new ArrayList&lt;&gt;();</span>
-<span class="nc" id="L29">        int contador = 0;</span>
-<span class="nc bnc" id="L30" title="All 2 branches missed.">        for (DtoJugador item: obtenerJugadores(&quot;Portero&quot;,1L)) {</span>
-<span class="nc bnc" id="L31" title="All 2 branches missed.">            if (contador &lt; 1) {</span>
-<span class="nc" id="L32">                equipoA.add(item);</span>
-            }
-<span class="nc" id="L34">            contador++;</span>
-<span class="nc" id="L35">        };</span>
-<span class="nc" id="L36">        contador = 0;</span>
-<span class="nc bnc" id="L37" title="All 2 branches missed.">        for (DtoJugador item: obtenerJugadores(&quot;Defensa&quot;, defensas)) {</span>
-<span class="nc bnc" id="L38" title="All 2 branches missed.">            if (contador &lt; defensas) {</span>
-<span class="nc" id="L39">                equipoA.add(item);</span>
-            }
-<span class="nc" id="L41">            contador++;</span>
-<span class="nc" id="L42">        };</span>
-<span class="nc" id="L43">        contador = 0;</span>
-<span class="nc bnc" id="L44" title="All 2 branches missed.">        for (DtoJugador item: obtenerJugadores(&quot;Mediocampista&quot;, mediocampistas)) {</span>
-<span class="nc bnc" id="L45" title="All 2 branches missed.">            if (contador &lt; mediocampistas) {</span>
-<span class="nc" id="L46">                equipoA.add(item);</span>
-            }
-<span class="nc" id="L48">            contador++;</span>
-<span class="nc" id="L49">        };</span>
-<span class="nc" id="L50">        contador = 0;</span>
-<span class="nc bnc" id="L51" title="All 2 branches missed.">        for (DtoJugador item: obtenerJugadores(&quot;Delantero&quot;, delanteros)) {</span>
-<span class="nc bnc" id="L52" title="All 2 branches missed.">            if (contador &lt; delanteros) {</span>
-<span class="nc" id="L53">                equipoA.add(item);</span>
-            }
-<span class="nc" id="L55">            contador++;</span>
-<span class="nc" id="L56">        };</span>
-<span class="nc" id="L57">        return equipoA;</span>
+<span class="fc" id="L31">        List&lt;DtoJugador&gt; equipoA = new ArrayList&lt;&gt;();</span>
+<span class="fc bfc" id="L32" title="All 2 branches covered.">        for (int i = 0; i &lt; keys.length ; i++){</span>
+<span class="fc bfc" id="L33" title="All 2 branches covered.">            for (DtoJugador dtoJugador: obtenerJugadores(posiciones[i], keys[i])) {</span>
+<span class="fc" id="L34">                equipoA.add(dtoJugador);</span>
+<span class="fc" id="L35">            }</span>
+        }
+<span class="fc" id="L37">        return equipoA;</span>
     }
 
     private List&lt;DtoJugador&gt; obtenerJugadores(String posicion, Long cantidad){
-<span class="nc" id="L61">        List&lt;DtoJugador&gt; jugadores = this.daoJugador.listarPorPosicion(posicion);</span>
-<span class="nc" id="L62">        List&lt;DtoJugador&gt; resultado = new ArrayList&lt;&gt;();</span>
-<span class="nc bnc" id="L63" title="All 2 branches missed.">        for (DtoJugador item: jugadores) {</span>
-<span class="nc bnc" id="L64" title="All 4 branches missed.">            if (posicion.equals(&quot;Portero&quot;) &amp;&amp; resultado.size() &lt; cantidad){</span>
-<span class="nc" id="L65">                int random = numeroAleatorioEnRango(0, jugadores.size());</span>
-<span class="nc" id="L66">                item = jugadores.get(random);</span>
-<span class="nc" id="L67">                resultado.add(item);</span>
-<span class="nc" id="L68">                System.out.println(&quot;Random = &quot; + random);</span>
-<span class="nc" id="L69">            }</span>
-<span class="nc bnc" id="L70" title="All 4 branches missed.">            else if (posicion.equals(&quot;Defensa&quot;) &amp;&amp; resultado.size() &lt; cantidad){</span>
-<span class="nc" id="L71">                int random = numeroAleatorioEnRango(0, jugadores.size());</span>
-<span class="nc" id="L72">                item = jugadores.get(random);</span>
-<span class="nc" id="L73">                resultado.add(item);</span>
-<span class="nc" id="L74">            }</span>
-<span class="nc bnc" id="L75" title="All 4 branches missed.">            else if (posicion.equals(&quot;Mediocampista&quot;) &amp;&amp; resultado.size() &lt; cantidad){</span>
-<span class="nc" id="L76">                int random = numeroAleatorioEnRango(0, jugadores.size());</span>
-<span class="nc" id="L77">                item = jugadores.get(random);</span>
-<span class="nc" id="L78">                resultado.add(item);</span>
-<span class="nc" id="L79">            }</span>
-<span class="nc bnc" id="L80" title="All 4 branches missed.">            else if (posicion.equals(&quot;Delantero&quot;) &amp;&amp; resultado.size() &lt; cantidad){</span>
-<span class="nc" id="L81">                int random = numeroAleatorioEnRango(0, jugadores.size());</span>
-<span class="nc" id="L82">                item = jugadores.get(random);</span>
-<span class="nc" id="L83">                resultado.add(item);</span>
+<span class="fc" id="L41">        List&lt;DtoJugador&gt; jugadores = this.daoJugador.listarPorPosicion(posicion);</span>
+<span class="fc" id="L42">        List&lt;Integer&gt; registroObtenido = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L43">        List&lt;DtoJugador&gt; resultado = new ArrayList&lt;&gt;();</span>
+<span class="fc bfc" id="L44" title="All 2 branches covered.">        for (int i = 0; i &lt; cantidad; i++){</span>
+<span class="pc bpc" id="L45" title="1 of 2 branches missed.">            if (cantidadDeLista(posicion) &lt; 1){</span>
+<span class="nc" id="L46">                resultado = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L47">                break;</span>
+            }
+<span class="fc" id="L49">            int random = numeroAleatorioEnRango(0, cantidadDeLista(posicion));</span>
+<span class="fc bfc" id="L50" title="All 2 branches covered.">            if (!registroObtenido.contains(random)){</span>
+<span class="fc" id="L51">                registroObtenido.add(random);</span>
+<span class="fc" id="L52">                resultado.add(jugadores.get(random));</span>
             }
             else {
-                //throw new ExcepcionValorInvalido(&quot;No se reconoce la posicion ingresada&quot;);
+<span class="fc" id="L55">                cantidad++;</span>
             }
-<span class="nc" id="L88">        };</span>
-<span class="nc" id="L89">        return resultado;</span>
+        }
+<span class="fc" id="L58">        return resultado;</span>
+    }
+
+    private int cantidadDeLista(String posicion){
+<span class="fc" id="L62">        return this.daoJugador.listarPorPosicion(posicion).size();</span>
     }
 
     private static int numeroAleatorioEnRango(int minimo, int maximo) {
         // nextInt regresa en rango pero con lÃ­mite superior exclusivo, por eso sumamos 1
-<span class="nc" id="L94">        return ThreadLocalRandom.current().nextInt(minimo, maximo);</span>
+<span class="fc" id="L67">        return ThreadLocalRandom.current().nextInt(minimo, maximo);</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

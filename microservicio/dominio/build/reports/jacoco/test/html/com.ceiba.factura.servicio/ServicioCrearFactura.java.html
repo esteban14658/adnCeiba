@@ -1,29 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ServicioCrearFactura.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">dominio</a> &gt; <a href="index.source.html" class="el_package">com.ceiba.factura.servicio</a> &gt; <span class="el_source">ServicioCrearFactura.java</span></div><h1>ServicioCrearFactura.java</h1><pre class="source lang-java linenums">package com.ceiba.factura.servicio;
 
-import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
+import com.ceiba.dominio.excepcion.ExcepcionSinDatos;
+import com.ceiba.dominio.excepcion.ExcepcionValorInvalido;
 import com.ceiba.factura.modelo.entidad.Factura;
 import com.ceiba.factura.puerto.repositorio.RepositorioFactura;
 
+import java.time.LocalDate;
+
 public class ServicioCrearFactura {
 
-    private static final String EL_USUARIO_YA_EXISTE_EN_EL_SISTEMA = &quot;El usuario ya cuenta con una mensualidad vigente existe en el sistema&quot;;
+    public static final String YA_TIENE_UNA_FACTURA_ASIGNADA = &quot;Ya tiene una factura asignada&quot;;
+    public static final String SOLO_SE_PUEE_INGRESAR_VALORES_DE_1_3_Y_6_MESES = &quot;Solo se puee ingresar valores de 1, 3 y 6 meses&quot;;
+    public static final int UN_MES = 1;
+    public static final int TRIMESTRAL = 3;
+    public static final int SEMESTRAL = 6;
 
     private final RepositorioFactura repositorioFactura;
 
-<span class="nc" id="L13">    public ServicioCrearFactura(RepositorioFactura repositorioFactura) {</span>
-<span class="nc" id="L14">        this.repositorioFactura = repositorioFactura;</span>
-<span class="nc" id="L15">    }</span>
+<span class="fc" id="L20">    public ServicioCrearFactura(RepositorioFactura repositorioFactura) {</span>
+<span class="fc" id="L21">        this.repositorioFactura = repositorioFactura;</span>
+<span class="fc" id="L22">    }</span>
 
-    public Long ejecutar(Factura factura) {
-<span class="nc" id="L18">        validarExistenciaPrevia(factura);</span>
-<span class="nc" id="L19">        return this.repositorioFactura.crear(factura);</span>
+    public Long ejecutar(Factura factura, Long meses) {
+<span class="fc" id="L25">        validarExistenciaPrevia(factura);</span>
+<span class="fc" id="L26">        factura = ingresoDeDatos(factura, meses);</span>
+<span class="fc" id="L27">        return this.repositorioFactura.crear(factura);</span>
+    }
+
+    private Factura ingresoDeDatos(Factura factura, Long meses) {
+<span class="fc" id="L31">        String fechaInicio = String.valueOf(LocalDate.now());</span>
+<span class="fc" id="L32">        String fechaCaducidad = factura.sumarMeses(fechaInicio, meses);</span>
+<span class="fc" id="L33">        double valorFactura = 0;</span>
+<span class="fc bfc" id="L34" title="All 2 branches covered.">        if (meses == UN_MES){</span>
+<span class="fc" id="L35">            valorFactura = factura.mensualidadNormal();</span>
+<span class="fc bfc" id="L36" title="All 2 branches covered.">        } else if (meses == TRIMESTRAL){</span>
+<span class="fc" id="L37">            valorFactura = factura.promocionTresMeses();</span>
+<span class="fc bfc" id="L38" title="All 2 branches covered.">        } else if (meses == SEMESTRAL){</span>
+<span class="fc" id="L39">            valorFactura = factura.promocionSeisMeses();</span>
+        } else {
+<span class="fc" id="L41">            throw new ExcepcionValorInvalido(SOLO_SE_PUEE_INGRESAR_VALORES_DE_1_3_Y_6_MESES);</span>
+        }
+<span class="fc" id="L43">        Long valor = Math.round(valorFactura);</span>
+<span class="fc" id="L44">        return new Factura(factura.getId(), valor, LocalDate.parse(fechaInicio),</span>
+<span class="fc" id="L45">                LocalDate.parse(fechaCaducidad), factura.getJugador(), factura.getEstado(), factura.getDescripcion());</span>
     }
 
     private void validarExistenciaPrevia(Factura factura) {
-<span class="nc" id="L23">        boolean existe = this.repositorioFactura.existePorDocumento(factura.getJugador().getDocumento());</span>
-<span class="nc bnc" id="L24" title="All 2 branches missed.">        if(existe) {</span>
-<span class="nc" id="L25">            throw new ExcepcionDuplicidad(EL_USUARIO_YA_EXISTE_EN_EL_SISTEMA);</span>
+<span class="fc" id="L49">        boolean existe = this.repositorioFactura.existePorIdJugador(factura.getJugador().getId());</span>
+<span class="fc bfc" id="L50" title="All 2 branches covered.">        if(existe) {</span>
+<span class="fc" id="L51">            throw new ExcepcionSinDatos(YA_TIENE_UNA_FACTURA_ASIGNADA);</span>
         }
-<span class="nc" id="L27">    }</span>
+<span class="fc" id="L53">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>
