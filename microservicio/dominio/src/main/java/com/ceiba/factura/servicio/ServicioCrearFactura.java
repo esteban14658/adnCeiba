@@ -41,8 +41,10 @@ public class ServicioCrearFactura {
             throw new ExcepcionValorInvalido(SOLO_SE_PUEE_INGRESAR_VALORES_DE_1_3_Y_6_MESES);
         }
         Long valor = Math.round(valorFactura);
-        return new Factura(factura.getId(), valor, LocalDate.parse(fechaInicio),
-                LocalDate.parse(fechaCaducidad), factura.getJugador(), factura.getEstado(), factura.getDescripcion());
+        factura.setValor(valor);
+        factura.setFechaIngreso(LocalDate.parse(fechaInicio));
+        factura.setFechaCaducidad(LocalDate.parse(fechaCaducidad));
+        return factura;
     }
 
     private void validarExistenciaPrevia(Factura factura) {

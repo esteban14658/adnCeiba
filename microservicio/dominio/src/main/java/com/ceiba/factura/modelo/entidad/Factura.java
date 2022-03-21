@@ -4,6 +4,7 @@ import com.ceiba.jugador.modelo.dto.DtoJugador;
 import com.ceiba.jugador.modelo.entidad.Jugador;
 import lombok.Data;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -11,6 +12,7 @@ import java.time.format.DateTimeFormatter;
 import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;
 
 @Getter
+@Setter
 public class Factura {
 
     private static final String SE_DEBE_INGRESAR_LA_FECHA_DE_INGRESO = "Se debe ingresar la fecha de ingreso";
