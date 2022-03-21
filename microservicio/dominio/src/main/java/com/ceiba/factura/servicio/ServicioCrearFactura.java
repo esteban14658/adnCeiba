@@ -23,8 +23,7 @@ public class ServicioCrearFactura {
 
     public Long ejecutar(Factura factura, Long meses) {
         validarExistenciaPrevia(factura);
-        factura = ingresoDeDatos(factura, meses);
-        return this.repositorioFactura.crear(factura);
+        return this.repositorioFactura.crear(ingresoDeDatos(factura, meses));
     }
 
     private Factura ingresoDeDatos(Factura factura, Long meses) {
